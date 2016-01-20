@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['t_5fdcmotor',['t_dcmotor',['../structt__dcmotor.html',1,'']]],
-  ['t_5fdcmotorincr',['t_dcmotorIncr',['../uniont__dcmotorIncr.html',1,'']]],
-  ['t_5fdcmotorsetting',['t_dcmotorSetting',['../structt__dcmotorSetting.html',1,'']]],
-  ['t_5fdcmotorvars',['t_dcmotorVars',['../structt__dcmotorVars.html',1,'']]],
-  ['t_5fdcmotorvolvars',['t_dcmotorVolVars',['../structt__dcmotorVolVars.html',1,'']]],
-  ['t_5fdelay',['t_delay',['../group__core.html#gaff33be5ef54d7fd826f6a14a907df285',1,'core.h']]],
-  ['t_5fpid',['t_pid',['../structt__pid.html',1,'']]],
-  ['t_5framp',['t_ramp',['../structt__ramp.html',1,'']]],
-  ['time',['time',['../group__core.html#gaef4fa67c3147686697f2d21977721983',1,'core.h']]],
-  ['timeisr',['timeISR',['../group__core.html#ga89d246c8525993a8801026d81be8a953',1,'core.h']]]
+  ['setup',['setup',['../group__core.html#ga4fc01d736fe50cf5b977f755b675f11d',1,'core.h']]],
+  ['switch_20module',['Switch module',['../group__switch.html',1,'']]],
+  ['switchdeselect',['switchDeselect',['../group__switch.html#ga6d8780c516fdd2529b9babdba36c02b7',1,'switch.h']]],
+  ['switchget',['switchGet',['../group__switch.html#ga000323c8f008a7f0599e221e654c6309',1,'switch.h']]],
+  ['switchinit',['switchInit',['../group__switch.html#ga981a7c67ad03551f83e46a0e025ff062',1,'switch.h']]],
+  ['switchselect',['switchSelect',['../group__switch.html#ga2ba714a8b1644a1c40d53304cc6f72f8',1,'switch.h']]],
+  ['switchsend',['switchSend',['../group__switch.html#gaaa219ac534f4901a85e23923df2379e8',1,'switch.h']]],
+  ['switchservice',['switchService',['../group__switch.html#gacbd1296967489a0050829b04bd2ef036',1,'switch.h']]]
 ];

@@ -1,10 +1,10 @@
 var group__core =
 [
     [ "coreInit", "group__core.html#ga177bd6de21c897957f29d2285f1fd89f", null ],
-    [ "eeReadByte", "group__core.html#gabcbdc48eb3c9a8f3d634358a0673d049", null ],
-    [ "eeWriteByte", "group__core.html#ga49ad04a5594ee06aca366ace96a837ea", null ],
     [ "highInterrupts", "group__core.html#ga78553cff130e844a4d576a72564a94be", null ],
+    [ "loop", "group__core.html#gafe461d27b9c48d5921c00d521181f12f", null ],
     [ "lowInterrupts", "group__core.html#ga564dc13d171bdafd49b4a6656c626a5a", null ],
+    [ "setup", "group__core.html#ga4fc01d736fe50cf5b977f755b675f11d", null ],
     [ "time", "group__core.html#gaef4fa67c3147686697f2d21977721983", null ],
     [ "BIT_COPY", "group__core.html#ga468fb56d9175e94d6fbb71a19352e86c", null ],
     [ "bitclr", "group__core.html#ga45067d13ba7e056136ec8bc1ae31a440", null ],

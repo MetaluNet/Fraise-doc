@@ -98,8 +98,6 @@ $(document).ready(function(){initNavTree('group__core.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Core module.</div>  </div>
 </div><!--header-->
@@ -107,11 +105,22 @@ $(document).ready(function(){initNavTree('group__core.html','');});
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>Core module implements eeprom, pins and time. </p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Initialization</h2></td></tr>
 <tr class="memitem:ga177bd6de21c897957f29d2285f1fd89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga177bd6de21c897957f29d2285f1fd89f">coreInit</a> ()</td></tr>
 <tr class="memdesc:ga177bd6de21c897957f29d2285f1fd89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init core module.  <a href="#ga177bd6de21c897957f29d2285f1fd89f">More...</a><br/></td></tr>
 <tr class="separator:ga177bd6de21c897957f29d2285f1fd89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+User defined functions</h2></td></tr>
+<tr class="memitem:ga4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4fc01d736fe50cf5b977f755b675f11d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:ga4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined initialization. <br/></td></tr>
+<tr class="separator:ga4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafe461d27b9c48d5921c00d521181f12f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gafe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:gafe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined forever loop. <br/></td></tr>
+<tr class="separator:gafe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga78553cff130e844a4d576a72564a94be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga78553cff130e844a4d576a72564a94be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga78553cff130e844a4d576a72564a94be">highInterrupts</a> ()</td></tr>
 <tr class="memdesc:ga78553cff130e844a4d576a72564a94be"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined high priority interrupt routine. <br/></td></tr>
@@ -120,14 +129,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga564dc13d171bdafd49b4a6656c626a5a">lowInterrupts</a> ()</td></tr>
 <tr class="memdesc:ga564dc13d171bdafd49b4a6656c626a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined low priority interrupt routine. <br/></td></tr>
 <tr class="separator:ga564dc13d171bdafd49b4a6656c626a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga49ad04a5594ee06aca366ace96a837ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga49ad04a5594ee06aca366ace96a837ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga49ad04a5594ee06aca366ace96a837ea">eeWriteByte</a> (unsigned char address, unsigned char value)</td></tr>
-<tr class="memdesc:ga49ad04a5594ee06aca366ace96a837ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to eeprom. <br/></td></tr>
-<tr class="separator:ga49ad04a5594ee06aca366ace96a837ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabcbdc48eb3c9a8f3d634358a0673d049"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabcbdc48eb3c9a8f3d634358a0673d049"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gabcbdc48eb3c9a8f3d634358a0673d049">eeReadByte</a> (unsigned char address)</td></tr>
-<tr class="memdesc:gabcbdc48eb3c9a8f3d634358a0673d049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to eeprom. <br/></td></tr>
-<tr class="separator:gabcbdc48eb3c9a8f3d634358a0673d049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Pin routines</h2></td></tr>
@@ -463,7 +464,7 @@ unsigned unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 19 2016 01:29:08 for Fraise by
+    <li class="footer">Generated on Wed Jan 20 2016 01:05:58 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

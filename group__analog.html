@@ -106,13 +106,13 @@ $(document).ready(function(){initNavTree('group__analog.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<p>Automates the use of analog input pins </p>
+<p>Automates the use of analog input pins. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga26be7a3a9138a48ea03dd8ae5e02a6fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga26be7a3a9138a48ea03dd8ae5e02a6fd">analogInit</a> ()</td></tr>
-<tr class="memdesc:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the module. <br/></td></tr>
+<tr class="memdesc:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the module in <a class="el" href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d" title="User defined initialization. ">setup()</a> <br/></td></tr>
 <tr class="separator:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafb7a273a087b18e14603ea152279501b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafb7a273a087b18e14603ea152279501b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gafb7a273a087b18e14603ea152279501b">analogDeselect</a> (unsigned char chan)</td></tr>
@@ -120,7 +120,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="separator:gafb7a273a087b18e14603ea152279501b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabb4db506680cee009a835e74aa3e8bfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabb4db506680cee009a835e74aa3e8bfc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gabb4db506680cee009a835e74aa3e8bfc">analogService</a> (void)</td></tr>
-<tr class="memdesc:gabb4db506680cee009a835e74aa3e8bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module service routine, to be called by the main loop. <br/></td></tr>
+<tr class="memdesc:gabb4db506680cee009a835e74aa3e8bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module service routine, to be called by the main <a class="el" href="group__core.html#gafe461d27b9c48d5921c00d521181f12f" title="User defined forever loop. ">loop()</a>. <br/></td></tr>
 <tr class="separator:gabb4db506680cee009a835e74aa3e8bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7743a8028fd4078874272568412fe07"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gaa7743a8028fd4078874272568412fe07">analogSend</a> (void)</td></tr>
 <tr class="memdesc:gaa7743a8028fd4078874272568412fe07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send analog values that changed.  <a href="#gaa7743a8028fd4078874272568412fe07">More...</a><br/></td></tr>
@@ -146,7 +146,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group
 <tr class="separator:ga0374934ed6e783924daf5642d123ff3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0a43c95bc449403ef33aaac5a094ddb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0a43c95bc449403ef33aaac5a094ddb0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga0a43c95bc449403ef33aaac5a094ddb0">analogDeclareEE</a> ()</td></tr>
-<tr class="memdesc:ga0a43c95bc449403ef33aaac5a094ddb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">EEPROM declaration for this module Call this function in your EEdeclareMain() if you want to save analog scaling calibration. <br/></td></tr>
+<tr class="memdesc:ga0a43c95bc449403ef33aaac5a094ddb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">EEPROM declaration for this module Call this function in your <a class="el" href="group__eeparams.html#gab58f2a1c4e5dcc8367def3b35bbef67d" title="User must define this function, with a list of char/int/long declarations. ">EEdeclareMain()</a> if you want to save analog scaling calibration. <br/></td></tr>
 <tr class="separator:ga0a43c95bc449403ef33aaac5a094ddb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -283,7 +283,7 @@ Output mode switchs</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 19 2016 01:29:08 for Fraise by
+    <li class="footer">Generated on Wed Jan 20 2016 01:05:58 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
