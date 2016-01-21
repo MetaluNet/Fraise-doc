@@ -4,6 +4,7 @@ var group__fraisedevice =
     [ "fraiseGetChar", "group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3", null ],
     [ "fraiseGetIndex", "group__fraisedevice.html#ga0035bb3a47602698b32a39a8a0af0901", null ],
     [ "fraiseGetLen", "group__fraisedevice.html#gac350dfd6b80ed990c4790a72f2172fb5", null ],
+    [ "fraiseInit", "group__fraisedevice.html#ga96c4c015176e2b536bbbb54a4b075b13", null ],
     [ "fraisePeekChar", "group__fraisedevice.html#ga3d7fb473b762cba47cc805e6ba196278", null ],
     [ "fraiseReceive", "group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae", null ],
     [ "fraiseReceiveBroadcast", "group__fraisedevice.html#ga21dc29c784229db80a88a1d1fedf6f76", null ],

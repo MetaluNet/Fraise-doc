@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eeprom_20utilities_20module_2e',['EEPROM utilities module.',['../group__eeparams.html',1,'']]]
+  ['eeprom_20parameters_20module',['EEPROM parameters module',['../group__eeparams.html',1,'']]]
 ];
