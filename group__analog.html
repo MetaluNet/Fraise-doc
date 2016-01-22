@@ -103,8 +103,67 @@ $(document).ready(function(){initNavTree('group__analog.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
-<p>Automates the use of analog input pins. </p>
-<table class="memberdecls">
+<p>Automates the use of analog input pins.</p>
+<p>Example : </p><div class="fragment"><div class="line"><span class="comment">/*********************************************************************</span></div>
+<div class="line"><span class="comment"> *               analog example for Versa1.0</span></div>
+<div class="line"><span class="comment"> *  Analog capture on connectors K1, K2, K3 and K5. </span></div>
+<div class="line"><span class="comment"> *********************************************************************/</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#define BOARD Versa1</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="fruit_8h.html">fruit.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="analog_8h.html">analog.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="group__core.html#gaff33be5ef54d7fd826f6a14a907df285">t_delay</a> mainDelay;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a>(<span class="keywordtype">void</span>) {  </div>
+<div class="line"><span class="comment">//----------- Setup ----------------</span></div>
+<div class="line">    <a class="code" href="group__fruit.html#gad4d26a8d262f481e6c2d09e24bae503e">fruitInit</a>();</div>
+<div class="line">            </div>
+<div class="line">    <a class="code" href="group__core.html#gac1a887376cc38d1337bdc56d009f8f96">pinModeDigitalOut</a>(LED);     <span class="comment">// set the LED pin mode to digital out</span></div>
+<div class="line">    <a class="code" href="group__core.html#ga148309384b56081a2556b95c6dfcad00">digitalClear</a>(LED);      <span class="comment">// clear the LED</span></div>
+<div class="line">    <a class="code" href="group__core.html#gaf4d36dd239e15caa010aa39d68935220">delayStart</a>(mainDelay, 5000);    <span class="comment">// init the mainDelay to 5 ms</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//----------- Analog setup ----------------</span></div>
+<div class="line">    <a class="code" href="group__analog.html#ga26be7a3a9138a48ea03dd8ae5e02a6fd">analogInit</a>();       <span class="comment">// init analog module</span></div>
+<div class="line">    <a class="code" href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a>(0,K1); <span class="comment">// assign connector K1 to analog channel 0</span></div>
+<div class="line">    <a class="code" href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a>(1,K2);</div>
+<div class="line">    <a class="code" href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a>(2,K3);</div>
+<div class="line">    <a class="code" href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a>(3,K5);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__core.html#gafe461d27b9c48d5921c00d521181f12f">loop</a>() {</div>
+<div class="line"><span class="comment">// ---------- Main loop ------------</span></div>
+<div class="line">    <a class="code" href="group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96">fraiseService</a>();    <span class="comment">// listen to Fraise events</span></div>
+<div class="line">    <a class="code" href="group__analog.html#gabb4db506680cee009a835e74aa3e8bfc">analogService</a>();    <span class="comment">// analog management routine</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span>(<a class="code" href="group__core.html#ga7955b3465200292e039dd5419b2e3296">delayFinished</a>(mainDelay)) <span class="comment">// when mainDelay triggers :</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="group__core.html#gaf4d36dd239e15caa010aa39d68935220">delayStart</a>(mainDelay, 5000);    <span class="comment">// re-init mainDelay</span></div>
+<div class="line">        <a class="code" href="group__analog.html#gaa7743a8028fd4078874272568412fe07">analogSend</a>();       <span class="comment">// send analog channels that changed</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Receiving</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578">fraiseReceiveChar</a>() <span class="comment">// receive text</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c;</div>
+<div class="line">    </div>
+<div class="line">    c=<a class="code" href="group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3">fraiseGetChar</a>();</div>
+<div class="line">    <span class="keywordflow">if</span>(c==<span class="charliteral">&#39;L&#39;</span>){     <span class="comment">//switch LED on/off </span></div>
+<div class="line">        c=<a class="code" href="group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3">fraiseGetChar</a>();</div>
+<div class="line">        <a class="code" href="group__core.html#ga8e46db3181b83e00e99f2e0f9b422637">digitalWrite</a>(LED, c!=<span class="charliteral">&#39;0&#39;</span>);      </div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(c==<span class="charliteral">&#39;E&#39;</span>) {   <span class="comment">// echo text (send it back to host)</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;C&quot;</span>);</div>
+<div class="line">        c = <a class="code" href="group__fraisedevice.html#gac350dfd6b80ed990c4790a72f2172fb5">fraiseGetLen</a>();             <span class="comment">// get length of current packet</span></div>
+<div class="line">        <span class="keywordflow">while</span>(c--) printf(<span class="stringliteral">&quot;%c&quot;</span>,<a class="code" href="group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3">fraiseGetChar</a>());<span class="comment">// send each received byte</span></div>
+<div class="line">        putchar(<span class="charliteral">&#39;\n&#39;</span>);              <span class="comment">// end of line</span></div>
+<div class="line">    }   </div>
+<div class="line">}</div>
+<div class="line"></div>
+</div><!-- fragment --> <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Settings to put in config.h</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp40eca2dddb39fe0e4fc5289d15305325"></a>These parameters can be overloaded in the config.h of your firmware. </p>
@@ -282,7 +341,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Jan 22 2016 18:15:45 for Fraise by
+    <li class="footer">Generated on Fri Jan 22 2016 18:54:20 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

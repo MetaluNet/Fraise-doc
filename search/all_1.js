@@ -4,6 +4,7 @@ var searchData=
   ['amode_5fnum',['AMODE_NUM',['../group__analog.html#ga795dd3de11c9af399ee30f86db15b980',1,'analog.h']]],
   ['amode_5fscale',['AMODE_SCALE',['../group__analog.html#ga9693fc6dab8dba34c27f2104a012b105',1,'analog.h']]],
   ['analog_20module',['Analog module',['../group__analog.html',1,'']]],
+  ['analog_2eh',['analog.h',['../analog_8h.html',1,'']]],
   ['analog_5ffilter',['ANALOG_FILTER',['../group__analog.html#ga63bf442111d34ae45ade940394e5e579',1,'analog.h']]],
   ['analog_5fmax_5fchannels',['ANALOG_MAX_CHANNELS',['../group__analog.html#ga1438ef70edcae7b325eca32c3bf2c557',1,'analog.h']]],
   ['analog_5fminmax_5fmargin',['ANALOG_MINMAX_MARGIN',['../group__analog.html#ga4e5a7060d3149c037996116a5ec35113',1,'analog.h']]],

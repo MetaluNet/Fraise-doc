@@ -1,6 +1,7 @@
 var searchData=
 [
   ['fraise_20device_20module',['Fraise device module',['../group__fraisedevice.html',1,'']]],
+  ['fraisedevice_2eh',['fraisedevice.h',['../fraisedevice_8h.html',1,'']]],
   ['fraisegetat',['fraiseGetAt',['../group__fraisedevice.html#ga0ddaba5ee567640a6bc568257d3dbe28',1,'fraisedevice.h']]],
   ['fraisegetchar',['fraiseGetChar',['../group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3',1,'fraisedevice.h']]],
   ['fraisegetindex',['fraiseGetIndex',['../group__fraisedevice.html#ga0035bb3a47602698b32a39a8a0af0901',1,'fraisedevice.h']]],

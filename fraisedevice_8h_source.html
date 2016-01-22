@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('fraisedevice_8h_source.html','');});
 <div class="title">fraisedevice.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<a href="fraisedevice_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *                Fraise device firmware v2.1</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
@@ -133,46 +133,47 @@ $(document).ready(function(){initNavTree('fraisedevice_8h_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef FRAISEDEV_H</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define FRAISEDEV_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;core.h&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//-------------- SYSTEM -------------</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga96c4c015176e2b536bbbb54a4b075b13">fraiseInit</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96">fraiseService</a>(<span class="keywordtype">void</span>); <span class="comment">// to be called by the main loop.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> fraiseSetID(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <span class="keywordtype">id</span>); <span class="comment">// normally you don&#39;t have to use this.</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> fraiseISR(); <span class="comment">//to be called by low priority interrupt.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> fraiseSetInterruptEnable(<span class="keywordtype">char</span> enable); <span class="comment">//fraiseInit automatically enables interrupt.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">char</span> fraiseGetInterruptEnable(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">//-------------- OUT ----------------</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#gaa010ccb30b28eb8d52e93c7e82e31c61">fraiseSend</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buf,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> len);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">//-------------- IN ----------------</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga8deea340958f6bcdda456f8ee43192bb">fraiseReceiveCharBroadcast</a>();  </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga21dc29c784229db80a88a1d1fedf6f76">fraiseReceiveBroadcast</a>();      </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578">fraiseReceiveChar</a>();       </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae">fraiseReceive</a>();           </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3">fraiseGetChar</a>();  </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#ga3d7fb473b762cba47cc805e6ba196278">fraisePeekChar</a>(); </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#ga0035bb3a47602698b32a39a8a0af0901">fraiseGetIndex</a>(); </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#ga0ddaba5ee567640a6bc568257d3dbe28">fraiseGetAt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i); </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#gac350dfd6b80ed990c4790a72f2172fb5">fraiseGetLen</a>();   </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga1f92e9742474f4655b6cbf59c3a28df6">fraiseSendCopy</a>(); </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define PARAM_CHAR(n,p) case n: p = fraiseGetChar();</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define PARAM_INT(n,p) case n: p = fraiseGetChar() &lt;&lt; 8; p += fraiseGetChar();</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define PARAM_LONG(n,p) case n: p = ((unsigned long)( \</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">    (((unsigned int)fraiseGetChar()) &lt;&lt; 8) + fraiseGetChar()) ) &lt;&lt; 16 | \</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">    (((unsigned int)fraiseGetChar()) &lt;&lt; 8) + fraiseGetChar();</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="group__fraisedevice.html#ga430dc6870548fce0f228b96a3de34ea4">  110</a></span>&#160;<span class="preprocessor">#define GETPARAM(n, p, i) case n: i = p; break</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;core.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//-------------- SYSTEM -------------</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga96c4c015176e2b536bbbb54a4b075b13">fraiseInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96">fraiseService</a>(<span class="keywordtype">void</span>); <span class="comment">// to be called by the main loop.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> fraiseSetID(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <span class="keywordtype">id</span>); <span class="comment">// normally you don&#39;t have to use this.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> fraiseISR(); <span class="comment">//to be called by low priority interrupt.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> fraiseSetInterruptEnable(<span class="keywordtype">char</span> enable); <span class="comment">//fraiseInit automatically enables interrupt.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">char</span> fraiseGetInterruptEnable(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//-------------- OUT ----------------</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#gaa010ccb30b28eb8d52e93c7e82e31c61">fraiseSend</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buf,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> len);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//-------------- IN ----------------</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga8deea340958f6bcdda456f8ee43192bb">fraiseReceiveCharBroadcast</a>();  </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga21dc29c784229db80a88a1d1fedf6f76">fraiseReceiveBroadcast</a>();      </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578">fraiseReceiveChar</a>();       </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae">fraiseReceive</a>();           </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3">fraiseGetChar</a>();  </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#ga3d7fb473b762cba47cc805e6ba196278">fraisePeekChar</a>(); </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#ga0035bb3a47602698b32a39a8a0af0901">fraiseGetIndex</a>(); </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#ga0ddaba5ee567640a6bc568257d3dbe28">fraiseGetAt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i); </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="group__fraisedevice.html#gac350dfd6b80ed990c4790a72f2172fb5">fraiseGetLen</a>();   </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraisedevice.html#ga1f92e9742474f4655b6cbf59c3a28df6">fraiseSendCopy</a>(); </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define PARAM_CHAR(n,p) case n: p = fraiseGetChar();</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define PARAM_INT(n,p) case n: p = fraiseGetChar() &lt;&lt; 8; p += fraiseGetChar();</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#define PARAM_LONG(n,p) case n: p = ((unsigned long)( \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">    (((unsigned int)fraiseGetChar()) &lt;&lt; 8) + fraiseGetChar()) ) &lt;&lt; 16 | \</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    (((unsigned int)fraiseGetChar()) &lt;&lt; 8) + fraiseGetChar();</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif //FRAISEDEV_H</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="group__fraisedevice.html#ga430dc6870548fce0f228b96a3de34ea4">  113</a></span>&#160;<span class="preprocessor">#define GETPARAM(n, p, i) case n: i = p; break</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif //FRAISEDEV_H</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="ttc" id="group__fraisedevice_html_gab98098cfba2559f45c462f313c1ec6ae"><div class="ttname"><a href="group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae">fraiseReceive</a></div><div class="ttdeci">void fraiseReceive()</div><div class="ttdoc">Raw message to this device. </div></div>
 <div class="ttc" id="group__fraisedevice_html_ga1ad12856b1ed8ea8e59ea07933bdef96"><div class="ttname"><a href="group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96">fraiseService</a></div><div class="ttdeci">void fraiseService(void)</div><div class="ttdoc">Fraise device service routine. </div></div>
 <div class="ttc" id="group__fraisedevice_html_ga21dc29c784229db80a88a1d1fedf6f76"><div class="ttname"><a href="group__fraisedevice.html#ga21dc29c784229db80a88a1d1fedf6f76">fraiseReceiveBroadcast</a></div><div class="ttdeci">void fraiseReceiveBroadcast()</div><div class="ttdoc">Raw message to every device. </div></div>
@@ -191,8 +192,8 @@ $(document).ready(function(){initNavTree('fraisedevice_8h_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_54653be0594ae4d5f14131c377adf4d3.html">fraisedevice</a></li><li class="navelem"><b>fraisedevice.h</b></li>
-    <li class="footer">Generated on Fri Jan 22 2016 18:15:45 for Fraise by
+    <li class="navelem"><a class="el" href="dir_54653be0594ae4d5f14131c377adf4d3.html">fraisedevice</a></li><li class="navelem"><a class="el" href="fraisedevice_8h.html">fraisedevice.h</a></li>
+    <li class="footer">Generated on Fri Jan 22 2016 18:54:20 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
