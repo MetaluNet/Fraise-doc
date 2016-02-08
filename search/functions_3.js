@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['fraisegetat',['fraiseGetAt',['../group__fraisedevice.html#ga0ddaba5ee567640a6bc568257d3dbe28',1,'fraisedevice.h']]],
-  ['fraisegetchar',['fraiseGetChar',['../group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3',1,'fraisedevice.h']]],
-  ['fraisegetindex',['fraiseGetIndex',['../group__fraisedevice.html#ga0035bb3a47602698b32a39a8a0af0901',1,'fraisedevice.h']]],
-  ['fraisegetlen',['fraiseGetLen',['../group__fraisedevice.html#gac350dfd6b80ed990c4790a72f2172fb5',1,'fraisedevice.h']]],
-  ['fraiseinit',['fraiseInit',['../group__fraisedevice.html#ga96c4c015176e2b536bbbb54a4b075b13',1,'fraisedevice.h']]],
-  ['fraisepeekchar',['fraisePeekChar',['../group__fraisedevice.html#ga3d7fb473b762cba47cc805e6ba196278',1,'fraisedevice.h']]],
-  ['fraisereceive',['fraiseReceive',['../group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae',1,'fraisedevice.h']]],
-  ['fraisereceivebroadcast',['fraiseReceiveBroadcast',['../group__fraisedevice.html#ga21dc29c784229db80a88a1d1fedf6f76',1,'fraisedevice.h']]],
-  ['fraisereceivechar',['fraiseReceiveChar',['../group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578',1,'fraisedevice.h']]],
-  ['fraisereceivecharbroadcast',['fraiseReceiveCharBroadcast',['../group__fraisedevice.html#ga8deea340958f6bcdda456f8ee43192bb',1,'fraisedevice.h']]],
-  ['fraisesend',['fraiseSend',['../group__fraisedevice.html#gaa010ccb30b28eb8d52e93c7e82e31c61',1,'fraisedevice.h']]],
-  ['fraisesendcopy',['fraiseSendCopy',['../group__fraisedevice.html#ga1f92e9742474f4655b6cbf59c3a28df6',1,'fraisedevice.h']]],
-  ['fraiseservice',['fraiseService',['../group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96',1,'fraisedevice.h']]],
-  ['fruitinit',['fruitInit',['../group__fruit.html#gad4d26a8d262f481e6c2d09e24bae503e',1,'fruit.h']]]
+  ['eedeclarechar',['EEdeclareChar',['../group__eeparams.html#gab9f9efe63e890b74575abf19fdc28a5a',1,'eeparams.h']]],
+  ['eedeclareint',['EEdeclareInt',['../group__eeparams.html#gaba865b31b2deb2acbdd0a527d9437ae8',1,'eeparams.h']]],
+  ['eedeclarelong',['EEdeclareLong',['../group__eeparams.html#ga1d8974d47600abed72dd4df2acda0421',1,'eeparams.h']]],
+  ['eedeclaremain',['EEdeclareMain',['../group__eeparams.html#gab58f2a1c4e5dcc8367def3b35bbef67d',1,'eeparams.h']]],
+  ['eereadmain',['EEreadMain',['../group__eeparams.html#gabec107a87ef3a54293b66bc05b165a59',1,'eeparams.h']]],
+  ['eewritemain',['EEwriteMain',['../group__eeparams.html#ga08e8d866816097ca4b42ddd898869077',1,'eeparams.h']]]
 ];

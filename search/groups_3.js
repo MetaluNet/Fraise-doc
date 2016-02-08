@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fraise_20device_20module',['Fraise device module',['../group__fraisedevice.html',1,'']]],
-  ['fruit_20module',['Fruit module',['../group__fruit.html',1,'']]]
+  ['eeprom_20parameters_20module',['EEPROM parameters module',['../group__eeparams.html',1,'']]]
 ];

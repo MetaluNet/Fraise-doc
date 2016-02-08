@@ -108,13 +108,13 @@ $(document).ready(function(){initNavTree('dmx_8h_source.html','');});
 <div class="title">dmx.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<a href="dmx_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *                DMX library for Fraise pic18f device</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *********************************************************************</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Author               Date        Comment</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *********************************************************************</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Antoine Rousseau  may 2012     Original.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> ********************************************************************/</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
@@ -137,19 +137,33 @@ $(document).ready(function(){initNavTree('dmx_8h_source.html','');});
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef _DMX_H_</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define _DMX_H_</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> DMXInit();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> DMXService();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> DMXSet(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channel, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // _DMX_H_</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fruit_8h.html">fruit.h</a>&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifndef DMX_NBCHAN </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="group__dmx.html#gad0e90c1017674bbd76c08cb818aa76b7">   55</a></span>&#160;<span class="preprocessor">#define DMX_NBCHAN 128 </span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__dmx.html#ga95b93e1c3190064918c14cb84c9405b1">DMXInit</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__dmx.html#gabcbf0ed962b4a99f202a91e2e89a5d1c">DMXService</a>(); </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__dmx.html#gae091668da3f370d5321850cfda6d7788">DMXSet</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channel, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif // _DMX_H_</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="ttc" id="group__dmx_html_gae091668da3f370d5321850cfda6d7788"><div class="ttname"><a href="group__dmx.html#gae091668da3f370d5321850cfda6d7788">DMXSet</a></div><div class="ttdeci">void DMXSet(unsigned int channel, unsigned char value)</div><div class="ttdoc">Set value of a DMX channel. </div></div>
+<div class="ttc" id="group__dmx_html_ga95b93e1c3190064918c14cb84c9405b1"><div class="ttname"><a href="group__dmx.html#ga95b93e1c3190064918c14cb84c9405b1">DMXInit</a></div><div class="ttdeci">void DMXInit()</div><div class="ttdoc">Init the module in setup() </div></div>
+<div class="ttc" id="fruit_8h_html"><div class="ttname"><a href="fruit_8h.html">fruit.h</a></div></div>
+<div class="ttc" id="group__dmx_html_gabcbf0ed962b4a99f202a91e2e89a5d1c"><div class="ttname"><a href="group__dmx.html#gabcbf0ed962b4a99f202a91e2e89a5d1c">DMXService</a></div><div class="ttdeci">void DMXService()</div><div class="ttdoc">Module service routine, to be called by the main loop(). </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_2514e7221305d068a75f7f25affadf1a.html">dmx</a></li><li class="navelem"><b>dmx.h</b></li>
-    <li class="footer">Generated on Fri Feb 5 2016 13:18:34 for Fraise by
+    <li class="navelem"><a class="el" href="dir_2514e7221305d068a75f7f25affadf1a.html">dmx</a></li><li class="navelem"><a class="el" href="dmx_8h.html">dmx.h</a></li>
+    <li class="footer">Generated on Mon Feb 8 2016 12:28:00 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

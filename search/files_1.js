@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eeparams_2eh',['eeparams.h',['../eeparams_8h.html',1,'']]]
+  ['dmx_2eh',['dmx.h',['../dmx_8h.html',1,'']]]
 ];

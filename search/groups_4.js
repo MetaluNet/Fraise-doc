@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['servo_20module',['Servo module',['../group__servo.html',1,'']]],
-  ['switch_20module',['Switch module',['../group__switch.html',1,'']]]
+  ['fraise_20device_20module',['Fraise device module',['../group__fraisedevice.html',1,'']]],
+  ['fruit_20module',['Fruit module',['../group__fruit.html',1,'']]]
 ];

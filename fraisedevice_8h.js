@@ -1,5 +1,7 @@
 var fraisedevice_8h =
 [
+    [ "fraiseGetInt", "group__fraisedevice.html#gaf9b08e47b6886af9d2a5d3111d54a7e2", null ],
+    [ "fraiseGetLong", "group__fraisedevice.html#ga67bcb69aecd70efb47250d905f5edc5b", null ],
     [ "GETPARAM", "group__fraisedevice.html#ga430dc6870548fce0f228b96a3de34ea4", null ],
     [ "PARAM_CHAR", "group__fraisedevice.html#gaa2f183df363c58f00fdb8e28a3da3cf5", null ],
     [ "PARAM_INT", "group__fraisedevice.html#ga3265d3e770c311b5f66190f4c567601f", null ],
