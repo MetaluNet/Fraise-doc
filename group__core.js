@@ -20,5 +20,6 @@ var group__core =
     [ "pinModeDigitalIn", "group__core.html#ga5bebb0f1e1ecef6600e9c2a422828db9", null ],
     [ "pinModeDigitalOut", "group__core.html#gac1a887376cc38d1337bdc56d009f8f96", null ],
     [ "timeISR", "group__core.html#ga89d246c8525993a8801026d81be8a953", null ],
-    [ "t_delay", "group__core.html#gaff33be5ef54d7fd826f6a14a907df285", null ]
+    [ "t_delay", "group__core.html#gaff33be5ef54d7fd826f6a14a907df285", null ],
+    [ "t_time", "group__core.html#gade18a19d166233b5890b8413c66be332", null ]
 ];

@@ -143,35 +143,39 @@ $(document).ready(function(){initNavTree('ramp_8h_source.html','');});
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define RAMP_UINCPOW 10 // 1 increment = 1024 milli-increments (mincs) = 1024x1024 micro-increments (uincs)</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structt__ramp.html">   37</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> destPos; <span class="comment">//Destination position, in incs</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> currentPos; <span class="comment">//Current position in mincs</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> maxSpeed;   <span class="comment">//Maximum absolute speed allowed to ramp generator, in minc/ms</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> speed; <span class="comment">//Consign speed computed by ramp generator, in uinc/ms</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> maxAccel ;  <span class="comment">//Maximum acceleration allowed to ramp generator, in uinc/ms/ms</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;*</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    <span class="comment">//ex: RAMP_UINCPOW=10</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="comment">// maxAccel=1 -&gt; 1 uinc/ms/ms : during 1s, speed will be increased of 1000/1024 minc/ms : </span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="comment">// it will take about 1s for speed to increase of 1 maxSpeed unity.   </span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="comment">// maxAccel=1024 -&gt; 1uinc/ms/ms:1000(uinc/ms)/s: 1.024s to reach speed 1024 (=1 inc/s)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="comment">// max 65535-&gt; about 1/16s  to reach speed 1024</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> maxDecel ;  <span class="comment">//Maximum acceleration allowed to trajectory generator, in uinc/ms/ms</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <a class="code" href="structt__ramp.html">t_ramp</a> ;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> rampInit(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> rampGoto(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp,<span class="keywordtype">int</span> pos);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> rampSetPos(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp,<span class="keywordtype">int</span> pos);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#define rampGetPos(Ramp) ((Ramp)-&gt;currentPos&gt;&gt;(RAMP_UINCPOW))</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> rampCompute(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> rampInput(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> rampDeclareEE(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define RAMP_EESIZE 6 // 4 bytes of eeprom</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif // _PID_H_</span></div>
-<div class="ttc" id="structt__ramp_html"><div class="ttname"><a href="structt__ramp.html">t_ramp</a></div><div class="ttdef"><b>Definition:</b> ramp.h:37</div></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifndef RAMP_MAXERROR </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define RAMP_MAXERROR 3 //  </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structt__ramp.html">   41</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> destPos; <span class="comment">//Destination position, in incs</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> currentPos; <span class="comment">//Current position in mincs</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> maxSpeed;   <span class="comment">//Maximum absolute speed allowed to ramp generator, in minc/ms</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> speed; <span class="comment">//Consign speed computed by ramp generator, in uinc/ms</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> maxAccel ;  <span class="comment">//Maximum acceleration allowed to ramp generator, in uinc/ms/ms</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="comment">//ex: RAMP_UINCPOW=10</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="comment">// maxAccel=1 -&gt; 1 uinc/ms/ms : during 1s, speed will be increased of 1000/1024 minc/ms : </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="comment">// it will take about 1s for speed to increase of 1 maxSpeed unity.   </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="comment">// maxAccel=1024 -&gt; 1uinc/ms/ms:1000(uinc/ms)/s: 1.024s to reach speed 1024 (=1 inc/s)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="comment">// max 65535-&gt; about 1/16s  to reach speed 1024</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> maxDecel ;  <span class="comment">//Maximum acceleration allowed to trajectory generator, in uinc/ms/ms</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;} <a class="code" href="structt__ramp.html">t_ramp</a> ;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> rampInit(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> rampGoto(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp,<span class="keywordtype">int</span> pos);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> rampSetPos(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp,<span class="keywordtype">int</span> pos);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define rampGetPos(Ramp) ((Ramp)-&gt;currentPos&gt;&gt;(RAMP_UINCPOW))</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> rampCompute(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> rampInput(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> rampDeclareEE(<a class="code" href="structt__ramp.html">t_ramp</a> *Ramp);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define RAMP_EESIZE 6 // 4 bytes of eeprom</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif // _PID_H_</span></div>
+<div class="ttc" id="structt__ramp_html"><div class="ttname"><a href="structt__ramp.html">t_ramp</a></div><div class="ttdef"><b>Definition:</b> ramp.h:41</div></div>
 <div class="ttc" id="fruit_8h_html"><div class="ttname"><a href="fruit_8h.html">fruit.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -179,7 +183,7 @@ $(document).ready(function(){initNavTree('ramp_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b252f3851b721d7dc65692dc6f41bdff.html">ramp</a></li><li class="navelem"><b>ramp.h</b></li>
-    <li class="footer">Generated on Mon Feb 8 2016 12:28:00 for Fraise by
+    <li class="footer">Generated on Wed Apr 27 2016 20:36:44 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

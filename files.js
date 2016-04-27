@@ -4,6 +4,7 @@ var files =
     [ "core", "dir_4270bfced15e0e73154b13468c7c9ad9.html", "dir_4270bfced15e0e73154b13468c7c9ad9" ],
     [ "crt", "dir_affb495f978f3575eca2eeb81eb7736b.html", "dir_affb495f978f3575eca2eeb81eb7736b" ],
     [ "dcmotor", "dir_b8f20b1aa1bf4fdd62f61a5a9d146225.html", "dir_b8f20b1aa1bf4fdd62f61a5a9d146225" ],
+    [ "dimmer", "dir_bc837ac9f422fa4f6505d48dd8442150.html", "dir_bc837ac9f422fa4f6505d48dd8442150" ],
     [ "dmx", "dir_2514e7221305d068a75f7f25affadf1a.html", "dir_2514e7221305d068a75f7f25affadf1a" ],
     [ "dmx_slave", "dir_8bc7b23acf315dc1ba8a0135c4cf94d6.html", "dir_8bc7b23acf315dc1ba8a0135c4cf94d6" ],
     [ "eeparams", "dir_2cdc7f5eaec8b1c8da82f496296eb60f.html", "dir_2cdc7f5eaec8b1c8da82f496296eb60f" ],

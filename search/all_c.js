@@ -8,6 +8,7 @@ var searchData=
   ['t_5fdelay',['t_delay',['../group__core.html#gaff33be5ef54d7fd826f6a14a907df285',1,'core.h']]],
   ['t_5fpid',['t_pid',['../structt__pid.html',1,'']]],
   ['t_5framp',['t_ramp',['../structt__ramp.html',1,'']]],
+  ['t_5ftime',['t_time',['../group__core.html#gade18a19d166233b5890b8413c66be332',1,'core.h']]],
   ['time',['time',['../group__core.html#gaef4fa67c3147686697f2d21977721983',1,'core.h']]],
   ['timeisr',['timeISR',['../group__core.html#ga89d246c8525993a8801026d81be8a953',1,'core.h']]]
 ];
