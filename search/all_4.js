@@ -20,6 +20,7 @@ var searchData=
   ['dimmer_5ftimer',['DIMMER_TIMER',['../group__dimmer.html#gae58eeea2a331a1452c21433b5701f7f4',1,'dimmer.h']]],
   ['dimmerhighinterrupt',['dimmerHighInterrupt',['../group__dimmer.html#ga47accdfe80c1bdac20edcaf388a155c8',1,'dimmer.h']]],
   ['dimmerinit',['dimmerInit',['../group__dimmer.html#ga3443d009eefcde9846dcebd9816aaf90',1,'dimmer.h']]],
+  ['dimmerlowinterrupt',['dimmerLowInterrupt',['../group__dimmer.html#gadb1c47c739cbb96bb8efcf63ce1e2528',1,'dimmer.h']]],
   ['dimmerreceive',['dimmerReceive',['../group__dimmer.html#ga44d2ecb369b187ddf809c7424d676aa7',1,'dimmer.h']]],
   ['dimmerservice',['dimmerService',['../group__dimmer.html#gac3d214c7d2e769bc2bdf8fc1bba485b3',1,'dimmer.h']]],
   ['dimmerset',['dimmerSet',['../group__dimmer.html#ga6cf4321c58981b082a7b895a0b778676',1,'dimmer.h']]],

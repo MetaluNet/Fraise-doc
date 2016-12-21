@@ -20,7 +20,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"____crt_8h_source.html"
+"____crt_8h_source.html",
+"structt__dcmotor.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

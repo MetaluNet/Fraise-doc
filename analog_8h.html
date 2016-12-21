@@ -156,10 +156,9 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Main loop functions</div></td></tr>
-<tr class="memitem:gabb4db506680cee009a835e74aa3e8bfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabb4db506680cee009a835e74aa3e8bfc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gabb4db506680cee009a835e74aa3e8bfc">analogService</a> (void)</td></tr>
-<tr class="memdesc:gabb4db506680cee009a835e74aa3e8bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module service routine, to be called by the main <a class="el" href="group__core.html#gafe461d27b9c48d5921c00d521181f12f" title="User defined forever loop. ">loop()</a>. <br /></td></tr>
-<tr class="separator:gabb4db506680cee009a835e74aa3e8bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7e374d473a52029cf642c0671b82a23"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gae7e374d473a52029cf642c0671b82a23">analogService</a> (void)</td></tr>
+<tr class="memdesc:gae7e374d473a52029cf642c0671b82a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module service routine, to be called by the main <a class="el" href="group__core.html#gafe461d27b9c48d5921c00d521181f12f" title="User defined forever loop. ">loop()</a>.  <a href="group__analog.html#gae7e374d473a52029cf642c0671b82a23">More...</a><br /></td></tr>
+<tr class="separator:gae7e374d473a52029cf642c0671b82a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7743a8028fd4078874272568412fe07"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gaa7743a8028fd4078874272568412fe07">analogSend</a> (void)</td></tr>
 <tr class="memdesc:gaa7743a8028fd4078874272568412fe07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send analog values that changed.  <a href="group__analog.html#gaa7743a8028fd4078874272568412fe07">More...</a><br /></td></tr>
 <tr class="separator:gaa7743a8028fd4078874272568412fe07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,12 +190,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Initialization</h2></td></tr>
 <tr class="memitem:ga56a024eb8ddd2403d7b5296edbaeea3e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a>(num, conn)</td></tr>
-<tr class="memdesc:ga56a024eb8ddd2403d7b5296edbaeea3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a pin for an analog channel. Assign the pin to the analog channel.  <a href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">More...</a><br /></td></tr>
+<tr class="memdesc:ga56a024eb8ddd2403d7b5296edbaeea3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a pin for an analog channel.  <a href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">More...</a><br /></td></tr>
 <tr class="separator:ga56a024eb8ddd2403d7b5296edbaeea3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1eba1f871815e56faa61de9b19201a31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga1eba1f871815e56faa61de9b19201a31">analogSelectTouch</a>(num, conn)</td></tr>
+<tr class="memdesc:ga1eba1f871815e56faa61de9b19201a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a pin for a capacitive touch channel and prepare it for capacitive measurement.  <a href="group__analog.html#ga1eba1f871815e56faa61de9b19201a31">More...</a><br /></td></tr>
+<tr class="separator:ga1eba1f871815e56faa61de9b19201a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga26be7a3a9138a48ea03dd8ae5e02a6fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga26be7a3a9138a48ea03dd8ae5e02a6fd">analogInit</a> ()</td></tr>
 <tr class="memdesc:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the module in <a class="el" href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d" title="User defined initialization. ">setup()</a> <br /></td></tr>
 <tr class="separator:ga26be7a3a9138a48ea03dd8ae5e02a6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga031970bc8117cff4bf3daf9cfbb7b491"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga031970bc8117cff4bf3daf9cfbb7b491"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga031970bc8117cff4bf3daf9cfbb7b491">analogInitTouch</a> ()</td></tr>
+<tr class="memdesc:ga031970bc8117cff4bf3daf9cfbb7b491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable capacitive touch function in <a class="el" href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d" title="User defined initialization. ">setup()</a> <br /></td></tr>
+<tr class="separator:ga031970bc8117cff4bf3daf9cfbb7b491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafd94da3c99e4984219a2e2ca49bbe920"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd94da3c99e4984219a2e2ca49bbe920"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920">analogSetMode</a> (unsigned char mode)</td></tr>
 <tr class="memdesc:gafd94da3c99e4984219a2e2ca49bbe920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the way analog values are sent (use Output mode switchs). <br /></td></tr>
@@ -208,7 +214,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_36708e6ec8f72b04185ac2a66fa5bf49.html">analog</a></li><li class="navelem"><a class="el" href="analog_8h.html">analog.h</a></li>
-    <li class="footer">Generated on Wed Apr 27 2016 20:45:41 for Fraise by
+    <li class="footer">Generated on Wed Dec 21 2016 17:47:54 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

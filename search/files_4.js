@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['servo_2eh',['servo.h',['../servo_8h.html',1,'']]],
-  ['switch_2eh',['switch.h',['../switch_8h.html',1,'']]]
+  ['hx711_2eh',['hx711.h',['../hx711_8h.html',1,'']]]
 ];

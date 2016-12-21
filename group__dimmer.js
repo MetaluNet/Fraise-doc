@@ -2,6 +2,7 @@ var group__dimmer =
 [
     [ "dimmerHighInterrupt", "group__dimmer.html#ga47accdfe80c1bdac20edcaf388a155c8", null ],
     [ "dimmerInit", "group__dimmer.html#ga3443d009eefcde9846dcebd9816aaf90", null ],
+    [ "dimmerLowInterrupt", "group__dimmer.html#gadb1c47c739cbb96bb8efcf63ce1e2528", null ],
     [ "dimmerReceive", "group__dimmer.html#ga44d2ecb369b187ddf809c7424d676aa7", null ],
     [ "dimmerService", "group__dimmer.html#gac3d214c7d2e769bc2bdf8fc1bba485b3", null ],
     [ "dimmerSet", "group__dimmer.html#ga6cf4321c58981b082a7b895a0b778676", null ],
