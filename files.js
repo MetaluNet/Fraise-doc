@@ -1,5 +1,6 @@
 var files =
 [
+    [ "ADXL345", "dir_0197a4d18ee98280cad44b59368fc22a.html", "dir_0197a4d18ee98280cad44b59368fc22a" ],
     [ "analog", "dir_36708e6ec8f72b04185ac2a66fa5bf49.html", "dir_36708e6ec8f72b04185ac2a66fa5bf49" ],
     [ "core", "dir_4270bfced15e0e73154b13468c7c9ad9.html", "dir_4270bfced15e0e73154b13468c7c9ad9" ],
     [ "crt", "dir_affb495f978f3575eca2eeb81eb7736b.html", "dir_affb495f978f3575eca2eeb81eb7736b" ],
@@ -12,9 +13,11 @@ var files =
     [ "fruit", "dir_1e95f52b3e91617b97f238a7618d836f.html", "dir_1e95f52b3e91617b97f238a7618d836f" ],
     [ "hx711", "dir_a04c8e664c4fcf3e2be00fc998314814.html", "dir_a04c8e664c4fcf3e2be00fc998314814" ],
     [ "i2c_master", "dir_4675963e583d5a3bdd86ae5f99b9c8f1.html", "dir_4675963e583d5a3bdd86ae5f99b9c8f1" ],
+    [ "PCA9655", "dir_80c1a01082b5b2f50774dca4db7e472a.html", "dir_80c1a01082b5b2f50774dca4db7e472a" ],
     [ "pid", "dir_92a1a7c0ab61b5eb55ed2567221d2809.html", "dir_92a1a7c0ab61b5eb55ed2567221d2809" ],
     [ "ramp", "dir_b252f3851b721d7dc65692dc6f41bdff.html", "dir_b252f3851b721d7dc65692dc6f41bdff" ],
     [ "servo", "dir_9e94c91128f2402217e3120e64a4fd79.html", "dir_9e94c91128f2402217e3120e64a4fd79" ],
+    [ "softpwm", "dir_fc6e712e9fa88b61b05ad43573bc1280.html", "dir_fc6e712e9fa88b61b05ad43573bc1280" ],
     [ "spimaster", "dir_96342702f031241a0493aa70a7300463.html", "dir_96342702f031241a0493aa70a7300463" ],
     [ "switch", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7.html", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7" ]
 ];

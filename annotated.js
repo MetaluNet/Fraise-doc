@@ -7,6 +7,8 @@ var annotated =
     [ "_BYTE", "union__BYTE.html", null ],
     [ "_DWORD", "union__DWORD.html", null ],
     [ "_WORD", "union__WORD.html", null ],
+    [ "ADXL345", "structADXL345.html", null ],
+    [ "PCA9655", "structPCA9655.html", null ],
     [ "t_dcmotor", "structt__dcmotor.html", null ],
     [ "t_dcmotorIncr", "uniont__dcmotorIncr.html", null ],
     [ "t_dcmotorSetting", "structt__dcmotorSetting.html", null ],

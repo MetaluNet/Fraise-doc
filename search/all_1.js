@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['adxl345',['ADXL345',['../structADXL345.html',1,'']]],
   ['amode_5fcross',['AMODE_CROSS',['../group__analog.html#ga6e4204e8c2b43935ba7a46f9de31ce5f',1,'analog.h']]],
   ['amode_5fnum',['AMODE_NUM',['../group__analog.html#ga795dd3de11c9af399ee30f86db15b980',1,'analog.h']]],
   ['amode_5fscale',['AMODE_SCALE',['../group__analog.html#ga9693fc6dab8dba34c27f2104a012b105',1,'analog.h']]],

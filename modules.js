@@ -9,5 +9,6 @@ var modules =
     [ "Fruit module", "group__fruit.html", "group__fruit" ],
     [ "Load Cell Amplifier HX711 module", "group__hx711.html", "group__hx711" ],
     [ "Servo module", "group__servo.html", "group__servo" ],
+    [ "Software PWM module", "group__softpwm.html", "group__softpwm" ],
     [ "Switch module", "group__switch.html", "group__switch" ]
 ];
