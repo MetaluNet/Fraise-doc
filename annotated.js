@@ -1,4 +1,4 @@
-var annotated_dup =
+var annotated =
 [
     [ "__ANSELZbits_t", "struct____ANSELZbits__t.html", null ],
     [ "__LATZbits_t", "union____LATZbits__t.html", null ],

@@ -23,5 +23,6 @@ var searchData=
   ['analogsend',['analogSend',['../group__analog.html#gaa7743a8028fd4078874272568412fe07',1,'analog.h']]],
   ['analogservice',['analogService',['../group__analog.html#gae7e374d473a52029cf642c0671b82a23',1,'analog.h']]],
   ['analogset',['analogSet',['../group__analog.html#gabb371086da11fd0e32bd08c4291b8bf5',1,'analog.h']]],
-  ['analogsetmode',['analogSetMode',['../group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920',1,'analog.h']]]
+  ['analogsetmode',['analogSetMode',['../group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920',1,'analog.h']]],
+  ['analogwrite',['analogWrite',['../group__core.html#gad5d942648eeaa2238a8194f5de19b5bc',1,'core.h']]]
 ];
