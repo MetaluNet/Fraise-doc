@@ -15,11 +15,16 @@ var searchData=
   ['fraisereceivechar',['fraiseReceiveChar',['../group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578',1,'fraisedevice.h']]],
   ['fraisereceivecharbroadcast',['fraiseReceiveCharBroadcast',['../group__fraisedevice.html#ga8deea340958f6bcdda456f8ee43192bb',1,'fraisedevice.h']]],
   ['fraisesend',['fraiseSend',['../group__fraisedevice.html#gaa010ccb30b28eb8d52e93c7e82e31c61',1,'fraisedevice.h']]],
+  ['fraisesendbroadcast',['fraiseSendBroadcast',['../group__fraisedevice.html#ga97d8d7cf204d6f60877a7a1a3740ceee',1,'fraisedevice.h']]],
   ['fraisesendcopy',['fraiseSendCopy',['../group__fraisedevice.html#ga1f92e9742474f4655b6cbf59c3a28df6',1,'fraisedevice.h']]],
   ['fraiseservice',['fraiseService',['../group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96',1,'fraisedevice.h']]],
   ['fruit_20module',['Fruit module',['../group__fruit.html',1,'']]],
   ['fruit_2eh',['fruit.h',['../fruit_8h.html',1,'']]],
   ['fruitinit',['fruitInit',['../group__fruit.html#gad4d26a8d262f481e6c2d09e24bae503e',1,'fruit.h']]],
   ['fruitservice',['fruitService',['../group__fruit.html#gad1150d554f7a3c1e14c3d59216844f04',1,'fruit.h']]],
+  ['force_2dsensing_20linear_20potentiometers_20module',['Force-sensing linear potentiometers module',['../group__FSLP.html',1,'']]],
+  ['fslp_2eh',['FSLP.h',['../FSLP_8h.html',1,'']]],
+  ['fslp_5fd2chan',['FSLP_D2CHAN',['../group__FSLP.html#ga019d8a019e225ffc3d4e75fccef9f80d',1,'FSLP.h']]],
+  ['fslp_5finit',['FSLP_Init',['../group__FSLP.html#gaa4906c56e3f057c4c577bdb3dde064c7',1,'FSLP.h']]],
   ['fraise_20protocol_20v_202_2e1',['Fraise Protocol v 2.1',['../md_protocol.html',1,'']]]
 ];

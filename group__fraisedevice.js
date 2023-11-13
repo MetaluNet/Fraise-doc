@@ -11,6 +11,7 @@ var group__fraisedevice =
     [ "fraiseReceiveChar", "group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578", null ],
     [ "fraiseReceiveCharBroadcast", "group__fraisedevice.html#ga8deea340958f6bcdda456f8ee43192bb", null ],
     [ "fraiseSend", "group__fraisedevice.html#gaa010ccb30b28eb8d52e93c7e82e31c61", null ],
+    [ "fraiseSendBroadcast", "group__fraisedevice.html#ga97d8d7cf204d6f60877a7a1a3740ceee", null ],
     [ "fraiseSendCopy", "group__fraisedevice.html#ga1f92e9742474f4655b6cbf59c3a28df6", null ],
     [ "fraiseService", "group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96", null ],
     [ "fraiseGetInt", "group__fraisedevice.html#gaf9b08e47b6886af9d2a5d3111d54a7e2", null ],

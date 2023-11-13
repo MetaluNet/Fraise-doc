@@ -2,6 +2,7 @@ var files =
 [
     [ "ADXL345", "dir_0197a4d18ee98280cad44b59368fc22a.html", "dir_0197a4d18ee98280cad44b59368fc22a" ],
     [ "analog", "dir_36708e6ec8f72b04185ac2a66fa5bf49.html", "dir_36708e6ec8f72b04185ac2a66fa5bf49" ],
+    [ "APDS9960", "dir_ac190077505df64a9eb37f80a39bc937.html", "dir_ac190077505df64a9eb37f80a39bc937" ],
     [ "core", "dir_4270bfced15e0e73154b13468c7c9ad9.html", "dir_4270bfced15e0e73154b13468c7c9ad9" ],
     [ "crt", "dir_affb495f978f3575eca2eeb81eb7736b.html", "dir_affb495f978f3575eca2eeb81eb7736b" ],
     [ "dcmotor", "dir_b8f20b1aa1bf4fdd62f61a5a9d146225.html", "dir_b8f20b1aa1bf4fdd62f61a5a9d146225" ],
@@ -11,13 +12,22 @@ var files =
     [ "eeparams", "dir_2cdc7f5eaec8b1c8da82f496296eb60f.html", "dir_2cdc7f5eaec8b1c8da82f496296eb60f" ],
     [ "fraisedevice", "dir_54653be0594ae4d5f14131c377adf4d3.html", "dir_54653be0594ae4d5f14131c377adf4d3" ],
     [ "fruit", "dir_1e95f52b3e91617b97f238a7618d836f.html", "dir_1e95f52b3e91617b97f238a7618d836f" ],
+    [ "fruit2fruit", "dir_ad481ced4174992431a64ca48eb4f841.html", "dir_ad481ced4174992431a64ca48eb4f841" ],
+    [ "FSLP", "dir_de8a706d72969bfbbc17cbc1a46a2e51.html", "dir_de8a706d72969bfbbc17cbc1a46a2e51" ],
     [ "hx711", "dir_a04c8e664c4fcf3e2be00fc998314814.html", "dir_a04c8e664c4fcf3e2be00fc998314814" ],
     [ "i2c_master", "dir_4675963e583d5a3bdd86ae5f99b9c8f1.html", "dir_4675963e583d5a3bdd86ae5f99b9c8f1" ],
+    [ "i2c_slave", "dir_8110339cd73e1a6c38acced3a8aaa629.html", "dir_8110339cd73e1a6c38acced3a8aaa629" ],
+    [ "kt403", "dir_38dfc48ca152af5e13ed435f332c4bed.html", "dir_38dfc48ca152af5e13ed435f332c4bed" ],
     [ "PCA9655", "dir_80c1a01082b5b2f50774dca4db7e472a.html", "dir_80c1a01082b5b2f50774dca4db7e472a" ],
+    [ "PCA9685", "dir_e3040953a8d459b4e439c8538fefe13f.html", "dir_e3040953a8d459b4e439c8538fefe13f" ],
     [ "pid", "dir_92a1a7c0ab61b5eb55ed2567221d2809.html", "dir_92a1a7c0ab61b5eb55ed2567221d2809" ],
     [ "ramp", "dir_b252f3851b721d7dc65692dc6f41bdff.html", "dir_b252f3851b721d7dc65692dc6f41bdff" ],
+    [ "RF24", "dir_ae00123db5b5581e05182e53ab3951bf.html", "dir_ae00123db5b5581e05182e53ab3951bf" ],
+    [ "rfm69", "dir_9fe6a418733da3e6a5bb1f5379999633.html", "dir_9fe6a418733da3e6a5bb1f5379999633" ],
     [ "servo", "dir_9e94c91128f2402217e3120e64a4fd79.html", "dir_9e94c91128f2402217e3120e64a4fd79" ],
     [ "softpwm", "dir_fc6e712e9fa88b61b05ad43573bc1280.html", "dir_fc6e712e9fa88b61b05ad43573bc1280" ],
     [ "spimaster", "dir_96342702f031241a0493aa70a7300463.html", "dir_96342702f031241a0493aa70a7300463" ],
-    [ "switch", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7.html", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7" ]
+    [ "switch", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7.html", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7" ],
+    [ "testarray", "dir_370fc7e55299882ba2b860624d7fa848.html", "dir_370fc7e55299882ba2b860624d7fa848" ],
+    [ "wt2003", "dir_e4f1a874451c62cea487f45de3c73bd6.html", "dir_e4f1a874451c62cea487f45de3c73bd6" ]
 ];
