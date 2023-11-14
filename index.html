@@ -110,12 +110,12 @@ $(document).ready(function(){initNavTree('index.html','');});
  <hr/>
 <h1><a href="https://github.com/MetaluNet/Fraise"><b>Fraise</b></a> is:</h1>
 <ul>
-<li>a protocol establishing a communication between multiple micro-controller boards and a host computer</li>
+<li>a protocol establishing a communication between multiple microcontroller boards and a host computer</li>
 <li>a C firmware library implementing the Fraise protocol plus various hardware-specific modules</li>
 <li>a integrated multi-platform environment hosted by <a href="http://www.puredata.info">Pure Data</a> (Pd) for interacting with Fraise boards</li>
 </ul>
 <p>Fraise boards are currently powered by Microchip's PIC18F26K22 8-bit microcontrollers, which have similar capabilities to Arduino's ATmega328.</p>
-<p>The Fraise protocol is based on asynchronous serial communication. Thanks to a carefully selected, moderate bitrate (250 kbs), the micro-controller boards can be located hundreds of meter away from the computer (400 meters total bus length), when connected through RS485 transceivers (called Fraiseivers).</p>
+<p>The Fraise protocol is based on asynchronous serial communication. Thanks to a carefully selected, moderate bitrate (250 kbs), the microcontroller boards can be located hundreds of meter away from the computer (400 meters total bus length), when connected through RS485 transceivers (called Fraiseivers).</p>
 <p>The firmware is compiled with <a href="http://sdcc.sourceforge.net">SDCC</a> and <a href="http://gputils.sourceforge.net">gputils</a>; Fraise ships with the compiler's binaries, and automates all the compilation and flashing processes from the Pd patches. </p><hr/>
 <h2>installation:</h2>
 <p>Fraise requires Pure Data version 0.54 or later.</p>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <h2>dependencies:</h2>
 <p>Fraise relies on two externals, which bring functionalities that are not (yet) supported by Pd natively:</p>
 <ul>
-<li>ggee/shell, or motex/system on Windows, to allow execution of a batch file</li>
+<li>ggee/shell, or motex/system on Windows, to allow Pd to run the compiler</li>
 <li>comport, to access USB serial devices</li>
 </ul>
 <p>These externals are included in the Fraise distribution for most platforms, so you shouldn't have to install anything.</p>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Nov 13 2023 18:00:24 for Fraise by
+    <li class="footer">Generated on Tue Nov 14 2023 12:13:49 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

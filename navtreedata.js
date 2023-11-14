@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "Fraise", "index.html", [
-    [ "Fraise Protocol v 2.1", "md_protocol.html", null ],
+    [ "Fraise Protocol v 2.1.2", "md_protocol.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
