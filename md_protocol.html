@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('md_protocol.html','');});
 <p><b>Fraise</b> is a half-duplex asynchronous serial communication protocol.</p>
 <p>Up to 126 devices (called <b>fruits</b>) can be connected to the master controller (which is called <b>pied</b>), via a common bus. The master controller is connected to a computer, usually via USB.</p>
 <p>The bitrate of the Fraise bus is currently fixed to <b>250 kbits/sec</b>.</p>
-<p>Communication is based on (1 start bit + 9 bits + 1 stop bit) words; if bit 9 is set, the 8 lower bits are considered to be an address byte, or ID, which is used to select one of the microcontrollers. ID are comprised between 1 and 126. ID 127 is reserved for future use. Words with bit 9 cleared are data bytes, which are only read by the previously addressed <b>fruit</b>.</p>
+<p>Communication is based on [1 start bit + 9 bits + 1 stop bit] words; if bit 9 is set, the 8 lower bits represent an address byte, or ID, which is used to select one of the <b>fruits</b>. ID must be between 1 and 126. ID 127 is reserved for future use. Words with bit 9 cleared are data bytes, which are read by the addressed <b>fruit</b>.</p>
 <p>Transfers occur by packets of up to 31 effective data bytes. Packets can be of two types: raw bytes or characters string.</p>
 <p>Each <b>fruit</b> stores an <b>ID</b> (8 bit) and a <b>NAME</b> (max 16 char string) in eeprom. Devices connected to the same bus are not allowed to share the same ID or NAME.</p>
 <p>In order to be renamed, a <b>fruit</b> should be connected alone to the bus. For any other operation, all <b>fruits</b> can be connected together to the bus.</p>
@@ -116,30 +116,30 @@ $(document).ready(function(){initNavTree('md_protocol.html','');});
 <p>Normal communications use ID to access the <b>fruit</b>.</p>
 <h2>Pied-to-fruit communication </h2>
 <h3>normal output</h3>
-<p>The <b>pied</b> initiates transmission by sending the <b>fruit</b> ID byte with bit 9 on, followed by a length byte (with possibly bit 8 set to signal a string packet). The message continues with the data bytes, then ends with a checksum byte. The <b>fruit</b> acknowledges the packet by sending a ’0’ byte.</p>
+<p>The <b>pied</b> initiates transmission by sending the <b>fruit</b> ID byte with bit 9 on, followed by a length byte where bit 8 is set if the packet is a string packet. The message continues with the data bytes, then ends with a checksum byte. The <b>fruit</b> acknowledges the packet by sending a null byte.</p>
 <p>(in this chapter, # means next character has bit 9 set)</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: #NLD(...)DS</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;- #N = fruit ID + bit9</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;- L = 128*c + l: bit8 = c = packet is character string, l = number of following data bytes (31 max).</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;- D(...)D = l data bytes.</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;- S = -sum (modulo 256) of all bytes before S (N+L+D+...+D).</div></div><!-- fragment --><p><b>Fruit</b> number N must acknowledge the packet returning <code>0</code> in less than 1 millisecond, or returns <code>1</code> to signal a checksum error.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: #NLD(...)DS</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;- #N = fruit ID + bit9</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;- L = 128 * c + l:  c (bit8) = packet is character string, l = number of following data bytes (31 max).</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;- D(...)D = l data bytes.</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;- S = -sum (modulo 256) of all bytes before S (N+L+D+...+D).</div></div><!-- fragment --><p><b>Fruit</b> number N must acknowledge the packet returning <code>0</code> in less than 1 millisecond, or returns <code>1</code> to signal a checksum error.</p>
 <h3>broadcast output</h3>
-<p>If ID is 0, then all the <b>fruits</b> decode the packet; no <b>fruit</b> has to acknowledge.</p>
-<p>Special broadcast commands are provided to assign a <b>fruit</b> to an ID, or to establish a 8 bits communication for bootloader purpose. The first data byte is the broadcast command:</p>
+<p>If ID is 0, all the <b>fruits</b> decode the packet; no <b>fruit</b> has to acknowledge.</p>
+<p>Special broadcast commands are provided to assign an ID to a <b>fruit</b>, or to establish a 8 bits communication for bootloader purpose. The first data byte is the broadcast command:</p>
 <ul>
 <li><code>’I’</code> = all reInit</li>
-<li><code>’F’ + NAME</code> = tell the <b>fruit</b> called NAME to switch to bootloader. Note: the <b>fruit</b> always boots in bootloader mode, and jumps to application after 1 second or as soon as it receives a byte with bit 9 set.</li>
-<li><code>’N’ + ID + NAME</code> = assign <b>fruit</b> NAME to an ID Number (1 to 127); here ID is written in hexadecimal ascii e.g: "N10Fruit" -&gt; <b>fruit</b> called "Fruit" is given ID = 16.</li>
+<li><code>’F’ + NAME</code> = tell the <b>fruit</b> called NAME to switch to bootloader. Note: the <b>fruit</b> also boots in bootloader mode, and jumps to application after 1 second or as soon as it receives a byte with bit 9 set.</li>
+<li><code>’N’ + ID + NAME</code> = assign ID (1 to 127) to <b>fruit</b> NAME; here ID is written in hexadecimal ascii e.g: "N0AFruit" -&gt; <b>fruit</b> named "Fruit" is given ID = 10.</li>
 <li><code>’B’</code> = broadcast string</li>
 <li><code>’b’</code> = broadcast raw bytes</li>
 </ul>
 <p>'B' and 'b' broadcast messages can be used by the user application (e.g to send a global clock).</p>
 <h2>Fruit-to-pied communication </h2>
-<p><b>Fruits</b> are polled sequentially, between transmissions of pied-to-fruits packets. The <b>pied</b> initiates transmission: The first byte is the ID of tested <b>fruit</b>, with bit 9 set to signal a start byte, and bit 8 set to signal a poll message. Then ID + 128 is repeated with bit 9 cleared, in order to secure addressing. If the <b>fruit</b> has nothing to transmit, it returns ’0’. Otherwise it sends a packet, which is acknowledged by the <b>pied</b>.</p>
+<p><b>Fruits</b> are polled sequentially, between transmissions of pied-to-fruits packets. The <b>pied</b> initiates transmission: The first byte is the ID of tested <b>fruit</b>, with bit 9 set to signal a start byte, and bit 8 set to signal a poll message. Then ID + 128 is repeated with bit 9 cleared, in order to secure addressing. If the <b>fruit</b> has nothing to transmit, it returns a null byte. Otherwise it sends a packet, which is acknowledged by the <b>pied</b>.</p>
 <p>(# means next character has bit 9 set)</p>
 <h3>polling for input</h3>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: #MM</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;- #M = fruit ID + bit8(128) + bit9 (M = #M - bit9)</div></div><!-- fragment --><p><b>Fruit</b> number ID must answer before 1 ms.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: #MM</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;- #M = fruit ID + bit8(128) + bit9</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;-  M = fruit ID + bit8(128)</div></div><!-- fragment --><p><b>Fruit</b> number ID must answer before 1 ms.</p>
 <h3>fruit answer</h3>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: LD(...)DS</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;- L = 128 * c + l: bit8 = c = packet is character string, l = number of following data bytes (31 max).</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;- D(...)D = l data bytes.</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;- S = -sum (modulo 256) of all bytes before S (L + D + ... + D).</div></div><!-- fragment --><p>The <b>pied</b> then returns ’0’ to acknowledge the packet, or ’1’ to signal a checksum error.</p>
-<h3>fruit nop answer</h3>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: 0 (one null byte)</div></div><!-- fragment --><p> No checksum byte in this case, nor acknowledge from the <b>pied</b>.</p>
-<h2>Bootloder communication </h2>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: LD(...)DS</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;- L = 128 * c + l: c (bit8) = packet is character string, l = number of following data bytes (31 max).</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;- D(...)D = l data bytes.</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;- S = -sum (modulo 256) of all bytes before S (L + D + ... + D).</div></div><!-- fragment --><p>The <b>pied</b> then returns <code>0</code> to acknowledge the packet, or <code>1</code> to signal a checksum error.</p>
+<h3>fruit "nothing to report" answer</h3>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;packet: 0 (one null byte)</div></div><!-- fragment --><p> No checksum byte in this case; the <b>pied</b> does not have to acknowledge.</p>
+<h2>Bootloader communication </h2>
 <p>Bit 9 is always cleared. Bootloader packets start with the number of following bytes (length byte). The last byte is the checksum (the sum of all bytes including length and checksum, modulo 256, must be zero). The first byte after the length byte indicates the command:</p>
 <ul>
 <li><code>’R’</code> = rename command: message must be "RENAME:" + NAME; <b>fruit</b> answers <code>’R’</code>.</li>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('md_protocol.html','');});
 <li><code>’A’</code> = goto Application (quit bootloader).</li>
 </ul>
 <p>After 100ms without receiving anything from the <b>pied</b>, the <b>fruit</b> discards waiting received bytes, and next received byte will start a new line.</p>
-<p>The <b>fruit</b> initially boots to bootloader mode; bootloader switches to application:</p><ul>
+<p>The <b>fruit</b> initially boots in bootloader mode; bootloader switches to application:</p><ul>
 <li>when it receives a ’A’</li>
 <li>or when it receives an non-zero address byte (bit 9 on)</li>
 <li>or 1 second after power-up if it has not been verified. <hr/>
@@ -165,24 +165,32 @@ $(document).ready(function(){initNavTree('md_protocol.html','');});
 <p>The <b>pied</b> is connected to the host computer via USB.</p>
 <p>(here * means byte has bit 9 set)</p>
 <h3>output to fruit</h3>
+<p>The host sends an addressed message to the <b>pied</b>, which forward it to the <b>fruit</b>.</p>
 <p><code>"0100\\n" -&gt; *0x01 0x01 0x00 0xFE</code>: send 0 to <b>fruit</b> ID 1. <code>"81Hi\\n" -&gt; *0x01 0x82 0x48 0x69 0xCC</code>: send "Hi" to <b>fruit</b> ID 1.</p>
-<p>The <b>pied</b> answers to host <code>"sTnn\\n"</code> if <b>fruit</b> nn didn’t answer (timeout), or <code>"sann\\n"</code> if it refused to acknowledge the packet (packet error or buffer full).</p>
+<p>The <b>pied</b> reports errors to the host:</p><ul>
+<li><code>"sTnn\\n"</code> if <b>fruit</b> nn didn’t answer (timeout)</li>
+<li><code>"sann\\n"</code> if the <b>fruit</b> refused to acknowledge the packet (packet error or buffer full).</li>
+</ul>
 <h3>broadcast output</h3>
-<p><code>"!BI\\n" -&gt; *0x00 0x82 0x42 0x49 0xF3</code>: send "I" to all <b>fruits</b>. <code>"!b00\\n" -&gt; *0x00 0x01 0x00 0xFF</code>: send 0 to all <b>fruits</b>.</p>
+<p>The host can ask the <b>pied</b> to send a message to all the <b>fruits</b>:</p>
+<p><code>"!BI\\n" -&gt; *0x00 0x82 0x42 0x49 0xF3</code>: send "I" to all <b>fruits</b> ("string" message). <code>"!b00\\n" -&gt; *0x00 0x01 0x00 0xFF</code>: send 0 to all <b>fruits</b> ("raw bytes" message).</p>
 <h3>polling for input</h3>
-<p><code>"#S04\\n"</code>: set polling for <b>fruit</b> ID 4 <code>"#C04\\n"</code>: clear polling for <b>fruit</b> ID 4</p>
-<p>polling: with 0xmm = (0xnn | 0x80), periodically send *0xmm 0xmm, then wait for answer from <b>fruit</b> nn.</p>
-<p>When <b>fruit</b> nn answers for the first time, print to USB: <code>"sCnn\\n"</code> (<b>fruit</b> nn is connected). When <b>fruit</b> nn stops answering, print to USB: <code>"scnn\\n"</code>.</p>
+<p>The host can enable or not the active polling of each fruit.</p>
+<p><code>"#S04\\n"</code>: start polling <b>fruit</b> ID 4 <code>"#C04\\n"</code>: stop polling <b>fruit</b> ID 4</p>
+<p>When <b>fruit</b> nn answers for the first time, the <b>pied</b> sends to USB: <code>"sCnn\\n"</code> (meaning: <b>fruit</b> nn is now connected). When <b>fruit</b> nn stops answering, the <b>pied</b> sends to USB: <code>"scnn\\n"</code>.</p>
 <p>If the <b>pied</b> received a corrupted packet from <b>fruit</b> nn (checksum error), it signals this error by <code>"sxnn\\n"</code>.</p>
-<p>When the <b>pied</b> receives a packet from <b>fruit</b> nn, it transmits it to host prefixed with "NN", where NN equals to nn, plus 0x80 if message is a character string.</p>
+<p>When the <b>pied</b> successfully receives a packet from <b>fruit</b> nn, it forwards it to host prefixed with "NN", where NN equals to nn, plus 0x80 if the message is a character string.</p>
 <h3>control</h3>
-<p><code>"!N04Fruit1\\n"</code>: assign to fruit called "Fruit1" ID 04. <code>"#i\\n"</code>: reinit the <b>pied</b> (clears polling for all <b>fruits</b>). <code>"#V\\n"</code>: query the firmware version of the <b>pied</b>, which answers (currently) <code>"#V UsbFraise 2.1.6 (SpareTimeLabs/SDCC) A.Rousseau 2023\\n"</code> <code>"#R\\n"</code>: query the piedID (usually 1), the <b>pied</b> answers <code>"#ID01\\n"</code> <code>"#UNLOCK\\n"</code>: allow setting the piedID (which must be the next command) <code>"#W02\\n"</code>: set the piedID to 2</p>
+<p><code>"!N04Fruit1\\n"</code>: assign ID 04 to fruit called "Fruit1". <code>"#i\\n"</code>: reinit the <b>pied</b> (clears polling for all <b>fruits</b>). <code>"#V\\n"</code>: query the firmware version of the <b>pied</b>, which answers (currently) <code>"#V UsbFraise 2.1.6 (SpareTimeLabs/SDCC) A.Rousseau 2023\\n"</code> <code>"#R\\n"</code>: query the piedID (usually 1), the <b>pied</b> answers <code>"#ID01\\n"</code> <code>"#UNLOCK\\n"</code>: allow setting the piedID (which must be the next command) <code>"#W02\\n"</code>: set the piedID to 2</p>
 <p>The piedID allows to distinguish several pieds connected to several USB ports.</p>
 <h3>bootloader mode</h3>
 <p><code>"!FFruit1\\n"</code>: ask "Fruit1" to jump to bootloader.</p>
-<p>Additionnaly, the <b>pied</b> switches to bootloading mode: it transmits directly every line (’<br />
-’ terminated, must not begin with "#" or "!") from host to the bus, then listens to the bus for any answer from the <b>fruit</b>, and puts this answer back to host, adding the 'b' character at the beginning of each line.</p>
-<p><code>"RENAME:Fruit1\\n"</code>: rename "Fruit1" ALL (!!!) connected <b>fruits</b> being in bootloader mode (that's why a single <b>fruit</b> should be connected before doing this). <code>"A\\n"</code>: ask the <b>fruit</b> to run Application (quit bootloader mode) <code>"#F\\n"</code>: ask the <b>pied</b> to quit bootloading mode</p>
+<p>Additionnaly, the <b>pied</b> switches to bootloading mode: it forwards directly every line (’<br />
+’ terminated, must not begin with "#" or "!") from the host to the bus, then listens to the bus for any answer from the <b>fruit</b>, and puts this answer back to host, adding the 'b' character at the beginning of each line.</p>
+<p>Example messages to bootloader:</p>
+<p><code>"RENAME:Fruit1\\n"</code>: rename "Fruit1" ALL (!!!) connected <b>fruits</b> being in bootloader mode (that's why a single <b>fruit</b> should be connected before doing this). <code>"A\\n"</code>: ask the <b>fruit</b> to run Application (quit bootloader mode)</p>
+<p>Quit bootloading mode:</p>
+<p><code>"#F\\n"</code>: ask the <b>pied</b> to quit bootloading mode</p>
 <h3>logging</h3>
 <p>The <b>pied</b> can send informational messages to the USB host, for debugging purpose. Each log line if prefixed with the 'l' character. </p><hr/>
 <p> LICENSE: CC-BY-ND This document is placed under the terms of the Creative Commons Attribution-NoDerivatives 4.0 International Public License <a href="http://creativecommons.org/licenses/by-nd/4.0/legalcode">http://creativecommons.org/licenses/by-nd/4.0/legalcode</a> </p>
@@ -191,7 +199,7 @@ $(document).ready(function(){initNavTree('md_protocol.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Nov 14 2023 12:13:49 for Fraise by
+    <li class="footer">Generated on Wed Nov 15 2023 09:50:13 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>
