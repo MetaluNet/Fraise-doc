@@ -1,4 +1,4 @@
-var files =
+var files_dup =
 [
     [ "ADXL345", "dir_0197a4d18ee98280cad44b59368fc22a.html", "dir_0197a4d18ee98280cad44b59368fc22a" ],
     [ "analog", "dir_36708e6ec8f72b04185ac2a66fa5bf49.html", "dir_36708e6ec8f72b04185ac2a66fa5bf49" ],
@@ -28,6 +28,5 @@ var files =
     [ "softpwm", "dir_fc6e712e9fa88b61b05ad43573bc1280.html", "dir_fc6e712e9fa88b61b05ad43573bc1280" ],
     [ "spimaster", "dir_96342702f031241a0493aa70a7300463.html", "dir_96342702f031241a0493aa70a7300463" ],
     [ "switch", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7.html", "dir_9b521ebbbaa271c08ea5f7ea5f4645b7" ],
-    [ "testarray", "dir_370fc7e55299882ba2b860624d7fa848.html", "dir_370fc7e55299882ba2b860624d7fa848" ],
     [ "wt2003", "dir_e4f1a874451c62cea487f45de3c73bd6.html", "dir_e4f1a874451c62cea487f45de3c73bd6" ]
 ];
