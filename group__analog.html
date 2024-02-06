@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('group__analog.html',''); initResizable
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Analog module</div>  </div>
+<div class="title">Analog module<div class="ingroups"><a class="el" href="group__pic.html">PIC18F modules</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('group__analog.html',''); initResizable
 <a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>Automates the use of analog input pins. </p>
-<p>Example : </p><div class="fragment"><div class="line"><span class="comment">/*********************************************************************</span></div>
+<p>Example: </p><div class="fragment"><div class="line"><span class="comment">/*********************************************************************</span></div>
 <div class="line"><span class="comment"> *               analog example for Versa1.0</span></div>
 <div class="line"><span class="comment"> *  Analog capture on connectors K1, K2, K3 and K5. </span></div>
 <div class="line"><span class="comment"> *********************************************************************/</span></div>
@@ -169,21 +169,20 @@ Settings to put in config.h</h2></td></tr>
 <tr class="separator:ga63bf442111d34ae45ade940394e5e579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="memItemLeft" align="right" valign="top"><a id="ga804766c5ede2eb9b8db2cc6c667f96d2"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga804766c5ede2eb9b8db2cc6c667f96d2">ANALOG_THRESHOLD</a></td></tr>
-<tr class="memdesc:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 7 : don't send an analog channel until it differs from last sent value by more than ANALOG_THRESHOLD. <br /></td></tr>
+<tr class="memdesc:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 7: don't send an analog channel until it differs from last sent value by more than ANALOG_THRESHOLD. <br /></td></tr>
 <tr class="separator:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e5a7060d3149c037996116a5ec35113"><td class="memItemLeft" align="right" valign="top"><a id="ga4e5a7060d3149c037996116a5ec35113"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga4e5a7060d3149c037996116a5ec35113">ANALOG_MINMAX_MARGIN</a></td></tr>
-<tr class="memdesc:ga4e5a7060d3149c037996116a5ec35113"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 100 : increase the minimum measured value by this amount (and decrease max value) for scaling output. <br /></td></tr>
+<tr class="memdesc:ga4e5a7060d3149c037996116a5ec35113"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 100: increase the minimum measured value by this amount (and decrease max value) for scaling output. <br /></td></tr>
 <tr class="separator:ga4e5a7060d3149c037996116a5ec35113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="memItemLeft" align="right" valign="top"><a id="ga93869506ec8c0797cf619ff4c1a9ff66"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga93869506ec8c0797cf619ff4c1a9ff66">ANALOG_SCALED_MAX</a></td></tr>
-<tr class="memdesc:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 16383 : maximum scaled output value. <br /></td></tr>
+<tr class="memdesc:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 16383: maximum scaled output value. <br /></td></tr>
 <tr class="separator:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Output mode switchs</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp79a247af1958dafe2ce83c31b5207dca"></a><br  />
- The different mode switchs can be OR-ed together and passed to <a class="el" href="group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920" title="Configure the way analog values are sent by analogSend() (use Output mode switchs).">analogSetMode()</a>. <br  />
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp79a247af1958dafe2ce83c31b5207dca"></a>The different mode switchs can be OR-ed together and passed to <a class="el" href="group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920" title="Configure the way analog values are sent by analogSend() (use Output mode switchs).">analogSetMode()</a>. <br  />
  Default is AMODE_NUM. </p>
 </td></tr>
 <tr class="memitem:ga2d0fba01d8c744b4cf37472a161fea2e"><td class="memItemLeft" align="right" valign="top"><a id="ga2d0fba01d8c744b4cf37472a161fea2e"></a>
@@ -198,12 +197,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>analogSelectAdcTouch<
 <tr class="separator:ga9693fc6dab8dba34c27f2104a012b105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga795dd3de11c9af399ee30f86db15b980"><td class="memItemLeft" align="right" valign="top"><a id="ga795dd3de11c9af399ee30f86db15b980"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga795dd3de11c9af399ee30f86db15b980">AMODE_NUM</a></td></tr>
-<tr class="memdesc:ga795dd3de11c9af399ee30f86db15b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send values in a raw (numerical) message, parsed by analog/parse.pd patch. Otherwise send text messages : "A channel value". <br /></td></tr>
+<tr class="memdesc:ga795dd3de11c9af399ee30f86db15b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send values in a raw (numerical) message, parsed by analog/parse.pd patch. Otherwise send text messages: "A channel value". <br /></td></tr>
 <tr class="separator:ga795dd3de11c9af399ee30f86db15b980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="memItemLeft" align="right" valign="top"><a id="ga6e4204e8c2b43935ba7a46f9de31ce5f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga6e4204e8c2b43935ba7a46f9de31ce5f">AMODE_CROSS</a></td></tr>
-<tr class="memdesc:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossing mode. <br  />
- If channel value has been set (see <a class="el" href="group__analog.html#gabb371086da11fd0e32bd08c4291b8bf5" title="Set the value of a channel (to be used in conjunction with AMODE_CROSS).">analogSet()</a> ), wait for the measurement value to cross the set value before sending value updates. <br /></td></tr>
+<tr class="memdesc:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossing mode. If channel value has been set (see <a class="el" href="group__analog.html#gabb371086da11fd0e32bd08c4291b8bf5" title="Set the value of a channel (to be used in conjunction with AMODE_CROSS).">analogSet()</a> ), wait for the measurement value to cross the set value before sending value updates. <br /></td></tr>
 <tr class="separator:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae75da49d13f2d3f1c7ea0f02d44cded7"><td class="memItemLeft" align="right" valign="top"><a id="gae75da49d13f2d3f1c7ea0f02d44cded7"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>analogSelectTouch_</b>(num,  adchan,  port,  bit)</td></tr>
@@ -286,8 +284,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scaling</td><td>1:start 0:stop <br  />
- First use analogScaling(1) to start calibration, which will measure the minimum and maximum values for each channel ; then stop calibration with analogScaling(0). <br  />
- </td></tr>
+ First use analogScaling(1) to start calibration, which will measure the minimum and maximum values for each channel; then stop calibration with analogScaling(0). </td></tr>
   </table>
   </dd>
 </dl>
@@ -368,8 +365,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num</td><td>Number of the channel (first channel = 0) </td></tr>
-    <tr><td class="paramname">conn</td><td>Symbol of the pin (example : K1 for connector 1) <br  />
- </td></tr>
+    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
   </table>
   </dd>
 </dl>
@@ -406,8 +402,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num</td><td>Number of the channel (first channel = 0) </td></tr>
-    <tr><td class="paramname">conn</td><td>Symbol of the pin (example : K1 for connector 1) <br  />
- </td></tr>
+    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
   </table>
   </dd>
 </dl>
@@ -417,14 +412,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__analog_html_gae7e374d473a52029cf642c0671b82a23"><div class="ttname"><a href="group__analog.html#gae7e374d473a52029cf642c0671b82a23">analogService</a></div><div class="ttdeci">unsigned char analogService(void)</div><div class="ttdoc">Module service routine, to be called by the main loop().</div></div>
-<div class="ttc" id="agroup__core_html_ga8e46db3181b83e00e99f2e0f9b422637"><div class="ttname"><a href="group__core.html#ga8e46db3181b83e00e99f2e0f9b422637">digitalWrite</a></div><div class="ttdeci">#define digitalWrite(conn, val)</div><div class="ttdoc">Digital write to pin. Set the pin output voltage to LOW or HIGH.</div><div class="ttdef"><b>Definition:</b> core.h:157</div></div>
+<div class="ttc" id="agroup__core_html_ga8e46db3181b83e00e99f2e0f9b422637"><div class="ttname"><a href="group__core.html#ga8e46db3181b83e00e99f2e0f9b422637">digitalWrite</a></div><div class="ttdeci">#define digitalWrite(conn, val)</div><div class="ttdoc">Digital write to pin. Set the pin output voltage to LOW or HIGH.</div><div class="ttdef"><b>Definition:</b> core.h:162</div></div>
 <div class="ttc" id="agroup__core_html_gafe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="group__core.html#gafe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">User defined forever loop.</div></div>
 <div class="ttc" id="agroup__fruit_html_gad4d26a8d262f481e6c2d09e24bae503e"><div class="ttname"><a href="group__fruit.html#gad4d26a8d262f481e6c2d09e24bae503e">fruitInit</a></div><div class="ttdeci">void fruitInit(void)</div><div class="ttdoc">Init fruit module at setup().</div></div>
-<div class="ttc" id="agroup__core_html_gaff33be5ef54d7fd826f6a14a907df285"><div class="ttname"><a href="group__core.html#gaff33be5ef54d7fd826f6a14a907df285">t_delay</a></div><div class="ttdeci">unsigned long t_delay</div><div class="ttdoc">Delay type.</div><div class="ttdef"><b>Definition:</b> core.h:210</div></div>
-<div class="ttc" id="agroup__core_html_ga148309384b56081a2556b95c6dfcad00"><div class="ttname"><a href="group__core.html#ga148309384b56081a2556b95c6dfcad00">digitalClear</a></div><div class="ttdeci">#define digitalClear(conn)</div><div class="ttdoc">Digital clear pin. Clear the pin output voltage.</div><div class="ttdef"><b>Definition:</b> core.h:163</div></div>
+<div class="ttc" id="agroup__core_html_gaff33be5ef54d7fd826f6a14a907df285"><div class="ttname"><a href="group__core.html#gaff33be5ef54d7fd826f6a14a907df285">t_delay</a></div><div class="ttdeci">unsigned long t_delay</div><div class="ttdoc">Delay type.</div><div class="ttdef"><b>Definition:</b> core.h:215</div></div>
+<div class="ttc" id="agroup__core_html_ga148309384b56081a2556b95c6dfcad00"><div class="ttname"><a href="group__core.html#ga148309384b56081a2556b95c6dfcad00">digitalClear</a></div><div class="ttdeci">#define digitalClear(conn)</div><div class="ttdoc">Digital clear pin. Clear the pin output voltage.</div><div class="ttdef"><b>Definition:</b> core.h:168</div></div>
 <div class="ttc" id="agroup__analog_html_ga26be7a3a9138a48ea03dd8ae5e02a6fd"><div class="ttname"><a href="group__analog.html#ga26be7a3a9138a48ea03dd8ae5e02a6fd">analogInit</a></div><div class="ttdeci">void analogInit()</div><div class="ttdoc">Init the module in setup()</div></div>
 <div class="ttc" id="agroup__fraisedevice_html_gac350dfd6b80ed990c4790a72f2172fb5"><div class="ttname"><a href="group__fraisedevice.html#gac350dfd6b80ed990c4790a72f2172fb5">fraiseGetLen</a></div><div class="ttdeci">unsigned char fraiseGetLen()</div><div class="ttdoc">Get total length of current receive packet.</div></div>
-<div class="ttc" id="agroup__analog_html_ga1eba1f871815e56faa61de9b19201a31"><div class="ttname"><a href="group__analog.html#ga1eba1f871815e56faa61de9b19201a31">analogSelectTouch</a></div><div class="ttdeci">#define analogSelectTouch(num, conn)</div><div class="ttdoc">Select a pin for a capacitive touch channel and prepare it for capacitive measurement.</div><div class="ttdef"><b>Definition:</b> analog.h:114</div></div>
+<div class="ttc" id="agroup__analog_html_ga1eba1f871815e56faa61de9b19201a31"><div class="ttname"><a href="group__analog.html#ga1eba1f871815e56faa61de9b19201a31">analogSelectTouch</a></div><div class="ttdeci">#define analogSelectTouch(num, conn)</div><div class="ttdoc">Select a pin for a capacitive touch channel and prepare it for capacitive measurement.</div><div class="ttdef"><b>Definition:</b> analog.h:116</div></div>
 <div class="ttc" id="agroup__analog_html_gaa7743a8028fd4078874272568412fe07"><div class="ttname"><a href="group__analog.html#gaa7743a8028fd4078874272568412fe07">analogSend</a></div><div class="ttdeci">char analogSend(void)</div><div class="ttdoc">Send analog values that changed.</div></div>
 <div class="ttc" id="afruit_8h_html"><div class="ttname"><a href="fruit_8h.html">fruit.h</a></div></div>
 <div class="ttc" id="agroup__fraisedevice_html_ga1ad12856b1ed8ea8e59ea07933bdef96"><div class="ttname"><a href="group__fraisedevice.html#ga1ad12856b1ed8ea8e59ea07933bdef96">fraiseService</a></div><div class="ttdeci">void fraiseService(void)</div><div class="ttdoc">Fraise device service routine.</div></div>
@@ -432,15 +427,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <div class="ttc" id="agroup__analog_html_ga031970bc8117cff4bf3daf9cfbb7b491"><div class="ttname"><a href="group__analog.html#ga031970bc8117cff4bf3daf9cfbb7b491">analogInitTouch</a></div><div class="ttdeci">void analogInitTouch()</div><div class="ttdoc">Enable capacitive touch function in setup()</div></div>
 <div class="ttc" id="agroup__core_html_ga4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">User defined initialization.</div></div>
 <div class="ttc" id="agroup__fraisedevice_html_gacd91c5d015a4db38a3ec29ed37cc43e3"><div class="ttname"><a href="group__fraisedevice.html#gacd91c5d015a4db38a3ec29ed37cc43e3">fraiseGetChar</a></div><div class="ttdeci">unsigned char fraiseGetChar()</div><div class="ttdoc">Get next char from receive buffer.</div></div>
-<div class="ttc" id="agroup__core_html_gac1a887376cc38d1337bdc56d009f8f96"><div class="ttname"><a href="group__core.html#gac1a887376cc38d1337bdc56d009f8f96">pinModeDigitalOut</a></div><div class="ttdeci">#define pinModeDigitalOut(conn)</div><div class="ttdoc">Set pin mode to Digital Output.</div><div class="ttdef"><b>Definition:</b> core.h:137</div></div>
-<div class="ttc" id="agroup__analog_html_ga56a024eb8ddd2403d7b5296edbaeea3e"><div class="ttname"><a href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a></div><div class="ttdeci">#define analogSelect(num, conn)</div><div class="ttdoc">Select a pin for an analog channel.</div><div class="ttdef"><b>Definition:</b> analog.h:107</div></div>
-<div class="ttc" id="agroup__core_html_ga7955b3465200292e039dd5419b2e3296"><div class="ttname"><a href="group__core.html#ga7955b3465200292e039dd5419b2e3296">delayFinished</a></div><div class="ttdeci">#define delayFinished(delay)</div><div class="ttdoc">Test delay timeout.</div><div class="ttdef"><b>Definition:</b> core.h:220</div></div>
-<div class="ttc" id="agroup__core_html_gaf4d36dd239e15caa010aa39d68935220"><div class="ttname"><a href="group__core.html#gaf4d36dd239e15caa010aa39d68935220">delayStart</a></div><div class="ttdeci">#define delayStart(delay, micros)</div><div class="ttdoc">Start delay.</div><div class="ttdef"><b>Definition:</b> core.h:215</div></div>
+<div class="ttc" id="agroup__core_html_gac1a887376cc38d1337bdc56d009f8f96"><div class="ttname"><a href="group__core.html#gac1a887376cc38d1337bdc56d009f8f96">pinModeDigitalOut</a></div><div class="ttdeci">#define pinModeDigitalOut(conn)</div><div class="ttdoc">Set pin mode to Digital Output.</div><div class="ttdef"><b>Definition:</b> core.h:142</div></div>
+<div class="ttc" id="agroup__analog_html_ga56a024eb8ddd2403d7b5296edbaeea3e"><div class="ttname"><a href="group__analog.html#ga56a024eb8ddd2403d7b5296edbaeea3e">analogSelect</a></div><div class="ttdeci">#define analogSelect(num, conn)</div><div class="ttdoc">Select a pin for an analog channel.</div><div class="ttdef"><b>Definition:</b> analog.h:109</div></div>
+<div class="ttc" id="agroup__core_html_ga7955b3465200292e039dd5419b2e3296"><div class="ttname"><a href="group__core.html#ga7955b3465200292e039dd5419b2e3296">delayFinished</a></div><div class="ttdeci">#define delayFinished(delay)</div><div class="ttdoc">Test delay timeout.</div><div class="ttdef"><b>Definition:</b> core.h:225</div></div>
+<div class="ttc" id="agroup__core_html_gaf4d36dd239e15caa010aa39d68935220"><div class="ttname"><a href="group__core.html#gaf4d36dd239e15caa010aa39d68935220">delayStart</a></div><div class="ttdeci">#define delayStart(delay, micros)</div><div class="ttdoc">Start delay.</div><div class="ttdef"><b>Definition:</b> core.h:220</div></div>
 <div class="ttc" id="agroup__fraisedevice_html_ga775c68de5e41fa1a51d980da2f050578"><div class="ttname"><a href="group__fraisedevice.html#ga775c68de5e41fa1a51d980da2f050578">fraiseReceiveChar</a></div><div class="ttdeci">void fraiseReceiveChar()</div><div class="ttdoc">String message to this device.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 15 2023 12:57:06 for Fraise by
+    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

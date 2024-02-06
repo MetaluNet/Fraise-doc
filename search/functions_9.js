@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['time_347',['time',['../group__core.html#gaef4fa67c3147686697f2d21977721983',1,'core.h']]]
+  ['producer_5fpool_5fgive_5fbuffer_5fdefault_493',['producer_pool_give_buffer_default',['../group__pico__audio.html#ga304a459a2753dc6188ff6b3c6c45d4b5',1,'audio.h']]],
+  ['producer_5fpool_5ftake_5fbuffer_5fdefault_494',['producer_pool_take_buffer_default',['../group__pico__audio.html#gaa9aa812fb866c937fe0e5482780acc24',1,'audio.h']]]
 ];

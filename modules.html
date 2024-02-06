@@ -89,20 +89,28 @@ $(document).ready(function(){initNavTree('modules.html',''); initResizable(); })
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here is a list of all modules:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__analog.html" target="_self">Analog module</a></td><td class="desc">Automates the use of analog input pins </td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__core.html" target="_self">Core module</a></td><td class="desc">Core module implements eeprom, pins and time </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__dimmer.html" target="_self">Dimmer module</a></td><td class="desc">8 channels AC dimmer </td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__dmx.html" target="_self">DMX master module</a></td><td class="desc">Example : </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__eeparams.html" target="_self">EEPROM parameters module</a></td><td class="desc">Save parameters values into EEPROM, and load them at setup </td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__fraisedevice.html" target="_self">Fraise device module</a></td><td class="desc">Implements Fraise device protocol on the serial device </td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__fruit.html" target="_self">Fruit module</a></td><td class="desc">Fruit module implements <a class="el" href="group__core.html">Core module</a>, <a class="el" href="group__fraisedevice.html">Fraise device module</a> and <a class="el" href="group__eeparams.html">EEPROM parameters module</a> </td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__FSLP.html" target="_self">Force-sensing linear potentiometers module</a></td><td class="desc">Example : </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__hx711.html" target="_self">Load Cell Amplifier HX711 module</a></td><td class="desc">Example : </td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__RF24.html" target="_self">nRF24L01+ module</a></td><td class="desc">2.4GHz wireless communication </td></tr>
-<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__servo.html" target="_self">Servo module</a></td><td class="desc">Automates the use of maximum 8 RC servomotors. Servo module uses timer 5 </td></tr>
-<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__softpwm.html" target="_self">Software PWM module</a></td><td class="desc">Implements 8channels(max) 10bits 100Hz(max) software PWM </td></tr>
-<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="group__switch.html" target="_self">Switch module</a></td><td class="desc">Automates the use of digital input pins </td></tr>
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><a class="el" href="group__pic.html" target="_self">PIC18F modules</a></td><td class="desc">These modules are to be used with pic18f26k22 based boards, such as Versa </td></tr>
+<tr id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__analog.html" target="_self">Analog module</a></td><td class="desc">Automates the use of analog input pins </td></tr>
+<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__core.html" target="_self">Core module</a></td><td class="desc">Core module implements eeprom, pins and time </td></tr>
+<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__dimmer.html" target="_self">Dimmer module</a></td><td class="desc">8 channels AC dimmer </td></tr>
+<tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__dmx.html" target="_self">DMX master module</a></td><td class="desc"></td></tr>
+<tr id="row_0_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__eeparams.html" target="_self">EEPROM parameters module</a></td><td class="desc">Save parameters values into EEPROM, and load them at setup </td></tr>
+<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__fraisedevice.html" target="_self">Fraise device module</a></td><td class="desc">Implements Fraise device protocol on the serial device </td></tr>
+<tr id="row_0_6_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__fruit.html" target="_self">Fruit module</a></td><td class="desc">Fruit module implements <a class="el" href="group__core.html">Core module</a>, <a class="el" href="group__fraisedevice.html">Fraise device module</a> and <a class="el" href="group__eeparams.html">EEPROM parameters module</a> </td></tr>
+<tr id="row_0_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__FSLP.html" target="_self">FSLP</a></td><td class="desc">Force-sensing linear potentiometers module </td></tr>
+<tr id="row_0_8_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__hx711.html" target="_self">hx711</a></td><td class="desc">Load cell amplifier module </td></tr>
+<tr id="row_0_9_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__RF24.html" target="_self">RF24 nRF24L01+ module</a></td><td class="desc">2.4GHz wireless communication </td></tr>
+<tr id="row_0_10_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__servo.html" target="_self">Servo module</a></td><td class="desc">Automates the use of maximum 8 RC servomotors </td></tr>
+<tr id="row_0_11_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__softpwm.html" target="_self">Software PWM module</a></td><td class="desc">Implements 8channels(max) 10bits 100Hz(max) software PWM </td></tr>
+<tr id="row_0_12_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__switch.html" target="_self">Switch module</a></td><td class="desc">Automates the use of digital input pins </td></tr>
+<tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><a class="el" href="group__pico.html" target="_self">Pico modules</a></td><td class="desc">These modules are to be used with rp2040 based boards, such as Raspberry Pi pico </td></tr>
+<tr id="row_1_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__pico__audio.html" target="_self">pico_audio</a></td><td class="desc">Common API for audio output </td></tr>
+<tr id="row_1_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__pico__audio__pwm.html" target="_self">pico_audio_pwm</a></td><td class="desc">PWM audio output (with optional noise shaping and error diffusion) using the PIO </td></tr>
+<tr id="row_1_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__fraise.html" target="_self">fraise</a></td><td class="desc">Common Fraise API </td></tr>
+<tr id="row_1_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__fraise__eeprom.html" target="_self">fraise_eeprom</a></td><td class="desc">EEPROM emulation in flash memory </td></tr>
+<tr id="row_1_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__smooth__pwm.html" target="_self">smooth_pwm</a></td><td class="desc">Demo module, implementing smoothed configurable PWM channels </td></tr>
+<tr id="row_1_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="group__fraise__stdout.html" target="_self">fraise_stdout</a></td><td class="desc">Setup Fraise output as a regular stdout </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
@@ -110,7 +118,7 @@ $(document).ready(function(){initNavTree('modules.html',''); initResizable(); })
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 15 2023 12:57:06 for Fraise by
+    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -6,5 +6,6 @@ var searchData=
   ['_5f_5ftriszbits_5ft_3',['__TRISZbits_t',['../union____TRISZbits__t.html',1,'']]],
   ['_5fbyte_4',['_BYTE',['../union__BYTE.html',1,'']]],
   ['_5fdword_5',['_DWORD',['../union__DWORD.html',1,'']]],
-  ['_5fword_6',['_WORD',['../union__WORD.html',1,'']]]
+  ['_5fsmooth_5fpwm_5ft_6',['_smooth_pwm_t',['../struct__smooth__pwm__t.html',1,'']]],
+  ['_5fword_7',['_WORD',['../union__WORD.html',1,'']]]
 ];

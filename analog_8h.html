@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fraise: analog/analog.h File Reference</title>
+<title>Fraise: pic/analog/analog.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,15 +107,15 @@ Macros</h2></td></tr>
 <tr class="separator:ga63bf442111d34ae45ade940394e5e579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga804766c5ede2eb9b8db2cc6c667f96d2">ANALOG_THRESHOLD</a></td></tr>
-<tr class="memdesc:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 7 : don't send an analog channel until it differs from last sent value by more than ANALOG_THRESHOLD. <br /></td></tr>
+<tr class="memdesc:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 7: don't send an analog channel until it differs from last sent value by more than ANALOG_THRESHOLD. <br /></td></tr>
 <tr class="separator:ga804766c5ede2eb9b8db2cc6c667f96d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e5a7060d3149c037996116a5ec35113"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga4e5a7060d3149c037996116a5ec35113">ANALOG_MINMAX_MARGIN</a></td></tr>
-<tr class="memdesc:ga4e5a7060d3149c037996116a5ec35113"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 100 : increase the minimum measured value by this amount (and decrease max value) for scaling output. <br /></td></tr>
+<tr class="memdesc:ga4e5a7060d3149c037996116a5ec35113"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 100: increase the minimum measured value by this amount (and decrease max value) for scaling output. <br /></td></tr>
 <tr class="separator:ga4e5a7060d3149c037996116a5ec35113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga93869506ec8c0797cf619ff4c1a9ff66">ANALOG_SCALED_MAX</a></td></tr>
-<tr class="memdesc:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 16383 : maximum scaled output value. <br /></td></tr>
+<tr class="memdesc:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">default 16383: maximum scaled output value. <br /></td></tr>
 <tr class="separator:ga93869506ec8c0797cf619ff4c1a9ff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -154,8 +154,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Output mode switchs</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp79a247af1958dafe2ce83c31b5207dca"></a><br  />
- The different mode switchs can be OR-ed together and passed to <a class="el" href="group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920" title="Configure the way analog values are sent by analogSend() (use Output mode switchs).">analogSetMode()</a>. <br  />
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp79a247af1958dafe2ce83c31b5207dca"></a>The different mode switchs can be OR-ed together and passed to <a class="el" href="group__analog.html#gafd94da3c99e4984219a2e2ca49bbe920" title="Configure the way analog values are sent by analogSend() (use Output mode switchs).">analogSetMode()</a>. <br  />
  Default is AMODE_NUM. </p>
 </td></tr>
 <tr class="memitem:ga9693fc6dab8dba34c27f2104a012b105"><td class="memItemLeft" align="right" valign="top">
@@ -164,12 +163,11 @@ Output mode switchs</h2></td></tr>
 <tr class="separator:ga9693fc6dab8dba34c27f2104a012b105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga795dd3de11c9af399ee30f86db15b980"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga795dd3de11c9af399ee30f86db15b980">AMODE_NUM</a></td></tr>
-<tr class="memdesc:ga795dd3de11c9af399ee30f86db15b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send values in a raw (numerical) message, parsed by analog/parse.pd patch. Otherwise send text messages : "A channel value". <br /></td></tr>
+<tr class="memdesc:ga795dd3de11c9af399ee30f86db15b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send values in a raw (numerical) message, parsed by analog/parse.pd patch. Otherwise send text messages: "A channel value". <br /></td></tr>
 <tr class="separator:ga795dd3de11c9af399ee30f86db15b980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analog.html#ga6e4204e8c2b43935ba7a46f9de31ce5f">AMODE_CROSS</a></td></tr>
-<tr class="memdesc:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossing mode. <br  />
- If channel value has been set (see <a class="el" href="group__analog.html#gabb371086da11fd0e32bd08c4291b8bf5" title="Set the value of a channel (to be used in conjunction with AMODE_CROSS).">analogSet()</a> ), wait for the measurement value to cross the set value before sending value updates. <br /></td></tr>
+<tr class="memdesc:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossing mode. If channel value has been set (see <a class="el" href="group__analog.html#gabb371086da11fd0e32bd08c4291b8bf5" title="Set the value of a channel (to be used in conjunction with AMODE_CROSS).">analogSet()</a> ), wait for the measurement value to cross the set value before sending value updates. <br /></td></tr>
 <tr class="separator:ga6e4204e8c2b43935ba7a46f9de31ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae75da49d13f2d3f1c7ea0f02d44cded7"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>analogSelectTouch_</b>(num,  adchan,  port,  bit)</td></tr>
@@ -207,8 +205,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_36708e6ec8f72b04185ac2a66fa5bf49.html">analog</a></li><li class="navelem"><a class="el" href="analog_8h.html">analog.h</a></li>
-    <li class="footer">Generated on Wed Nov 15 2023 12:57:06 for Fraise by
+    <li class="navelem"><a class="el" href="dir_034dc9dd2860b0cfe884242bc6ff92e7.html">pic</a></li><li class="navelem"><a class="el" href="dir_47795d54f42b775f707f44146166b0b2.html">analog</a></li><li class="navelem"><a class="el" href="analog_8h.html">analog.h</a></li>
+    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
