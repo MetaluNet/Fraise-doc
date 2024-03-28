@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -299,115 +301,14 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 </div>
 </div>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="gad5d942648eeaa2238a8194f5de19b5bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad5d942648eeaa2238a8194f5de19b5bc">&#9670;&nbsp;</a></span>analogWrite</h2>
+<a id="ga5bebb0f1e1ecef6600e9c2a422828db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bebb0f1e1ecef6600e9c2a422828db9">&#9670;&nbsp;</a></span>pinModeDigitalIn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define analogWrite</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">conn, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">val&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>'Analog' write to pin. Set the pin output voltage (actually PWM ratio). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
-    <tr><td class="paramname">val</td><td>Value between 0 and 1023 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga7955b3465200292e039dd5419b2e3296"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7955b3465200292e039dd5419b2e3296">&#9670;&nbsp;</a></span>delayFinished</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define delayFinished</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">delay</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Test delay timeout. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">delay</td><td>Delay to test (use t_delay type) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>TRUE if timeout </dd></dl>
-
-</div>
-</div>
-<a id="gaf4d36dd239e15caa010aa39d68935220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf4d36dd239e15caa010aa39d68935220">&#9670;&nbsp;</a></span>delayStart</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define delayStart</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">delay, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">micros&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Start delay. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">delay</td><td>Delay to start (use t_delay type) </td></tr>
-    <tr><td class="paramname">micros</td><td>Timeout in microseconds </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga148309384b56081a2556b95c6dfcad00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga148309384b56081a2556b95c6dfcad00">&#9670;&nbsp;</a></span>digitalClear</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define digitalClear</td>
+          <td class="memname">#define pinModeDigitalIn</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">conn</td><td>)</td>
@@ -416,7 +317,85 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
       </table>
 </div><div class="memdoc">
 
-<p>Digital clear pin. Clear the pin output voltage. </p>
+<p>Set pin mode to Digital Input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga64de20f998bbf9cf5cef4320e4a20845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64de20f998bbf9cf5cef4320e4a20845">&#9670;&nbsp;</a></span>pinModeAnalogIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define pinModeAnalogIn</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">conn</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set pin mode to Analog Input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac1a887376cc38d1337bdc56d009f8f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1a887376cc38d1337bdc56d009f8f96">&#9670;&nbsp;</a></span>pinModeDigitalOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define pinModeDigitalOut</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">conn</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set pin mode to Digital Output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga06f07e1a272c52472a8b57aae298a8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06f07e1a272c52472a8b57aae298a8fc">&#9670;&nbsp;</a></span>pinModeAnalogOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define pinModeAnalogOut</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">conn</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set pin mode to Analog Output (PWM). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
@@ -452,32 +431,6 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <dl class="section return"><dt>Returns</dt><dd>0 if voltage was LOW </dd>
 <dd>
 1 if voltage was HIGH </dd></dl>
-
-</div>
-</div>
-<a id="ga571e05ded456ae222e112dbced81962e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga571e05ded456ae222e112dbced81962e">&#9670;&nbsp;</a></span>digitalSet</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define digitalSet</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">conn</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Digital set pin. Set the pin output voltage ot HIGH. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -518,14 +471,14 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 
 </div>
 </div>
-<a id="ga64de20f998bbf9cf5cef4320e4a20845"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga64de20f998bbf9cf5cef4320e4a20845">&#9670;&nbsp;</a></span>pinModeAnalogIn</h2>
+<a id="ga148309384b56081a2556b95c6dfcad00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga148309384b56081a2556b95c6dfcad00">&#9670;&nbsp;</a></span>digitalClear</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define pinModeAnalogIn</td>
+          <td class="memname">#define digitalClear</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">conn</td><td>)</td>
@@ -534,7 +487,7 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
       </table>
 </div><div class="memdoc">
 
-<p>Set pin mode to Analog Input. </p>
+<p>Digital clear pin. Clear the pin output voltage. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
@@ -544,14 +497,14 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 
 </div>
 </div>
-<a id="ga06f07e1a272c52472a8b57aae298a8fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga06f07e1a272c52472a8b57aae298a8fc">&#9670;&nbsp;</a></span>pinModeAnalogOut</h2>
+<a id="ga571e05ded456ae222e112dbced81962e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga571e05ded456ae222e112dbced81962e">&#9670;&nbsp;</a></span>digitalSet</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define pinModeAnalogOut</td>
+          <td class="memname">#define digitalSet</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">conn</td><td>)</td>
@@ -560,7 +513,7 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
       </table>
 </div><div class="memdoc">
 
-<p>Set pin mode to Analog Output (PWM). </p>
+<p>Digital set pin. Set the pin output voltage ot HIGH. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
@@ -570,64 +523,114 @@ unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 
 </div>
 </div>
-<a id="ga5bebb0f1e1ecef6600e9c2a422828db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5bebb0f1e1ecef6600e9c2a422828db9">&#9670;&nbsp;</a></span>pinModeDigitalIn</h2>
+<a id="gad5d942648eeaa2238a8194f5de19b5bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5d942648eeaa2238a8194f5de19b5bc">&#9670;&nbsp;</a></span>analogWrite</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define pinModeDigitalIn</td>
+          <td class="memname">#define analogWrite</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">conn</td><td>)</td>
+          <td class="paramname">conn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set pin mode to Digital Input. </p>
+<p>'Analog' write to pin. Set the pin output voltage (actually PWM ratio). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
+    <tr><td class="paramname">val</td><td>Value between 0 and 1023 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="gac1a887376cc38d1337bdc56d009f8f96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac1a887376cc38d1337bdc56d009f8f96">&#9670;&nbsp;</a></span>pinModeDigitalOut</h2>
+<a id="gaf4d36dd239e15caa010aa39d68935220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4d36dd239e15caa010aa39d68935220">&#9670;&nbsp;</a></span>delayStart</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define pinModeDigitalOut</td>
+          <td class="memname">#define delayStart</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">conn</td><td>)</td>
+          <td class="paramname">delay, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">micros&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start delay. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>Delay to start (use t_delay type) </td></tr>
+    <tr><td class="paramname">micros</td><td>Timeout in microseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7955b3465200292e039dd5419b2e3296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7955b3465200292e039dd5419b2e3296">&#9670;&nbsp;</a></span>delayFinished</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define delayFinished</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">delay</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set pin mode to Digital Output. </p>
+<p>Test delay timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conn</td><td>Symbol of the pin (example: K1 for connector 1) </td></tr>
+    <tr><td class="paramname">delay</td><td>Delay to test (use t_delay type) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE if timeout </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

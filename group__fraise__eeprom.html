@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -84,8 +86,6 @@ $(document).ready(function(){initNavTree('group__fraise__eeprom.html',''); initR
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">fraise_eeprom<div class="ingroups"><a class="el" href="group__pico.html">Pico modules</a></div></div>  </div>
 </div><!--header-->
@@ -95,107 +95,382 @@ $(document).ready(function(){initNavTree('group__fraise__eeprom.html',''); initR
 <a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader"> </h2>
 <p>EEPROM emulation in flash memory. </p>
-<p>Eeprom must first be initialized with <a class="el" href="group__fraise__eeprom.html#gab3ec9c5794264ad724c15de896d5e76a">eeprom_setup()</a>, than can be read or modified, then (if modified) must be committed with <a class="el" href="group__fraise__eeprom.html#ga07676fbfe7e07041d2e5936f5375f6c0">eeprom_commit()</a>. This function is auto-protected with a critical section, which ensures that interrupt are fully disabled during actual flash writing.</p>
+<p>Eeprom must first be initialized with <a class="el" href="group__fraise__eeprom.html#gab3ec9c5794264ad724c15de896d5e76a" title="Initialize the eeprom.">eeprom_setup()</a>, than can be read or modified, then (if modified) must be committed with <a class="el" href="group__fraise__eeprom.html#ga07676fbfe7e07041d2e5936f5375f6c0" title="Actually write the eeprom area to flash.">eeprom_commit()</a>. This function is auto-protected with a critical section, which ensures that interrupt are fully disabled during actual flash writing.</p>
 <p>The fraise_eeprom API reserves some bytes at the beginning of the allocated space, to store fraise system data, such as the "name" and the "ID" of the device. </p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Hi-level persistent parameter API</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp6c861d291892b3b073dae83f842d1c41"></a>This API allows to declare a set of parameters, and automates saving to and reloading from the EEPROM emulation. </p>
+</td></tr>
+<tr class="memitem:ga57c6962df78d5ec28bfdaa6d8744e04e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e">eeprom_declare_main</a> ()</td></tr>
+<tr class="memdesc:ga57c6962df78d5ec28bfdaa6d8744e04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">User defined function where to declare the parameters.  <a href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e">More...</a><br /></td></tr>
+<tr class="separator:ga57c6962df78d5ec28bfdaa6d8744e04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae65bb9cb69d5610126427e48797ac8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#gae65bb9cb69d5610126427e48797ac8b9">eeprom_declare_data</a> (char *data, uint8_t size)</td></tr>
+<tr class="memdesc:gae65bb9cb69d5610126427e48797ac8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare data of arbitrary size.  <a href="group__fraise__eeprom.html#gae65bb9cb69d5610126427e48797ac8b9">More...</a><br /></td></tr>
+<tr class="separator:gae65bb9cb69d5610126427e48797ac8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3795f99d7a761d3e26c764fe00bf5e2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga3795f99d7a761d3e26c764fe00bf5e2c">eeprom_declare_int8</a> (int8_t *data)</td></tr>
+<tr class="memdesc:ga3795f99d7a761d3e26c764fe00bf5e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a 8-bit signed parameter.  <a href="group__fraise__eeprom.html#ga3795f99d7a761d3e26c764fe00bf5e2c">More...</a><br /></td></tr>
+<tr class="separator:ga3795f99d7a761d3e26c764fe00bf5e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga220eb38b7fbda52b626265a5899b0340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga220eb38b7fbda52b626265a5899b0340">eeprom_declare_uint8</a> (uint8_t *data)</td></tr>
+<tr class="memdesc:ga220eb38b7fbda52b626265a5899b0340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a 8-bit unsigned parameter.  <a href="group__fraise__eeprom.html#ga220eb38b7fbda52b626265a5899b0340">More...</a><br /></td></tr>
+<tr class="separator:ga220eb38b7fbda52b626265a5899b0340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8402a2630da448d969c37da89b46a169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga8402a2630da448d969c37da89b46a169">eeprom_declare_int16</a> (int16_t *data)</td></tr>
+<tr class="memdesc:ga8402a2630da448d969c37da89b46a169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a 16-bit signed parameter.  <a href="group__fraise__eeprom.html#ga8402a2630da448d969c37da89b46a169">More...</a><br /></td></tr>
+<tr class="separator:ga8402a2630da448d969c37da89b46a169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74ddfca32b03a2e64aa80c7238b45265"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga74ddfca32b03a2e64aa80c7238b45265">eeprom_declare_uint16</a> (uint16_t *data)</td></tr>
+<tr class="memdesc:ga74ddfca32b03a2e64aa80c7238b45265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a 16-bit unsigned parameter.  <a href="group__fraise__eeprom.html#ga74ddfca32b03a2e64aa80c7238b45265">More...</a><br /></td></tr>
+<tr class="separator:ga74ddfca32b03a2e64aa80c7238b45265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78b3c053302e21f582d55e40d1818714"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga78b3c053302e21f582d55e40d1818714">eeprom_declare_int32</a> (int32_t *data)</td></tr>
+<tr class="memdesc:ga78b3c053302e21f582d55e40d1818714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a 32-bit signed parameter.  <a href="group__fraise__eeprom.html#ga78b3c053302e21f582d55e40d1818714">More...</a><br /></td></tr>
+<tr class="separator:ga78b3c053302e21f582d55e40d1818714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe22c4c0c6e7388a9718880c1ca9370f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#gabe22c4c0c6e7388a9718880c1ca9370f">eeprom_declare_uint32</a> (uint32_t *data)</td></tr>
+<tr class="memdesc:gabe22c4c0c6e7388a9718880c1ca9370f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a 32-bit unsigned parameter.  <a href="group__fraise__eeprom.html#gabe22c4c0c6e7388a9718880c1ca9370f">More...</a><br /></td></tr>
+<tr class="separator:gabe22c4c0c6e7388a9718880c1ca9370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26194dea0ee8e13cb980bed533e2ee85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga26194dea0ee8e13cb980bed533e2ee85">eeprom_load</a> ()</td></tr>
+<tr class="memdesc:ga26194dea0ee8e13cb980bed533e2ee85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload all the parameters from eeprom.  <a href="group__fraise__eeprom.html#ga26194dea0ee8e13cb980bed533e2ee85">More...</a><br /></td></tr>
+<tr class="separator:ga26194dea0ee8e13cb980bed533e2ee85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f9369ea392171b1bd30e63af693d8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga1f9369ea392171b1bd30e63af693d8fa">eeprom_save</a> ()</td></tr>
+<tr class="memdesc:ga1f9369ea392171b1bd30e63af693d8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save all the parameters to eeprom.  <a href="group__fraise__eeprom.html#ga1f9369ea392171b1bd30e63af693d8fa">More...</a><br /></td></tr>
+<tr class="separator:ga1f9369ea392171b1bd30e63af693d8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Low-level eeprom API</h2></td></tr>
 <tr class="memitem:gab3ec9c5794264ad724c15de896d5e76a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#gab3ec9c5794264ad724c15de896d5e76a">eeprom_setup</a> ()</td></tr>
+<tr class="memdesc:gab3ec9c5794264ad724c15de896d5e76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the eeprom.  <a href="group__fraise__eeprom.html#gab3ec9c5794264ad724c15de896d5e76a">More...</a><br /></td></tr>
 <tr class="separator:gab3ec9c5794264ad724c15de896d5e76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4944728611cefefc1196cd8be4e92557"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga4944728611cefefc1196cd8be4e92557">eeprom_user_read</a> (int address)</td></tr>
+<tr class="memdesc:ga4944728611cefefc1196cd8be4e92557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a byte.  <a href="group__fraise__eeprom.html#ga4944728611cefefc1196cd8be4e92557">More...</a><br /></td></tr>
 <tr class="separator:ga4944728611cefefc1196cd8be4e92557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaa1f84588a850d612dbd657dbfc5fd67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#gaaa1f84588a850d612dbd657dbfc5fd67">eeprom_user_write</a> (int address, char data)</td></tr>
+<tr class="memdesc:gaaa1f84588a850d612dbd657dbfc5fd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a byte.  <a href="group__fraise__eeprom.html#gaaa1f84588a850d612dbd657dbfc5fd67">More...</a><br /></td></tr>
 <tr class="separator:gaaa1f84588a850d612dbd657dbfc5fd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1854f01604551cc895f0318b02d401d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga1854f01604551cc895f0318b02d401d9">eeprom_write_name</a> (char *newname)</td></tr>
+<tr class="memdesc:ga1854f01604551cc895f0318b02d401d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the device name in eeprom.  <a href="group__fraise__eeprom.html#ga1854f01604551cc895f0318b02d401d9">More...</a><br /></td></tr>
 <tr class="separator:ga1854f01604551cc895f0318b02d401d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga07fe00cb9d4e2db2c2086204e9923cc6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga07fe00cb9d4e2db2c2086204e9923cc6">eeprom_get_name</a> ()</td></tr>
+<tr class="memdesc:ga07fe00cb9d4e2db2c2086204e9923cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the device name stored in eeprom.  <a href="group__fraise__eeprom.html#ga07fe00cb9d4e2db2c2086204e9923cc6">More...</a><br /></td></tr>
 <tr class="separator:ga07fe00cb9d4e2db2c2086204e9923cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga383a95dc5ca46153bc1db991dfb01b44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga383a95dc5ca46153bc1db991dfb01b44">eeprom_set_id</a> (uint8_t newid)</td></tr>
+<tr class="memdesc:ga383a95dc5ca46153bc1db991dfb01b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the device ID in eeprom.  <a href="group__fraise__eeprom.html#ga383a95dc5ca46153bc1db991dfb01b44">More...</a><br /></td></tr>
 <tr class="separator:ga383a95dc5ca46153bc1db991dfb01b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga37ce49dd5f1e719a24383a750c1d69c0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga37ce49dd5f1e719a24383a750c1d69c0">eeprom_get_id</a> ()</td></tr>
+<tr class="memdesc:ga37ce49dd5f1e719a24383a750c1d69c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the device ID stored in eeprom.  <a href="group__fraise__eeprom.html#ga37ce49dd5f1e719a24383a750c1d69c0">More...</a><br /></td></tr>
 <tr class="separator:ga37ce49dd5f1e719a24383a750c1d69c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga07676fbfe7e07041d2e5936f5375f6c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga07676fbfe7e07041d2e5936f5375f6c0">eeprom_commit</a> ()</td></tr>
+<tr class="memitem:ga07676fbfe7e07041d2e5936f5375f6c0"><td class="memItemLeft" align="right" valign="top"><a id="ga07676fbfe7e07041d2e5936f5375f6c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise__eeprom.html#ga07676fbfe7e07041d2e5936f5375f6c0">eeprom_commit</a> ()</td></tr>
+<tr class="memdesc:ga07676fbfe7e07041d2e5936f5375f6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually write the eeprom area to flash. <br /></td></tr>
 <tr class="separator:ga07676fbfe7e07041d2e5936f5375f6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga07676fbfe7e07041d2e5936f5375f6c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga07676fbfe7e07041d2e5936f5375f6c0">&#9670;&nbsp;</a></span>eeprom_commit()</h2>
+<a id="ga57c6962df78d5ec28bfdaa6d8744e04e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga57c6962df78d5ec28bfdaa6d8744e04e">&#9670;&nbsp;</a></span>eeprom_declare_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void eeprom_commit </td>
+          <td class="memname">void eeprom_declare_main </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Actually write the eeprom area to flash </p>
+
+<p>User defined function where to declare the parameters. </p>
+<dl class="section note"><dt>Note</dt><dd>User has to define this function, which must be a list of eeprom_declare_*() calls. Example: <div class="fragment"><div class="line"><span class="keywordtype">void</span> eeprom_main() {</div>
+<div class="line">    <a class="code" href="group__fraise__eeprom.html#ga220eb38b7fbda52b626265a5899b0340">eeprom_declare_uint8</a>(&amp;my_uint8);</div>
+<div class="line">    <a class="code" href="group__fraise__eeprom.html#ga8402a2630da448d969c37da89b46a169">eeprom_declare_int16</a>(&amp;my_int16);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
-<a id="ga37ce49dd5f1e719a24383a750c1d69c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga37ce49dd5f1e719a24383a750c1d69c0">&#9670;&nbsp;</a></span>eeprom_get_id()</h2>
+<a id="gae65bb9cb69d5610126427e48797ac8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae65bb9cb69d5610126427e48797ac8b9">&#9670;&nbsp;</a></span>eeprom_declare_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t eeprom_get_id </td>
+          <td class="memname">void eeprom_declare_data </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Read the device ID stored in eeprom</p>
-<dl class="section return"><dt>Returns</dt><dd>the currently stored ID </dd></dl>
-
-</div>
-</div>
-<a id="ga07fe00cb9d4e2db2c2086204e9923cc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga07fe00cb9d4e2db2c2086204e9923cc6">&#9670;&nbsp;</a></span>eeprom_get_name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">const char* eeprom_get_name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Read the device name stored in eeprom</p>
-<dl class="section return"><dt>Returns</dt><dd>the currently stored name </dd></dl>
-
-</div>
-</div>
-<a id="ga383a95dc5ca46153bc1db991dfb01b44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga383a95dc5ca46153bc1db991dfb01b44">&#9670;&nbsp;</a></span>eeprom_set_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void eeprom_set_id </td>
-          <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>newid</em></td><td>)</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Change the device ID in eeprom</p>
+
+<p>Declare data of arbitrary size. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newid</td><td>the new ID to store (must be in range [1:126]) </td></tr>
+    <tr><td class="paramname">data</td><td>the address of the declared data </td></tr>
+    <tr><td class="paramname">size</td><td>the size of the data </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga3795f99d7a761d3e26c764fe00bf5e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3795f99d7a761d3e26c764fe00bf5e2c">&#9670;&nbsp;</a></span>eeprom_declare_int8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_declare_int8 </td>
+          <td>(</td>
+          <td class="paramtype">int8_t *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a 8-bit signed parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the address of the declared parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga220eb38b7fbda52b626265a5899b0340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga220eb38b7fbda52b626265a5899b0340">&#9670;&nbsp;</a></span>eeprom_declare_uint8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_declare_uint8 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a 8-bit unsigned parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the address of the declared parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8402a2630da448d969c37da89b46a169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8402a2630da448d969c37da89b46a169">&#9670;&nbsp;</a></span>eeprom_declare_int16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_declare_int16 </td>
+          <td>(</td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a 16-bit signed parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the address of the declared parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga74ddfca32b03a2e64aa80c7238b45265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74ddfca32b03a2e64aa80c7238b45265">&#9670;&nbsp;</a></span>eeprom_declare_uint16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_declare_uint16 </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a 16-bit unsigned parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the address of the declared parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga78b3c053302e21f582d55e40d1818714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78b3c053302e21f582d55e40d1818714">&#9670;&nbsp;</a></span>eeprom_declare_int32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_declare_int32 </td>
+          <td>(</td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a 32-bit signed parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the address of the declared parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabe22c4c0c6e7388a9718880c1ca9370f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe22c4c0c6e7388a9718880c1ca9370f">&#9670;&nbsp;</a></span>eeprom_declare_uint32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_declare_uint32 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declare a 32-bit unsigned parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>use in <a class="el" href="group__fraise__eeprom.html#ga57c6962df78d5ec28bfdaa6d8744e04e" title="User defined function where to declare the parameters.">eeprom_declare_main()</a> only </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the address of the declared parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga26194dea0ee8e13cb980bed533e2ee85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26194dea0ee8e13cb980bed533e2ee85">&#9670;&nbsp;</a></span>eeprom_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reload all the parameters from eeprom. </p>
+<dl class="section note"><dt>Note</dt><dd>You might want to call this function in your <a class="el" href="group__core.html#ga4fc01d736fe50cf5b977f755b675f11d" title="User defined initialization.">setup()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ga1f9369ea392171b1bd30e63af693d8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f9369ea392171b1bd30e63af693d8fa">&#9670;&nbsp;</a></span>eeprom_save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save all the parameters to eeprom. </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="group__fraise__eeprom.html#ga1f9369ea392171b1bd30e63af693d8fa" title="Save all the parameters to eeprom.">eeprom_save()</a> automatically calls <a class="el" href="group__fraise__eeprom.html#ga07676fbfe7e07041d2e5936f5375f6c0" title="Actually write the eeprom area to flash.">eeprom_commit()</a> after the RAM image is updated. </dd></dl>
 
 </div>
 </div>
@@ -213,7 +488,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize the eeprom</p>
+
+<p>Initialize the eeprom. </p>
 <dl class="section note"><dt>Note</dt><dd>This actually copies the flash area to RAM, so that it can be accessed in both read and write modes. </dd></dl>
 
 </div>
@@ -233,7 +509,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read a byte</p>
+
+<p>Read a byte. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">address</td><td>the address to read </td></tr>
@@ -269,7 +546,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Write a byte</p>
+
+<p>Write a byte. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">address</td><td>the address to write to </td></tr>
@@ -295,7 +573,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Change the device name in eeprom</p>
+
+<p>Change the device name in eeprom. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">newname</td><td>the new name to store (no more than 16 chars) </td></tr>
@@ -305,12 +584,81 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga07fe00cb9d4e2db2c2086204e9923cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07fe00cb9d4e2db2c2086204e9923cc6">&#9670;&nbsp;</a></span>eeprom_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* eeprom_get_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the device name stored in eeprom. </p>
+<dl class="section return"><dt>Returns</dt><dd>the currently stored name </dd></dl>
+
+</div>
+</div>
+<a id="ga383a95dc5ca46153bc1db991dfb01b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga383a95dc5ca46153bc1db991dfb01b44">&#9670;&nbsp;</a></span>eeprom_set_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_set_id </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>newid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the device ID in eeprom. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newid</td><td>the new ID to store (must be in range [1:126]) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga37ce49dd5f1e719a24383a750c1d69c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37ce49dd5f1e719a24383a750c1d69c0">&#9670;&nbsp;</a></span>eeprom_get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t eeprom_get_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the device ID stored in eeprom. </p>
+<dl class="section return"><dt>Returns</dt><dd>the currently stored ID </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__fraise__eeprom_html_ga220eb38b7fbda52b626265a5899b0340"><div class="ttname"><a href="group__fraise__eeprom.html#ga220eb38b7fbda52b626265a5899b0340">eeprom_declare_uint8</a></div><div class="ttdeci">void eeprom_declare_uint8(uint8_t *data)</div><div class="ttdoc">Declare a 8-bit unsigned parameter.</div><div class="ttdef"><b>Definition:</b> fraise_eeprom.h:67</div></div>
+<div class="ttc" id="agroup__fraise__eeprom_html_ga8402a2630da448d969c37da89b46a169"><div class="ttname"><a href="group__fraise__eeprom.html#ga8402a2630da448d969c37da89b46a169">eeprom_declare_int16</a></div><div class="ttdeci">void eeprom_declare_int16(int16_t *data)</div><div class="ttdoc">Declare a 16-bit signed parameter.</div><div class="ttdef"><b>Definition:</b> fraise_eeprom.h:73</div></div>
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

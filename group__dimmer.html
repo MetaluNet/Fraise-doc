@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -243,26 +245,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>dimmerPrintDebug</b> 
 <tr class="separator:ga2cc5261672f9bb85e4ebc28638049d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga44d2ecb369b187ddf809c7424d676aa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga44d2ecb369b187ddf809c7424d676aa7">&#9670;&nbsp;</a></span>dimmerReceive()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dimmerReceive </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Module receive function, to be called by the <b><a class="el" href="group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae" title="Raw message to this device.">fraiseReceive()</a></b> user defined function. </p>
-<p>The first byte of the message represents the channel (0-7), the 2 next bytes are the 16 bit new position value. If the first byte is 8 then the next char sets the AC frequency : 0=50Hz, 1=60Hz </p>
-
-</div>
-</div>
 <a id="ga6cf4321c58981b082a7b895a0b778676"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6cf4321c58981b082a7b895a0b778676">&#9670;&nbsp;</a></span>dimmerSet()</h2>
 
@@ -300,6 +282,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>dimmerPrintDebug</b> 
 
 </div>
 </div>
+<a id="ga44d2ecb369b187ddf809c7424d676aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44d2ecb369b187ddf809c7424d676aa7">&#9670;&nbsp;</a></span>dimmerReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dimmerReceive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Module receive function, to be called by the <b><a class="el" href="group__fraisedevice.html#gab98098cfba2559f45c462f313c1ec6ae" title="Raw message to this device.">fraiseReceive()</a></b> user defined function. </p>
+<p>The first byte of the message represents the channel (0-7), the 2 next bytes are the 16 bit new position value. If the first byte is 8 then the next char sets the AC frequency : 0=50Hz, 1=60Hz </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__dimmer_html_ga44d2ecb369b187ddf809c7424d676aa7"><div class="ttname"><a href="group__dimmer.html#ga44d2ecb369b187ddf809c7424d676aa7">dimmerReceive</a></div><div class="ttdeci">void dimmerReceive()</div><div class="ttdoc">Module receive function, to be called by the fraiseReceive() user defined function.</div></div>
@@ -320,10 +322,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>dimmerPrintDebug</b> 
 <div class="ttc" id="agroup__core_html_ga7955b3465200292e039dd5419b2e3296"><div class="ttname"><a href="group__core.html#ga7955b3465200292e039dd5419b2e3296">delayFinished</a></div><div class="ttdeci">#define delayFinished(delay)</div><div class="ttdoc">Test delay timeout.</div><div class="ttdef"><b>Definition:</b> core.h:225</div></div>
 <div class="ttc" id="agroup__dimmer_html_gac3d214c7d2e769bc2bdf8fc1bba485b3"><div class="ttname"><a href="group__dimmer.html#gac3d214c7d2e769bc2bdf8fc1bba485b3">dimmerService</a></div><div class="ttdeci">void dimmerService(void)</div><div class="ttdoc">Module service routine, to be called by the main loop().</div></div>
 <div class="ttc" id="agroup__core_html_gaf4d36dd239e15caa010aa39d68935220"><div class="ttname"><a href="group__core.html#gaf4d36dd239e15caa010aa39d68935220">delayStart</a></div><div class="ttdeci">#define delayStart(delay, micros)</div><div class="ttdoc">Start delay.</div><div class="ttdef"><b>Definition:</b> core.h:220</div></div>
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

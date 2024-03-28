@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hx711_590',['hx711',['../group__hx711.html',1,'']]]
+  ['hx711_730',['hx711',['../group__hx711.html',1,'']]]
 ];

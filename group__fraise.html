@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -98,66 +100,129 @@ $(document).ready(function(){initNavTree('group__fraise.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga267a010f22d0632a3ca4325daffc2dd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga267a010f22d0632a3ca4325daffc2dd8">claim_pio_sm_irq</a> (const pio_program_t *program, PIO *pio_hw, uint *sm, uint *program_offset, uint *irq)</td></tr>
+<tr class="memdesc:ga267a010f22d0632a3ca4325daffc2dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request attribution of a pio/sm (and optionnaly irq) for a given pio program.  <a href="group__fraise.html#ga267a010f22d0632a3ca4325daffc2dd8">More...</a><br /></td></tr>
+<tr class="separator:ga267a010f22d0632a3ca4325daffc2dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Global fraise driver management</h2></td></tr>
 <tr class="memitem:gadd51949227bfd777a42e800867baa6b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">fraise_setup</a> ()</td></tr>
+<tr class="memdesc:gadd51949227bfd777a42e800867baa6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Fraise driver.  <a href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">More...</a><br /></td></tr>
 <tr class="separator:gadd51949227bfd777a42e800867baa6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a> ()</td></tr>
+<tr class="memitem:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="memItemLeft" align="right" valign="top"><a id="ga4677a8dde274ac954f0e00fd8bb967aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a> ()</td></tr>
+<tr class="memdesc:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop and cleanup the Fraise driver. <br /></td></tr>
 <tr class="separator:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaecca8d8311d85535d6487c1628bb2431"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a> (const char *msg)</td></tr>
-<tr class="separator:gaecca8d8311d85535d6487c1628bb2431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Sending raw bytes messages</h2></td></tr>
 <tr class="memitem:gae75e4a8d71ed499d4292ff4977a3415b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">fraise_putbytes</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:gae75e4a8d71ed499d4292ff4977a3415b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a raw bytes message.  <a href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">More...</a><br /></td></tr>
 <tr class="separator:gae75e4a8d71ed499d4292ff4977a3415b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef9ef780e6168fe6ea33fadd3bf53cd7"><td class="memItemLeft" align="right" valign="top"><a id="gaef9ef780e6168fe6ea33fadd3bf53cd7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaef9ef780e6168fe6ea33fadd3bf53cd7">fraise_put_init</a> ()</td></tr>
+<tr class="memdesc:gaef9ef780e6168fe6ea33fadd3bf53cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the 'put' buffer. <br /></td></tr>
+<tr class="separator:gaef9ef780e6168fe6ea33fadd3bf53cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbf49c64c55cc5c717fb79b0c499957d"><td class="memItemLeft" align="right" valign="top"><a id="gafbf49c64c55cc5c717fb79b0c499957d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_int8</b> (int8_t b)</td></tr>
+<tr class="separator:gafbf49c64c55cc5c717fb79b0c499957d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46d0cfdae4f710f37010cc8ea6c66e83"><td class="memItemLeft" align="right" valign="top"><a id="ga46d0cfdae4f710f37010cc8ea6c66e83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_uint8</b> (uint8_t b)</td></tr>
+<tr class="separator:ga46d0cfdae4f710f37010cc8ea6c66e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9358058d7c3b2f5f20d3ac3a5a679b56"><td class="memItemLeft" align="right" valign="top"><a id="ga9358058d7c3b2f5f20d3ac3a5a679b56"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_int16</b> (int16_t b)</td></tr>
+<tr class="separator:ga9358058d7c3b2f5f20d3ac3a5a679b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga434f915d96c147132a14a31813bb01c5"><td class="memItemLeft" align="right" valign="top"><a id="ga434f915d96c147132a14a31813bb01c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_uint16</b> (uint16_t b)</td></tr>
+<tr class="separator:ga434f915d96c147132a14a31813bb01c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8cbc2baf4a1f2f41e86fa4ce73b7de4"><td class="memItemLeft" align="right" valign="top"><a id="gaa8cbc2baf4a1f2f41e86fa4ce73b7de4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_int32</b> (int32_t b)</td></tr>
+<tr class="separator:gaa8cbc2baf4a1f2f41e86fa4ce73b7de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3503fb63786f448f63434dff2608e161"><td class="memItemLeft" align="right" valign="top"><a id="ga3503fb63786f448f63434dff2608e161"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_uint32</b> (uint32_t b)</td></tr>
+<tr class="separator:ga3503fb63786f448f63434dff2608e161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58a69d5bec6eeee5e28b0314dd3aa93d"><td class="memItemLeft" align="right" valign="top"><a id="ga58a69d5bec6eeee5e28b0314dd3aa93d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga58a69d5bec6eeee5e28b0314dd3aa93d">fraise_put_send</a> ()</td></tr>
+<tr class="memdesc:ga58a69d5bec6eeee5e28b0314dd3aa93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the 'put' buffer with <a class="el" href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b" title="Send a raw bytes message.">fraise_putbytes()</a> <br /></td></tr>
+<tr class="separator:ga58a69d5bec6eeee5e28b0314dd3aa93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Sending text messages</h2></td></tr>
+<tr class="memitem:gaecca8d8311d85535d6487c1628bb2431"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a> (const char *msg)</td></tr>
+<tr class="memdesc:gaecca8d8311d85535d6487c1628bb2431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a text message.  <a href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">More...</a><br /></td></tr>
+<tr class="separator:gaecca8d8311d85535d6487c1628bb2431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf4fcdfa366b46e7f1bad8935709d14a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar</a> (char c)</td></tr>
+<tr class="memdesc:gaf4fcdfa366b46e7f1bad8935709d14a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">push a single character to the text buffer  <a href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">More...</a><br /></td></tr>
 <tr class="separator:gaf4fcdfa366b46e7f1bad8935709d14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafca0c30751460cab2387ac05c0b78353"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf</a> (const char *fmt,...) __attribute__((format(printf</td></tr>
+<tr class="memdesc:gafca0c30751460cab2387ac05c0b78353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a printf-formatted buffered text to the text buffer.  <a href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">More...</a><br /></td></tr>
 <tr class="separator:gafca0c30751460cab2387ac05c0b78353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fc92d82854585b4b0062645268a98be"><td class="memItemLeft" align="right" valign="top">void void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga3fc92d82854585b4b0062645268a98be">setup</a> ()</td></tr>
-<tr class="separator:ga3fc92d82854585b4b0062645268a98be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Optional user defined callbacks</h2></td></tr>
+<tr class="memitem:ga4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:ga4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the application (optional user defined)  <a href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d">More...</a><br /></td></tr>
+<tr class="separator:ga4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:gafe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application loop (optional user defined)  <a href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">More...</a><br /></td></tr>
 <tr class="separator:gafe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5de420201fa950da49fdfc9f56fca79b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">fraise_receivebytes</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga5de420201fa950da49fdfc9f56fca79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive raw bytes (optional user defined)  <a href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">More...</a><br /></td></tr>
 <tr class="separator:ga5de420201fa950da49fdfc9f56fca79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5c9ab97fec7799326b5c4bc356d5b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">fraise_receivechars</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:gae5c9ab97fec7799326b5c4bc356d5b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive text message (optional user defined)  <a href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">More...</a><br /></td></tr>
 <tr class="separator:gae5c9ab97fec7799326b5c4bc356d5b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga634a7d90873198229c867fe4dfe7ab5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">fraise_receivebytes_broadcast</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga634a7d90873198229c867fe4dfe7ab5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive broadcast raw bytes (optional user defined)  <a href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">More...</a><br /></td></tr>
 <tr class="separator:ga634a7d90873198229c867fe4dfe7ab5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga39978b1484c2bde04c4e45d4274a2043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">fraise_receivechars_broadcast</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga39978b1484c2bde04c4e45d4274a2043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive broadcast text message (optional user defined)  <a href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">More...</a><br /></td></tr>
 <tr class="separator:ga39978b1484c2bde04c4e45d4274a2043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Bytes receive decoding utils:</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp408852fcb962a2d790fc05457c25fb36"></a></p><dl class="section note"><dt>Note</dt><dd>These functions are only valid when called from <a class="el" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b" title="Receive raw bytes (optional user defined)">fraise_receivebytes()</a> or <a class="el" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b" title="Receive broadcast raw bytes (optional user defined)">fraise_receivebytes_broadcast()</a>. If there's not enough data left, they return 0. </dd></dl>
+</td></tr>
+<tr class="memitem:ga8c7e1dedccafbdbe1b6758fa5b5074c4"><td class="memItemLeft" align="right" valign="top"><a id="ga8c7e1dedccafbdbe1b6758fa5b5074c4"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_int8</b> ()</td></tr>
+<tr class="separator:ga8c7e1dedccafbdbe1b6758fa5b5074c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae27d2d06d729332388652171660139df"><td class="memItemLeft" align="right" valign="top"><a id="gae27d2d06d729332388652171660139df"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_uint8</b> ()</td></tr>
+<tr class="separator:gae27d2d06d729332388652171660139df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga331340908a15d5846a793eebbebc49e1"><td class="memItemLeft" align="right" valign="top"><a id="ga331340908a15d5846a793eebbebc49e1"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_int16</b> ()</td></tr>
+<tr class="separator:ga331340908a15d5846a793eebbebc49e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed33519d22e18c098fe0216510450e9d"><td class="memItemLeft" align="right" valign="top"><a id="gaed33519d22e18c098fe0216510450e9d"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_uint16</b> ()</td></tr>
+<tr class="separator:gaed33519d22e18c098fe0216510450e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24e680867226a03c808c17d696f92e13"><td class="memItemLeft" align="right" valign="top"><a id="ga24e680867226a03c808c17d696f92e13"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_int32</b> ()</td></tr>
+<tr class="separator:ga24e680867226a03c808c17d696f92e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1094c77513cc49f8b0539465a052f927"><td class="memItemLeft" align="right" valign="top"><a id="ga1094c77513cc49f8b0539465a052f927"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_uint32</b> ()</td></tr>
+<tr class="separator:ga1094c77513cc49f8b0539465a052f927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">fraise_init_get_buffer</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the 'get' buffer.  <a href="group__fraise.html#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">More...</a><br /></td></tr>
+<tr class="separator:ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gafca0c30751460cab2387ac05c0b78353"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafca0c30751460cab2387ac05c0b78353">&#9670;&nbsp;</a></span>fraise_printf()</h2>
+<a id="gadd51949227bfd777a42e800867baa6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd51949227bfd777a42e800867baa6b5">&#9670;&nbsp;</a></span>fraise_setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fraise_printf </td>
+          <td class="memname">void fraise_setup </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fmt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Push a printf-formatted buffered text to the buffer</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fmt,...</td><td>the formatted text </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>the message will be sent and flushed after each '<br  />
-' character (<a class="el" href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf()</a> internally uses <a class="el" href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar()</a>) </dd></dl>
+
+<p>Initialize the Fraise driver. </p>
+<dl class="section note"><dt>Note</dt><dd>This is automatically called at startup, so in most cases you won't need it. </dd></dl>
 
 </div>
 </div>
@@ -186,11 +251,39 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Send a raw bytes message</p>
+
+<p>Send a raw bytes message. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>the address of the first byte to send </td></tr>
     <tr><td class="paramname">len</td><td>the number of bytes to send </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if the TX buffer is full, true otherwise </dd></dl>
+
+</div>
+</div>
+<a id="gaecca8d8311d85535d6487c1628bb2431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecca8d8311d85535d6487c1628bb2431">&#9670;&nbsp;</a></span>fraise_puts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fraise_puts </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a text message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>the text message to send, must be a null-terminated string </td></tr>
   </table>
   </dd>
 </dl>
@@ -213,41 +306,94 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>push a single character to the buffer</p>
+
+<p>push a single character to the text buffer </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>the char to send </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>the message will be sent and flushed after each '<br  />
+<dl class="section note"><dt>Note</dt><dd>the message will be sent with <a class="el" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431" title="Send a text message.">fraise_puts()</a> and flushed after each '<br  />
 ' character </dd></dl>
 
 </div>
 </div>
-<a id="gaecca8d8311d85535d6487c1628bb2431"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaecca8d8311d85535d6487c1628bb2431">&#9670;&nbsp;</a></span>fraise_puts()</h2>
+<a id="gafca0c30751460cab2387ac05c0b78353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafca0c30751460cab2387ac05c0b78353">&#9670;&nbsp;</a></span>fraise_printf()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool fraise_puts </td>
+          <td class="memname">void fraise_printf </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Push a printf-formatted buffered text to the text buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt,...</td><td>the formatted text </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>the message will be sent and flushed after each '<br  />
+' character (<a class="el" href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353" title="Push a printf-formatted buffered text to the text buffer.">fraise_printf()</a> internally calls <a class="el" href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8" title="push a single character to the text buffer">fraise_putchar()</a>) </dd></dl>
+
+</div>
+</div>
+<a id="ga4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fc01d736fe50cf5b977f755b675f11d">&#9670;&nbsp;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Send a text message</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">msg</td><td>the text message to send, must be a null-terminated string </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>false if the TX buffer is full, true otherwise </dd></dl>
+
+<p>Setup the application (optional user defined) </p>
+<dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be automatically called once at startup </dd></dl>
+
+</div>
+</div>
+<a id="gafe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe461d27b9c48d5921c00d521181f12f">&#9670;&nbsp;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Application loop (optional user defined) </p>
+<dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be called repeatedly after <a class="el" href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d" title="Setup the application (optional user defined)">setup()</a> </dd></dl>
 
 </div>
 </div>
@@ -276,7 +422,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Receive raw bytes (optional user defined)</p>
+
+<p>Receive raw bytes (optional user defined) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>the buffer containing the received bytes </td></tr>
@@ -285,43 +432,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be called when a raw bytes message has been received </dd></dl>
-
-</div>
-</div>
-<a id="ga634a7d90873198229c867fe4dfe7ab5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga634a7d90873198229c867fe4dfe7ab5b">&#9670;&nbsp;</a></span>fraise_receivebytes_broadcast()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fraise_receivebytes_broadcast </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Receive broadcast raw bytes (optional user defined)</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>the buffer containing the received bytes </td></tr>
-    <tr><td class="paramname">len</td><td>the number of received bytes </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be called when a broadcast raw bytes message has been received </dd></dl>
 
 </div>
 </div>
@@ -350,7 +460,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Receive text message (optional user defined)</p>
+
+<p>Receive text message (optional user defined) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>the buffer containing the received characters </td></tr>
@@ -359,6 +470,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be called when a text message has been received </dd></dl>
+
+</div>
+</div>
+<a id="ga634a7d90873198229c867fe4dfe7ab5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga634a7d90873198229c867fe4dfe7ab5b">&#9670;&nbsp;</a></span>fraise_receivebytes_broadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fraise_receivebytes_broadcast </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receive broadcast raw bytes (optional user defined) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the buffer containing the received bytes </td></tr>
+    <tr><td class="paramname">len</td><td>the number of received bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be called when a broadcast raw bytes message has been received </dd></dl>
 
 </div>
 </div>
@@ -387,7 +536,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Receive broadcast text message (optional user defined)</p>
+
+<p>Receive broadcast text message (optional user defined) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>the buffer containing the received characters </td></tr>
@@ -399,87 +549,110 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gadd51949227bfd777a42e800867baa6b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd51949227bfd777a42e800867baa6b5">&#9670;&nbsp;</a></span>fraise_setup()</h2>
+<a id="ga6bbe3f06b1d8c17acfbc8c16d8191b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">&#9670;&nbsp;</a></span>fraise_init_get_buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fraise_setup </td>
+          <td class="memname">void fraise_init_get_buffer </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize the Fraise driver</p>
-<dl class="section note"><dt>Note</dt><dd>This is automatically called at startup, so in most cases you won't need it. </dd></dl>
+
+<p>Init the 'get' buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the buffer containing the data to decode </td></tr>
+    <tr><td class="paramname">len</td><td>the number of data bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>this function is automatically called before <a class="el" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b" title="Receive raw bytes (optional user defined)">fraise_receivebytes()</a> or <a class="el" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b" title="Receive broadcast raw bytes (optional user defined)">fraise_receivebytes_broadcast()</a> are called. </dd></dl>
 
 </div>
 </div>
-<a id="ga4677a8dde274ac954f0e00fd8bb967aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4677a8dde274ac954f0e00fd8bb967aa">&#9670;&nbsp;</a></span>fraise_unsetup()</h2>
+<a id="ga267a010f22d0632a3ca4325daffc2dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga267a010f22d0632a3ca4325daffc2dd8">&#9670;&nbsp;</a></span>claim_pio_sm_irq()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fraise_unsetup </td>
+          <td class="memname">bool claim_pio_sm_irq </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const pio_program_t *&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Stop and cleanup the Fraise driver </p>
-
-</div>
-</div>
-<a id="gafe461d27b9c48d5921c00d521181f12f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe461d27b9c48d5921c00d521181f12f">&#9670;&nbsp;</a></span>loop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void loop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">PIO *&#160;</td>
+          <td class="paramname"><em>pio_hw</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Application loop (optional user defined)</p>
-<dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be called repeatedly after <a class="el" href="group__fraise.html#ga3fc92d82854585b4b0062645268a98be">setup()</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga3fc92d82854585b4b0062645268a98be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3fc92d82854585b4b0062645268a98be">&#9670;&nbsp;</a></span>setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void void setup </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint *&#160;</td>
+          <td class="paramname"><em>sm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint *&#160;</td>
+          <td class="paramname"><em>program_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint *&#160;</td>
+          <td class="paramname"><em>irq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setup the application (optional user defined)</p>
-<dl class="section note"><dt>Note</dt><dd>the user can define this function, which will be automatically called once at startup </dd></dl>
+
+<p>Request attribution of a pio/sm (and optionnaly irq) for a given pio program. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>the pio program we want a sm to run </td></tr>
+    <tr><td class="paramname">pio_hw</td><td>the address where to store the available pio </td></tr>
+    <tr><td class="paramname">sm</td><td>the address where to store the index of the available state machine </td></tr>
+    <tr><td class="paramname">program_offset</td><td>the address where to store the offset from which the program can be written </td></tr>
+    <tr><td class="paramname">irq</td><td>if not null, the address where to store the index of the chosen irq </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if this fails. </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

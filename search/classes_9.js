@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['t_5fdcmotor_376',['t_dcmotor',['../structt__dcmotor.html',1,'']]],
-  ['t_5fdcmotorincr_377',['t_dcmotorIncr',['../uniont__dcmotorIncr.html',1,'']]],
-  ['t_5fdcmotorsetting_378',['t_dcmotorSetting',['../structt__dcmotorSetting.html',1,'']]],
-  ['t_5fdcmotorvars_379',['t_dcmotorVars',['../structt__dcmotorVars.html',1,'']]],
-  ['t_5fdcmotorvolvars_380',['t_dcmotorVolVars',['../structt__dcmotorVolVars.html',1,'']]],
-  ['t_5fpid_381',['t_pid',['../structt__pid.html',1,'']]],
-  ['t_5framp_382',['t_ramp',['../structt__ramp.html',1,'']]]
+  ['pca9655_468',['PCA9655',['../structPCA9655.html',1,'']]],
+  ['pio_5faudio_5fchannel_5fconfig_469',['pio_audio_channel_config',['../structpio__audio__channel__config.html',1,'']]],
+  ['pk2bootloader_470',['Pk2BootLoader',['../classPk2BootLoader.html',1,'']]],
+  ['pk2fwver_471',['PK2FWver',['../structCPICkitFunctions_1_1PK2FWver.html',1,'CPICkitFunctions']]],
+  ['producer_5fpool_5fblocking_5fgive_5fconnection_472',['producer_pool_blocking_give_connection',['../structproducer__pool__blocking__give__connection.html',1,'']]]
 ];

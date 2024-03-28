@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,111 +115,6 @@ Functions</h2></td></tr>
 <tr class="separator:ga52b23dc9aa8a7ca3120526f70aef48cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga0ab5449af5cc1762598fb7534f45c672"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0ab5449af5cc1762598fb7534f45c672">&#9670;&nbsp;</a></span>audio_pwm_default_connect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool audio_pwm_default_connect </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structaudio__buffer__pool.html">audio_buffer_pool_t</a> *&#160;</td>
-          <td class="paramname"><em>producer_pool</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>dedicate_core_1</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">producer_pool</td><td></td></tr>
-    <tr><td class="paramname">dedicate_core_1</td><td>attempt a default mapping of producer buffers to pio pwm pico_audio output dedicate_core_1 to have core 1 set aside entirely to do work offloading as much stuff from the producer side as possible todo also allow IRQ handler to do it I guess </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga52b23dc9aa8a7ca3120526f70aef48cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga52b23dc9aa8a7ca3120526f70aef48cd">&#9670;&nbsp;</a></span>audio_pwm_get_correction_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum audio_correction_mode audio_pwm_get_correction_mode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the PWM correction mode. </p>
-<dl class="section return"><dt>Returns</dt><dd>mode </dd></dl>
-
-</div>
-</div>
-<a id="gadd5175dd1adc1d4cdd6a583ff7591aca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd5175dd1adc1d4cdd6a583ff7591aca">&#9670;&nbsp;</a></span>audio_pwm_set_correction_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool audio_pwm_set_correction_mode </td>
-          <td>(</td>
-          <td class="paramtype">enum audio_correction_mode&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the PWM correction mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga7bf40cc7cb538f7231279cee837dbc52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7bf40cc7cb538f7231279cee837dbc52">&#9670;&nbsp;</a></span>audio_pwm_set_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void audio_pwm_set_enabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enable</td><td>true to enable the PWM audio, false to disable </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ga02e1fea898ae3278d58ff664f32c8db7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga02e1fea898ae3278d58ff664f32c8db7">&#9670;&nbsp;</a></span>audio_pwm_setup()</h2>
 
@@ -268,12 +165,118 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga0ab5449af5cc1762598fb7534f45c672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ab5449af5cc1762598fb7534f45c672">&#9670;&nbsp;</a></span>audio_pwm_default_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool audio_pwm_default_connect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structaudio__buffer__pool.html">audio_buffer_pool_t</a> *&#160;</td>
+          <td class="paramname"><em>producer_pool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>dedicate_core_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">producer_pool</td><td></td></tr>
+    <tr><td class="paramname">dedicate_core_1</td><td>attempt a default mapping of producer buffers to pio pwm pico_audio output dedicate_core_1 to have core 1 set aside entirely to do work offloading as much stuff from the producer side as possible todo also allow IRQ handler to do it I guess </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7bf40cc7cb538f7231279cee837dbc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bf40cc7cb538f7231279cee837dbc52">&#9670;&nbsp;</a></span>audio_pwm_set_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void audio_pwm_set_enabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true to enable the PWM audio, false to disable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadd5175dd1adc1d4cdd6a583ff7591aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd5175dd1adc1d4cdd6a583ff7591aca">&#9670;&nbsp;</a></span>audio_pwm_set_correction_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool audio_pwm_set_correction_mode </td>
+          <td>(</td>
+          <td class="paramtype">enum audio_correction_mode&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the PWM correction mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga52b23dc9aa8a7ca3120526f70aef48cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52b23dc9aa8a7ca3120526f70aef48cd">&#9670;&nbsp;</a></span>audio_pwm_get_correction_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum audio_correction_mode audio_pwm_get_correction_mode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the PWM correction mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>mode </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

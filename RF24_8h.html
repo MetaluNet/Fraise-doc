@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -245,19 +247,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RF24_reset</b> (void)
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RF24 Fraise module declarations </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="adbe00719f3f835c82bd007081d040a7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbe00719f3f835c82bd007081d040a7e">&#9670;&nbsp;</a></span>rf24_crclength_e</h2>
+<a id="a1e4cd0bea93e6b43422855fb0120aace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4cd0bea93e6b43422855fb0120aace">&#9670;&nbsp;</a></span>rf24_pa_dbm_e</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="RF24_8h.html#adbe00719f3f835c82bd007081d040a7e">rf24_crclength_e</a></td>
+          <td class="memname">enum <a class="el" href="RF24_8h.html#a1e4cd0bea93e6b43422855fb0120aace">rf24_pa_dbm_e</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>CRC Length. How big (if any) of a CRC is included.</p>
-<p>For use with setCRCLength() </p>
+<p>Power Amplifier level.</p>
+<p>For use with setPALevel() </p>
 
 </div>
 </div>
@@ -277,23 +279,110 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RF24_reset</b> (void)
 
 </div>
 </div>
-<a id="a1e4cd0bea93e6b43422855fb0120aace"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e4cd0bea93e6b43422855fb0120aace">&#9670;&nbsp;</a></span>rf24_pa_dbm_e</h2>
+<a id="adbe00719f3f835c82bd007081d040a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe00719f3f835c82bd007081d040a7e">&#9670;&nbsp;</a></span>rf24_crclength_e</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="RF24_8h.html#a1e4cd0bea93e6b43422855fb0120aace">rf24_pa_dbm_e</a></td>
+          <td class="memname">enum <a class="el" href="RF24_8h.html#adbe00719f3f835c82bd007081d040a7e">rf24_crclength_e</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Power Amplifier level.</p>
-<p>For use with setPALevel() </p>
+<p>CRC Length. How big (if any) of a CRC is included.</p>
+<p>For use with setCRCLength() </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a58f5e1a21ee319e8535fe2b4737fa7b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58f5e1a21ee319e8535fe2b4737fa7b3">&#9670;&nbsp;</a></span>RF24_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Driver for nRF24L01(+) 2.4GHz Wireless Transceiver </p>
+
+</div>
+</div>
+<a id="a13df844e485b64af029be27bff5bdf3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13df844e485b64af029be27bff5bdf3f">&#9670;&nbsp;</a></span>RF24_isChipConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_isChipConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if the chip is connected to the SPI bus </p>
+
+</div>
+</div>
+<a id="a795bb1fededae3d5e3d074653c662619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795bb1fededae3d5e3d074653c662619">&#9670;&nbsp;</a></span>RF24_startListening()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_startListening </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Start listening on the pipes opened for reading.</p>
+<ol type="1">
+<li>Be sure to call openReadingPipe() first. <br  />
+</li>
+<li>Do not call write() while in this mode, without first calling stopListening().</li>
+<li>Call available() to check for incoming traffic, and read() to get it.</li>
+</ol>
+<div class="fragment"><div class="line">Open reading pipe 1 <span class="keyword">using</span> address CCCECCCECC</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">byte</span> address[] = { 0xCC,0xCE,0xCC,0xCE,0xCC };</div>
+<div class="line">radio.openReadingPipe(1,address);</div>
+<div class="line">radio.startListening();</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a42d9a6c41ffb1a516657b60c4e27602a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d9a6c41ffb1a516657b60c4e27602a">&#9670;&nbsp;</a></span>RF24_stopListening()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_stopListening </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stop listening for incoming messages, and switch to transmit mode.</p>
+<p>Do this before calling write(). </p><div class="fragment"><div class="line">radio.stopListening();</div>
+<div class="line">radio.write(&amp;data,<span class="keyword">sizeof</span>(data));</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a52e998916ce8974bbf027bf8630ed756"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52e998916ce8974bbf027bf8630ed756">&#9670;&nbsp;</a></span>RF24_available()</h2>
 
@@ -316,367 +405,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RF24_reset</b> (void)
 
 </div>
 </div>
-<a id="a22baad441994f4ebc04d22f9a3a2900d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22baad441994f4ebc04d22f9a3a2900d">&#9670;&nbsp;</a></span>RF24_closeReadingPipe()</h2>
+<a id="a11ee4d1091e2f5c8c5b434c24aa2a2d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ee4d1091e2f5c8c5b434c24aa2a2d8">&#9670;&nbsp;</a></span>RF24_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_closeReadingPipe </td>
+          <td class="memname">void RF24_read </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>pipe</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Test whether this is a real radio, or a mock shim for debugging. Setting either pin to 0xff is the way to indicate that this is not a real radio.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if this is a legitimate radio Close a pipe after it has been previously opened. Can be safely called without having previously opened a pipe. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pipe</td><td>Which pipe # to close, 0-5. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0320af6c6bda86532f5654ef9e29f23d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0320af6c6bda86532f5654ef9e29f23d">&#9670;&nbsp;</a></span>RF24_disableCRC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_disableCRC </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Disable CRC validation</p>
-<dl class="section warning"><dt>Warning</dt><dd>CRC cannot be disabled if auto-ack/ESB is enabled. </dd></dl>
-
-</div>
-</div>
-<a id="a0a509aba162cff1b2acf6d54753dc76b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a509aba162cff1b2acf6d54753dc76b">&#9670;&nbsp;</a></span>RF24_disableDynamicPayloads()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_disableDynamicPayloads </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Disable dynamically-sized payloads</p>
-<p>This disables dynamic payloads on ALL pipes. Since Ack Payloads requires Dynamic Payloads, Ack Payloads are also disabled. If dynamic payloads are later re-enabled and ack payloads are desired then enableAckPayload() must be called again as well. </p>
-
-</div>
-</div>
-<a id="a063ad3e74355a8754baa6ffc8fd74945"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a063ad3e74355a8754baa6ffc8fd74945">&#9670;&nbsp;</a></span>RF24_enableAckPayload()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_enableAckPayload </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enable custom payloads on the acknowledge packets</p>
-<p>Ack payloads are a handy way to return data back to senders without manually changing the radio modes on both units.</p>
-<dl class="section note"><dt>Note</dt><dd>Ack payloads are dynamic payloads. This only works on pipes 0&amp;1 by default. Call enableDynamicPayloads() to enable on all pipes. </dd></dl>
-
-</div>
-</div>
-<a id="a3659b73ab3294bff2c24b37a1f29b596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3659b73ab3294bff2c24b37a1f29b596">&#9670;&nbsp;</a></span>RF24_enableDynamicAck()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_enableDynamicAck </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enable dynamic ACKs (single write multicast or unicast) for chosen messages</p>
-<dl class="section note"><dt>Note</dt><dd>To enable full multicast or per-pipe multicast, use setAutoAck()</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This MUST be called prior to attempting single write NOACK calls <div class="fragment"><div class="line">radio.enableDynamicAck();</div>
-<div class="line">radio.write(&amp;data,32,1);  <span class="comment">// Sends a payload with no acknowledgement requested</span></div>
-<div class="line">radio.write(&amp;data,32,0);  <span class="comment">// Sends a payload using auto-retry/autoACK</span></div>
-</div><!-- fragment --> </dd></dl>
-
-</div>
-</div>
-<a id="a546ea8db1d399bfcc14fa11d6d6dd377"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a546ea8db1d399bfcc14fa11d6d6dd377">&#9670;&nbsp;</a></span>RF24_enableDynamicPayloads()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_enableDynamicPayloads </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enable dynamically-sized payloads</p>
-<p>This way you don't always have to send large packets just to send them once in a while. This enables dynamic payloads on ALL pipes. </p>
-
-</div>
-</div>
-<a id="aa410f56bce0094054cb2bb2f001bc099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa410f56bce0094054cb2bb2f001bc099">&#9670;&nbsp;</a></span>RF24_getChannel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t RF24_getChannel </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get RF communication channel</p>
-<dl class="section return"><dt>Returns</dt><dd>The currently configured RF Channel </dd></dl>
-
-</div>
-</div>
-<a id="ad34895106ece40c91131e95c654f821d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34895106ece40c91131e95c654f821d">&#9670;&nbsp;</a></span>RF24_getCRCLength()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="RF24_8h.html#adbe00719f3f835c82bd007081d040a7e">rf24_crclength_e</a> RF24_getCRCLength </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get the CRC length <br  />
-CRC checking cannot be disabled if auto-ack is enabled </p><dl class="section return"><dt>Returns</dt><dd>RF24_CRC_DISABLED if disabled or RF24_CRC_8 for 8-bit or RF24_CRC_16 for 16-bit </dd></dl>
-
-</div>
-</div>
-<a id="a4ff172256352b2208faa7a0d71dab27e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ff172256352b2208faa7a0d71dab27e">&#9670;&nbsp;</a></span>RF24_getDataRate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="RF24_8h.html#a82745de4aa1251b7561564b3ed1d6522">rf24_datarate_e</a> RF24_getDataRate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Fetches the transmission data rate</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns the hardware's currently configured datarate. The value is one of 250kbs, RF24_1MBPS for 1Mbps, or RF24_2MBPS, as defined in the rf24_datarate_e enum. </dd></dl>
-
-</div>
-</div>
-<a id="a10df0046045b306fda76be78c2e5587a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10df0046045b306fda76be78c2e5587a">&#9670;&nbsp;</a></span>RF24_getDynamicPayloadSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t RF24_getDynamicPayloadSize </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get Dynamic Payload Size</p>
-<p>For dynamic payloads, this pulls the size of the payload off the chip</p>
-<dl class="section note"><dt>Note</dt><dd>Corrupt packets are now detected and flushed per the manufacturer. <div class="fragment"><div class="line"><span class="keywordflow">if</span>(radio.available()){</div>
-<div class="line">  <span class="keywordflow">if</span>(radio.getDynamicPayloadSize() &lt; 1){</div>
-<div class="line">    <span class="comment">// Corrupt payload has been flushed</span></div>
-<div class="line">    <span class="keywordflow">return</span>; </div>
-<div class="line">  }</div>
-<div class="line">  radio.read(&amp;data,<span class="keyword">sizeof</span>(data));</div>
-<div class="line">}</div>
-</div><!-- fragment --></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Payload length of last-received dynamic payload </dd></dl>
-
-</div>
-</div>
-<a id="acf354b84f44639e21c996ff503128597"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf354b84f44639e21c996ff503128597">&#9670;&nbsp;</a></span>RF24_getPALevel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t RF24_getPALevel </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Fetches the current PA level.</p>
-<p>NRF24L01: -18dBm, -12dBm, -6dBm and 0dBm SI24R1: -6dBm, 0dBm, 3dBm, 7dBm</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns values 0 to 3 representing the PA Level. </dd></dl>
-
-</div>
-</div>
-<a id="a8d310dca584ade306b224bd417a96bbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d310dca584ade306b224bd417a96bbb">&#9670;&nbsp;</a></span>RF24_getPayloadSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t RF24_getPayloadSize </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get Static Payload Size</p>
-<dl class="section see"><dt>See also</dt><dd>setPayloadSize()</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of bytes in the payload </dd></dl>
-
-</div>
-</div>
-<a id="a58f5e1a21ee319e8535fe2b4737fa7b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58f5e1a21ee319e8535fe2b4737fa7b3">&#9670;&nbsp;</a></span>RF24_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Driver for nRF24L01(+) 2.4GHz Wireless Transceiver </p>
-
-</div>
-</div>
-<a id="a9a75b9a7259269b5e5545c5ae9cbf10d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a75b9a7259269b5e5545c5ae9cbf10d">&#9670;&nbsp;</a></span>RF24_isAckPayloadAvailable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_isAckPayloadAvailable </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Determine if an ack payload was received in the most recent call to write(). The regular available() can also be used.</p>
-<p>Call read() to retrieve the ack payload.</p>
-<dl class="section return"><dt>Returns</dt><dd>True if an ack payload is available. </dd></dl>
-
-</div>
-</div>
-<a id="a13df844e485b64af029be27bff5bdf3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13df844e485b64af029be27bff5bdf3f">&#9670;&nbsp;</a></span>RF24_isChipConnected()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_isChipConnected </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Checks if the chip is connected to the SPI bus </p>
-
-</div>
-</div>
-<a id="ad9827d1b46e839e7df625b8697bb5c58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9827d1b46e839e7df625b8697bb5c58">&#9670;&nbsp;</a></span>RF24_isPVariant()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_isPVariant </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Determine whether the hardware is an nRF24L01+ or not.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if the hardware is nRF24L01+ (or compatible) and false if its not. </dd></dl>
-
-</div>
-</div>
-<a id="afcc6f30fd9aea9bc9e7ee60fbdd07280"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcc6f30fd9aea9bc9e7ee60fbdd07280">&#9670;&nbsp;</a></span>RF24_maskIRQ()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_maskIRQ </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>tx_ok</em>, </td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>tx_fail</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>rx_ready</em>&#160;</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -685,15 +430,66 @@ CRC checking cannot be disabled if auto-ack is enabled </p><dl class="section re
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The radio will generate interrupt signals when a transmission is complete, a transmission fails, or a payload is received. This allows users to mask those interrupts to prevent them from generating a signal on the interrupt pin. Interrupts are enabled on the radio chip by default.</p>
-<div class="fragment"><div class="line">Mask all interrupts except the receive interrupt:</div>
-<div class="line"> </div>
-<div class="line">radio.maskIRQ(1,1,0);</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+<p>Read the available payload</p>
+<p>The size of data read is the fixed payload size, see getPayloadSize()</p>
+<dl class="section note"><dt>Note</dt><dd>I specifically chose 'void*' as a data type to make it easier for beginners to use. No casting needed.</dd>
+<dd>
+No longer boolean. Use available to determine if packets are available. Interrupt flags are now cleared during reads instead of when calling available().</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tx_ok</td><td>Mask transmission complete interrupts </td></tr>
-    <tr><td class="paramname">tx_fail</td><td>Mask transmit failure interrupts </td></tr>
-    <tr><td class="paramname">rx_ready</td><td>Mask payload received interrupts </td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to a buffer where the data should be written </td></tr>
+    <tr><td class="paramname">len</td><td>Maximum number of bytes to read into the buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(radio.available()){</div>
+<div class="line">  radio.read(&amp;data,<span class="keyword">sizeof</span>(data));</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>No return value. Use available(). </dd></dl>
+
+</div>
+</div>
+<a id="a31d0a85f8f880cf821b953f93fef09d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d0a85f8f880cf821b953f93fef09d8">&#9670;&nbsp;</a></span>RF24_openWritingPipe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_openWritingPipe </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Be sure to call openWritingPipe() first to set the destination of where to write to.</p>
+<p>This blocks until the message is successfully acknowledged by the receiver or the timeout/retransmit maxima are reached. In the current configuration, the max delay here is 60-70ms.</p>
+<p>The maximum size of data written is the fixed payload size, see getPayloadSize(). However, you can write less, and the remainder will just be filled with zeroes.</p>
+<p>TX/RX/RT interrupt flags will be cleared every time write is called</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to the data to be sent </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes to be sent</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">radio.stopListening();</div>
+<div class="line">radio.write(&amp;data,<span class="keyword">sizeof</span>(data));</div>
+</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>True if the payload was delivered successfully and an ACK was received, or upon successfull transmission if auto-ack is disabled. New: Open a pipe for writing via byte array. Old addressing format retained for compatibility.</dd></dl>
+<p>Only one writing pipe can be open at once, but you can change the address you'll write to. Call stopListening() first.</p>
+<p>Addresses are assigned via a byte array, default is 5 byte address length</p>
+<div class="fragment"><div class="line">uint8_t addresses[][6] = {<span class="stringliteral">&quot;1Node&quot;</span>,<span class="stringliteral">&quot;2Node&quot;</span>};</div>
+<div class="line">radio.openWritingPipe(addresses[0]);</div>
+</div><!-- fragment --> <div class="fragment"><div class="line">uint8_t address[] = { 0xCC,0xCE,0xCC,0xCE,0xCC };</div>
+<div class="line">radio.openWritingPipe(address);</div>
+<div class="line">address[0] = 0x33;</div>
+<div class="line">radio.openReadingPipe(1,address);</div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>setAddressWidth</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The address of the pipe to open. Coordinate these pipe addresses amongst nodes on the network. </td></tr>
   </table>
   </dd>
 </dl>
@@ -747,53 +543,6 @@ Pipe 0 is also used by the writing pipe. So if you open pipe 0 for reading, and 
 
 </div>
 </div>
-<a id="a31d0a85f8f880cf821b953f93fef09d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31d0a85f8f880cf821b953f93fef09d8">&#9670;&nbsp;</a></span>RF24_openWritingPipe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_openWritingPipe </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t *&#160;</td>
-          <td class="paramname"><em>address</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Be sure to call openWritingPipe() first to set the destination of where to write to.</p>
-<p>This blocks until the message is successfully acknowledged by the receiver or the timeout/retransmit maxima are reached. In the current configuration, the max delay here is 60-70ms.</p>
-<p>The maximum size of data written is the fixed payload size, see getPayloadSize(). However, you can write less, and the remainder will just be filled with zeroes.</p>
-<p>TX/RX/RT interrupt flags will be cleared every time write is called</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buf</td><td>Pointer to the data to be sent </td></tr>
-    <tr><td class="paramname">len</td><td>Number of bytes to be sent</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line">radio.stopListening();</div>
-<div class="line">radio.write(&amp;data,<span class="keyword">sizeof</span>(data));</div>
-</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>True if the payload was delivered successfully and an ACK was received, or upon successfull transmission if auto-ack is disabled. New: Open a pipe for writing via byte array. Old addressing format retained for compatibility.</dd></dl>
-<p>Only one writing pipe can be open at once, but you can change the address you'll write to. Call stopListening() first.</p>
-<p>Addresses are assigned via a byte array, default is 5 byte address length</p>
-<div class="fragment"><div class="line">uint8_t addresses[][6] = {<span class="stringliteral">&quot;1Node&quot;</span>,<span class="stringliteral">&quot;2Node&quot;</span>};</div>
-<div class="line">radio.openWritingPipe(addresses[0]);</div>
-</div><!-- fragment --> <div class="fragment"><div class="line">uint8_t address[] = { 0xCC,0xCE,0xCC,0xCE,0xCC };</div>
-<div class="line">radio.openWritingPipe(address);</div>
-<div class="line">address[0] = 0x33;</div>
-<div class="line">radio.openReadingPipe(1,address);</div>
-</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>setAddressWidth</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">address</td><td>The address of the pipe to open. Coordinate these pipe addresses amongst nodes on the network. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="aa18075c80995cad33e4b829169613cf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa18075c80995cad33e4b829169613cf0">&#9670;&nbsp;</a></span>RF24_pipeAvailable()</h2>
 
@@ -823,6 +572,24 @@ Pipe 0 is also used by the writing pipe. So if you open pipe 0 for reading, and 
 <div class="line">  Serial.println(pipeNum);</div>
 <div class="line">}</div>
 </div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>True if there is a payload available, false if none is </dd></dl>
+
+</div>
+</div>
+<a id="a29d3f2e63e369890353fecdb42d28957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d3f2e63e369890353fecdb42d28957">&#9670;&nbsp;</a></span>RF24_rxFifoFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_rxFifoFull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the radio needs to be read. Can be used to prevent data loss </p><dl class="section return"><dt>Returns</dt><dd>True if all three 32-byte radio buffers are full </dd></dl>
 
 </div>
 </div>
@@ -871,22 +638,106 @@ Pipe 0 is also used by the writing pipe. So if you open pipe 0 for reading, and 
 
 </div>
 </div>
-<a id="a11ee4d1091e2f5c8c5b434c24aa2a2d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11ee4d1091e2f5c8c5b434c24aa2a2d8">&#9670;&nbsp;</a></span>RF24_read()</h2>
+<a id="a6badb9c1062591a6b89171c7116571be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6badb9c1062591a6b89171c7116571be">&#9670;&nbsp;</a></span>RF24_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_read </td>
+          <td class="memname">bool RF24_write </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>multicast</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Write for single NOACK writes. Optionally disables acknowledgements/autoretries for a single write.</p>
+<dl class="section note"><dt>Note</dt><dd>enableDynamicAck() must be called to enable this feature</dd></dl>
+<p>Can be used with enableAckPayload() to request a response </p><dl class="section see"><dt>See also</dt><dd>enableDynamicAck() </dd>
+<dd>
+setAutoAck() </dd>
+<dd>
+write()</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to the data to be sent </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes to be sent </td></tr>
+    <tr><td class="paramname">multicast</td><td>Request ACK (0), NOACK (1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac3502954f448fb04e566bd727b32c4eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3502954f448fb04e566bd727b32c4eb">&#9670;&nbsp;</a></span>RF24_txStandBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_txStandBy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function should be called as soon as transmission is finished to drop the radio back to STANDBY-I mode. If not issued, the radio will remain in STANDBY-II mode which, per the data sheet, is not a recommended operating mode.</p>
+<dl class="section note"><dt>Note</dt><dd>When transmitting data in rapid succession, it is still recommended by the manufacturer to drop the radio out of TX or STANDBY-II mode if there is time enough between sends for the FIFOs to empty. This is not required if auto-ack is enabled.</dd></dl>
+<p>Relies on built-in auto retry functionality.</p>
+<div class="fragment"><div class="line">Example (Partial blocking):</div>
+<div class="line"> </div>
+<div class="line">        radio.writeFast(&amp;buf,32);</div>
+<div class="line">        radio.writeFast(&amp;buf,32);</div>
+<div class="line">        radio.writeFast(&amp;buf,32);  <span class="comment">//Fills the FIFO buffers up</span></div>
+<div class="line">        <span class="keywordtype">bool</span> ok = txStandBy();     <span class="comment">//Returns 0 if failed. 1 if success.</span></div>
+<div class="line">                                   <span class="comment">//Blocks only until MAX_RT timeout or success. Data flushed on fail.</span></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>txStandBy(unsigned long timeout) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if transmission is successful </dd></dl>
+
+</div>
+</div>
+<a id="aa68e730561ea861392e55329049a6a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68e730561ea861392e55329049a6a41">&#9670;&nbsp;</a></span>RF24_writeAckPayload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_writeAckPayload </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pipe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
@@ -896,22 +747,88 @@ Pipe 0 is also used by the writing pipe. So if you open pipe 0 for reading, and 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read the available payload</p>
-<p>The size of data read is the fixed payload size, see getPayloadSize()</p>
-<dl class="section note"><dt>Note</dt><dd>I specifically chose 'void*' as a data type to make it easier for beginners to use. No casting needed.</dd>
+<p>Write an ack payload for the specified pipe</p>
+<p>The next time a message is received on <code>pipe</code>, the data in <code>buf</code> will be sent back in the acknowledgement. </p><dl class="section see"><dt>See also</dt><dd>enableAckPayload() </dd>
 <dd>
-No longer boolean. Use available to determine if packets are available. Interrupt flags are now cleared during reads instead of when calling available().</dd></dl>
+enableDynamicPayloads() </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Only three of these can be pending at any time as there are only 3 FIFO buffers.<br  />
+ Dynamic payloads must be enabled. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Ack payloads are handled automatically by the radio chip when a payload is received. Users should generally write an ack payload as soon as startListening() is called, so one is available when a regular payload is received. </dd>
+<dd>
+Ack payloads are dynamic payloads. This only works on pipes 0&amp;1 by default. Call enableDynamicPayloads() to enable on all pipes.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buf</td><td>Pointer to a buffer where the data should be written </td></tr>
-    <tr><td class="paramname">len</td><td>Maximum number of bytes to read into the buffer</td></tr>
+    <tr><td class="paramname">pipe</td><td>Which pipe# (typically 1-5) will get this response. </td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to data that is sent </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the data to send, up to 32 bytes max. Not affected by the static payload set by setPayloadSize(). </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span>(radio.available()){</div>
-<div class="line">  radio.read(&amp;data,<span class="keyword">sizeof</span>(data));</div>
-<div class="line">}</div>
-</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>No return value. Use available(). </dd></dl>
+
+</div>
+</div>
+<a id="a9a75b9a7259269b5e5545c5ae9cbf10d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a75b9a7259269b5e5545c5ae9cbf10d">&#9670;&nbsp;</a></span>RF24_isAckPayloadAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_isAckPayloadAvailable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determine if an ack payload was received in the most recent call to write(). The regular available() can also be used.</p>
+<p>Call read() to retrieve the ack payload.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if an ack payload is available. </dd></dl>
+
+</div>
+</div>
+<a id="a36aad17af719b63e7f80915de9ab5288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36aad17af719b63e7f80915de9ab5288">&#9670;&nbsp;</a></span>RF24_whatHappened()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_whatHappened </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>tx_ok</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>tx_fail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>rx_ready</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Call this when you get an interrupt to find out why</p>
+<p>Tells you what caused the interrupt, and clears the state of interrupts.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">tx_ok</td><td>The send was successful (TX_DS) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tx_fail</td><td>The send failed, too many retries (MAX_RT) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rx_ready</td><td>There is a message waiting to be read (RX_DS) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -975,21 +892,77 @@ setAutoAck()</dd></dl>
 
 </div>
 </div>
-<a id="a29d3f2e63e369890353fecdb42d28957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d3f2e63e369890353fecdb42d28957">&#9670;&nbsp;</a></span>RF24_rxFifoFull()</h2>
+<a id="ad12f4bcb9908f2d4efa0006145ba8691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12f4bcb9908f2d4efa0006145ba8691">&#9670;&nbsp;</a></span>RF24_testCarrier()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool RF24_rxFifoFull </td>
+          <td class="memname">bool RF24_testCarrier </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if the radio needs to be read. Can be used to prevent data loss </p><dl class="section return"><dt>Returns</dt><dd>True if all three 32-byte radio buffers are full </dd></dl>
+<p>Empty the transmit buffer. This is generally not required in standard operation. May be required in specific cases after stopListening() , if operating at 250KBPS data rate.</p>
+<dl class="section return"><dt>Returns</dt><dd>Current value of status register Test whether there was a carrier on the line for the previous listening period.</dd></dl>
+<p>Useful to check for interference on the current channel.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if was carrier, false if not </dd></dl>
+
+</div>
+</div>
+<a id="ad192ea1a3a815e1ef84fab39fa187618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad192ea1a3a815e1ef84fab39fa187618">&#9670;&nbsp;</a></span>RF24_testRPD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_testRPD </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Test whether a signal (carrier or otherwise) greater than or equal to -64dBm is present on the channel. Valid only on nRF24L01P (+) hardware. On nRF24L01, use testCarrier().</p>
+<p>Useful to check for interference on the current channel and channel hopping strategies.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> goodSignal = radio.testRPD();</div>
+<div class="line"><span class="keywordflow">if</span>(radio.available()){</div>
+<div class="line">   Serial.println(goodSignal ? <span class="stringliteral">&quot;Strong signal &gt; 64dBm&quot;</span> : <span class="stringliteral">&quot;Weak signal &lt; 64dBm&quot;</span> );</div>
+<div class="line">   radio.read(0,0);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if signal =&gt; -64dBm, false if not </dd></dl>
+
+</div>
+</div>
+<a id="a22baad441994f4ebc04d22f9a3a2900d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22baad441994f4ebc04d22f9a3a2900d">&#9670;&nbsp;</a></span>RF24_closeReadingPipe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_closeReadingPipe </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pipe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Test whether this is a real radio, or a mock shim for debugging. Setting either pin to 0xff is the way to indicate that this is not a real radio.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if this is a legitimate radio Close a pipe after it has been previously opened. Can be safely called without having previously opened a pipe. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipe</td><td>Which pipe # to close, 0-5. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1015,6 +988,267 @@ setAutoAck()</dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aba46e0c06d591e3e8fbe77bb30d7b65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba46e0c06d591e3e8fbe77bb30d7b65d">&#9670;&nbsp;</a></span>RF24_setRetries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_setRetries </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the number and delay of retries upon failed submit</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>How long to wait between each retry, in multiples of 250us, max is 15. 0 means 250us, 15 means 4000us. </td></tr>
+    <tr><td class="paramname">count</td><td>How many retries before giving up, max 15 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6934d62a152b8bf2ebc514ee2ec0ef92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6934d62a152b8bf2ebc514ee2ec0ef92">&#9670;&nbsp;</a></span>RF24_setChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_setChannel </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set RF communication channel</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Which RF channel to communicate on, 0-125 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa410f56bce0094054cb2bb2f001bc099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa410f56bce0094054cb2bb2f001bc099">&#9670;&nbsp;</a></span>RF24_getChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t RF24_getChannel </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get RF communication channel</p>
+<dl class="section return"><dt>Returns</dt><dd>The currently configured RF Channel </dd></dl>
+
+</div>
+</div>
+<a id="a7a8d3765c21a8f230a379519edfe38aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8d3765c21a8f230a379519edfe38aa">&#9670;&nbsp;</a></span>RF24_setPayloadSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_setPayloadSize </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Static Payload Size</p>
+<p>This implementation uses a pre-stablished fixed payload size for all transmissions. If this method is never called, the driver will always transmit the maximum payload size (32 bytes), no matter how much was sent to write().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The number of bytes in the payload </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8d310dca584ade306b224bd417a96bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d310dca584ade306b224bd417a96bbb">&#9670;&nbsp;</a></span>RF24_getPayloadSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t RF24_getPayloadSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Static Payload Size</p>
+<dl class="section see"><dt>See also</dt><dd>setPayloadSize()</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes in the payload </dd></dl>
+
+</div>
+</div>
+<a id="a10df0046045b306fda76be78c2e5587a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10df0046045b306fda76be78c2e5587a">&#9670;&nbsp;</a></span>RF24_getDynamicPayloadSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t RF24_getDynamicPayloadSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Dynamic Payload Size</p>
+<p>For dynamic payloads, this pulls the size of the payload off the chip</p>
+<dl class="section note"><dt>Note</dt><dd>Corrupt packets are now detected and flushed per the manufacturer. <div class="fragment"><div class="line"><span class="keywordflow">if</span>(radio.available()){</div>
+<div class="line">  <span class="keywordflow">if</span>(radio.getDynamicPayloadSize() &lt; 1){</div>
+<div class="line">    <span class="comment">// Corrupt payload has been flushed</span></div>
+<div class="line">    <span class="keywordflow">return</span>; </div>
+<div class="line">  }</div>
+<div class="line">  radio.read(&amp;data,<span class="keyword">sizeof</span>(data));</div>
+<div class="line">}</div>
+</div><!-- fragment --></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Payload length of last-received dynamic payload </dd></dl>
+
+</div>
+</div>
+<a id="a063ad3e74355a8754baa6ffc8fd74945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063ad3e74355a8754baa6ffc8fd74945">&#9670;&nbsp;</a></span>RF24_enableAckPayload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_enableAckPayload </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable custom payloads on the acknowledge packets</p>
+<p>Ack payloads are a handy way to return data back to senders without manually changing the radio modes on both units.</p>
+<dl class="section note"><dt>Note</dt><dd>Ack payloads are dynamic payloads. This only works on pipes 0&amp;1 by default. Call enableDynamicPayloads() to enable on all pipes. </dd></dl>
+
+</div>
+</div>
+<a id="a546ea8db1d399bfcc14fa11d6d6dd377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546ea8db1d399bfcc14fa11d6d6dd377">&#9670;&nbsp;</a></span>RF24_enableDynamicPayloads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_enableDynamicPayloads </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable dynamically-sized payloads</p>
+<p>This way you don't always have to send large packets just to send them once in a while. This enables dynamic payloads on ALL pipes. </p>
+
+</div>
+</div>
+<a id="a0a509aba162cff1b2acf6d54753dc76b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a509aba162cff1b2acf6d54753dc76b">&#9670;&nbsp;</a></span>RF24_disableDynamicPayloads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_disableDynamicPayloads </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disable dynamically-sized payloads</p>
+<p>This disables dynamic payloads on ALL pipes. Since Ack Payloads requires Dynamic Payloads, Ack Payloads are also disabled. If dynamic payloads are later re-enabled and ack payloads are desired then enableAckPayload() must be called again as well. </p>
+
+</div>
+</div>
+<a id="a3659b73ab3294bff2c24b37a1f29b596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3659b73ab3294bff2c24b37a1f29b596">&#9670;&nbsp;</a></span>RF24_enableDynamicAck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_enableDynamicAck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable dynamic ACKs (single write multicast or unicast) for chosen messages</p>
+<dl class="section note"><dt>Note</dt><dd>To enable full multicast or per-pipe multicast, use setAutoAck()</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This MUST be called prior to attempting single write NOACK calls <div class="fragment"><div class="line">radio.enableDynamicAck();</div>
+<div class="line">radio.write(&amp;data,32,1);  <span class="comment">// Sends a payload with no acknowledgement requested</span></div>
+<div class="line">radio.write(&amp;data,32,0);  <span class="comment">// Sends a payload using auto-retry/autoACK</span></div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="ad9827d1b46e839e7df625b8697bb5c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9827d1b46e839e7df625b8697bb5c58">&#9670;&nbsp;</a></span>RF24_isPVariant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF24_isPVariant </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determine whether the hardware is an nRF24L01+ or not.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the hardware is nRF24L01+ (or compatible) and false if its not. </dd></dl>
 
 </div>
 </div>
@@ -1081,53 +1315,51 @@ setAutoAck()</dd></dl>
 
 </div>
 </div>
-<a id="a6934d62a152b8bf2ebc514ee2ec0ef92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6934d62a152b8bf2ebc514ee2ec0ef92">&#9670;&nbsp;</a></span>RF24_setChannel()</h2>
+<a id="a761beff12476b6dd967fe3128fdd5712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a761beff12476b6dd967fe3128fdd5712">&#9670;&nbsp;</a></span>RF24_setPALevel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_setChannel </td>
+          <td class="memname">void RF24_setPALevel </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set RF communication channel</p>
+<p>Set Power Amplifier (PA) level to one of four levels: RF24_PA_MIN, RF24_PA_LOW, RF24_PA_HIGH and RF24_PA_MAX</p>
+<p>The power levels correspond to the following output levels respectively: NRF24L01: -18dBm, -12dBm,-6dBM, and 0dBm</p>
+<p>SI24R1: -6dBm, 0dBm, 3dBM, and 7dBm.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">channel</td><td>Which RF channel to communicate on, 0-125 </td></tr>
+    <tr><td class="paramname">level</td><td>Desired PA level. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a6338ec425b7f684915cd37488f3e5e61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6338ec425b7f684915cd37488f3e5e61">&#9670;&nbsp;</a></span>RF24_setCRCLength()</h2>
+<a id="acf354b84f44639e21c996ff503128597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf354b84f44639e21c996ff503128597">&#9670;&nbsp;</a></span>RF24_getPALevel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_setCRCLength </td>
+          <td class="memname">uint8_t RF24_getPALevel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="RF24_8h.html#adbe00719f3f835c82bd007081d040a7e">rf24_crclength_e</a>&#160;</td>
-          <td class="paramname"><em>length</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the CRC length <br  />
-CRC checking cannot be disabled if auto-ack is enabled </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">length</td><td>RF24_CRC_8 for 8-bit or RF24_CRC_16 for 16-bit </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Fetches the current PA level.</p>
+<p>NRF24L01: -18dBm, -12dBm, -6dBm and 0dBm SI24R1: -6dBm, 0dBm, 3dBm, 7dBm</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns values 0 to 3 representing the PA Level. </dd></dl>
 
 </div>
 </div>
@@ -1158,103 +1390,59 @@ CRC checking cannot be disabled if auto-ack is enabled </p><dl class="params"><d
 
 </div>
 </div>
-<a id="a761beff12476b6dd967fe3128fdd5712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a761beff12476b6dd967fe3128fdd5712">&#9670;&nbsp;</a></span>RF24_setPALevel()</h2>
+<a id="a4ff172256352b2208faa7a0d71dab27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff172256352b2208faa7a0d71dab27e">&#9670;&nbsp;</a></span>RF24_getDataRate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_setPALevel </td>
+          <td class="memname"><a class="el" href="RF24_8h.html#a82745de4aa1251b7561564b3ed1d6522">rf24_datarate_e</a> RF24_getDataRate </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set Power Amplifier (PA) level to one of four levels: RF24_PA_MIN, RF24_PA_LOW, RF24_PA_HIGH and RF24_PA_MAX</p>
-<p>The power levels correspond to the following output levels respectively: NRF24L01: -18dBm, -12dBm,-6dBM, and 0dBm</p>
-<p>SI24R1: -6dBm, 0dBm, 3dBM, and 7dBm.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Fetches the transmission data rate</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the hardware's currently configured datarate. The value is one of 250kbs, RF24_1MBPS for 1Mbps, or RF24_2MBPS, as defined in the rf24_datarate_e enum. </dd></dl>
+
+</div>
+</div>
+<a id="a6338ec425b7f684915cd37488f3e5e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6338ec425b7f684915cd37488f3e5e61">&#9670;&nbsp;</a></span>RF24_setCRCLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF24_setCRCLength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="RF24_8h.html#adbe00719f3f835c82bd007081d040a7e">rf24_crclength_e</a>&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the CRC length <br  />
+CRC checking cannot be disabled if auto-ack is enabled </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>Desired PA level. </td></tr>
+    <tr><td class="paramname">length</td><td>RF24_CRC_8 for 8-bit or RF24_CRC_16 for 16-bit </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a7a8d3765c21a8f230a379519edfe38aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a8d3765c21a8f230a379519edfe38aa">&#9670;&nbsp;</a></span>RF24_setPayloadSize()</h2>
+<a id="ad34895106ece40c91131e95c654f821d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad34895106ece40c91131e95c654f821d">&#9670;&nbsp;</a></span>RF24_getCRCLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_setPayloadSize </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set Static Payload Size</p>
-<p>This implementation uses a pre-stablished fixed payload size for all transmissions. If this method is never called, the driver will always transmit the maximum payload size (32 bytes), no matter how much was sent to write().</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>The number of bytes in the payload </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aba46e0c06d591e3e8fbe77bb30d7b65d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba46e0c06d591e3e8fbe77bb30d7b65d">&#9670;&nbsp;</a></span>RF24_setRetries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_setRetries </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>delay</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>count</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set the number and delay of retries upon failed submit</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">delay</td><td>How long to wait between each retry, in multiples of 250us, max is 15. 0 means 250us, 15 means 4000us. </td></tr>
-    <tr><td class="paramname">count</td><td>How many retries before giving up, max 15 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a795bb1fededae3d5e3d074653c662619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a795bb1fededae3d5e3d074653c662619">&#9670;&nbsp;</a></span>RF24_startListening()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_startListening </td>
+          <td class="memname"><a class="el" href="RF24_8h.html#adbe00719f3f835c82bd007081d040a7e">rf24_crclength_e</a> RF24_getCRCLength </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1262,29 +1450,19 @@ CRC checking cannot be disabled if auto-ack is enabled </p><dl class="params"><d
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Start listening on the pipes opened for reading.</p>
-<ol type="1">
-<li>Be sure to call openReadingPipe() first. <br  />
-</li>
-<li>Do not call write() while in this mode, without first calling stopListening().</li>
-<li>Call available() to check for incoming traffic, and read() to get it.</li>
-</ol>
-<div class="fragment"><div class="line">Open reading pipe 1 <span class="keyword">using</span> address CCCECCCECC</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">byte</span> address[] = { 0xCC,0xCE,0xCC,0xCE,0xCC };</div>
-<div class="line">radio.openReadingPipe(1,address);</div>
-<div class="line">radio.startListening();</div>
-</div><!-- fragment --> 
+<p>Get the CRC length <br  />
+CRC checking cannot be disabled if auto-ack is enabled </p><dl class="section return"><dt>Returns</dt><dd>RF24_CRC_DISABLED if disabled or RF24_CRC_8 for 8-bit or RF24_CRC_16 for 16-bit </dd></dl>
+
 </div>
 </div>
-<a id="a42d9a6c41ffb1a516657b60c4e27602a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42d9a6c41ffb1a516657b60c4e27602a">&#9670;&nbsp;</a></span>RF24_stopListening()</h2>
+<a id="a0320af6c6bda86532f5654ef9e29f23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0320af6c6bda86532f5654ef9e29f23d">&#9670;&nbsp;</a></span>RF24_disableCRC()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RF24_stopListening </td>
+          <td class="memname">void RF24_disableCRC </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1292,111 +1470,33 @@ CRC checking cannot be disabled if auto-ack is enabled </p><dl class="params"><d
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stop listening for incoming messages, and switch to transmit mode.</p>
-<p>Do this before calling write(). </p><div class="fragment"><div class="line">radio.stopListening();</div>
-<div class="line">radio.write(&amp;data,<span class="keyword">sizeof</span>(data));</div>
-</div><!-- fragment --> 
+<p>Disable CRC validation</p>
+<dl class="section warning"><dt>Warning</dt><dd>CRC cannot be disabled if auto-ack/ESB is enabled. </dd></dl>
+
 </div>
 </div>
-<a id="ad12f4bcb9908f2d4efa0006145ba8691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad12f4bcb9908f2d4efa0006145ba8691">&#9670;&nbsp;</a></span>RF24_testCarrier()</h2>
+<a id="afcc6f30fd9aea9bc9e7ee60fbdd07280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc6f30fd9aea9bc9e7ee60fbdd07280">&#9670;&nbsp;</a></span>RF24_maskIRQ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool RF24_testCarrier </td>
+          <td class="memname">void RF24_maskIRQ </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Empty the transmit buffer. This is generally not required in standard operation. May be required in specific cases after stopListening() , if operating at 250KBPS data rate.</p>
-<dl class="section return"><dt>Returns</dt><dd>Current value of status register Test whether there was a carrier on the line for the previous listening period.</dd></dl>
-<p>Useful to check for interference on the current channel.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if was carrier, false if not </dd></dl>
-
-</div>
-</div>
-<a id="ad192ea1a3a815e1ef84fab39fa187618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad192ea1a3a815e1ef84fab39fa187618">&#9670;&nbsp;</a></span>RF24_testRPD()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_testRPD </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Test whether a signal (carrier or otherwise) greater than or equal to -64dBm is present on the channel. Valid only on nRF24L01P (+) hardware. On nRF24L01, use testCarrier().</p>
-<p>Useful to check for interference on the current channel and channel hopping strategies.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">bool</span> goodSignal = radio.testRPD();</div>
-<div class="line"><span class="keywordflow">if</span>(radio.available()){</div>
-<div class="line">   Serial.println(goodSignal ? <span class="stringliteral">&quot;Strong signal &gt; 64dBm&quot;</span> : <span class="stringliteral">&quot;Weak signal &lt; 64dBm&quot;</span> );</div>
-<div class="line">   radio.read(0,0);</div>
-<div class="line">}</div>
-</div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if signal =&gt; -64dBm, false if not </dd></dl>
-
-</div>
-</div>
-<a id="ac3502954f448fb04e566bd727b32c4eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3502954f448fb04e566bd727b32c4eb">&#9670;&nbsp;</a></span>RF24_txStandBy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_txStandBy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function should be called as soon as transmission is finished to drop the radio back to STANDBY-I mode. If not issued, the radio will remain in STANDBY-II mode which, per the data sheet, is not a recommended operating mode.</p>
-<dl class="section note"><dt>Note</dt><dd>When transmitting data in rapid succession, it is still recommended by the manufacturer to drop the radio out of TX or STANDBY-II mode if there is time enough between sends for the FIFOs to empty. This is not required if auto-ack is enabled.</dd></dl>
-<p>Relies on built-in auto retry functionality.</p>
-<div class="fragment"><div class="line">Example (Partial blocking):</div>
-<div class="line"> </div>
-<div class="line">        radio.writeFast(&amp;buf,32);</div>
-<div class="line">        radio.writeFast(&amp;buf,32);</div>
-<div class="line">        radio.writeFast(&amp;buf,32);  <span class="comment">//Fills the FIFO buffers up</span></div>
-<div class="line">        <span class="keywordtype">bool</span> ok = txStandBy();     <span class="comment">//Returns 0 if failed. 1 if success.</span></div>
-<div class="line">                                   <span class="comment">//Blocks only until MAX_RT timeout or success. Data flushed on fail.</span></div>
-</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>txStandBy(unsigned long timeout) </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>True if transmission is successful </dd></dl>
-
-</div>
-</div>
-<a id="a36aad17af719b63e7f80915de9ab5288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36aad17af719b63e7f80915de9ab5288">&#9670;&nbsp;</a></span>RF24_whatHappened()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_whatHappened </td>
-          <td>(</td>
-          <td class="paramtype">bool *&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>tx_ok</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>tx_fail</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool *&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>rx_ready</em>&#160;</td>
         </tr>
         <tr>
@@ -1406,113 +1506,15 @@ CRC checking cannot be disabled if auto-ack is enabled </p><dl class="params"><d
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Call this when you get an interrupt to find out why</p>
-<p>Tells you what caused the interrupt, and clears the state of interrupts.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The radio will generate interrupt signals when a transmission is complete, a transmission fails, or a payload is received. This allows users to mask those interrupts to prevent them from generating a signal on the interrupt pin. Interrupts are enabled on the radio chip by default.</p>
+<div class="fragment"><div class="line">Mask all interrupts except the receive interrupt:</div>
+<div class="line"> </div>
+<div class="line">radio.maskIRQ(1,1,0);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">tx_ok</td><td>The send was successful (TX_DS) </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">tx_fail</td><td>The send failed, too many retries (MAX_RT) </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">rx_ready</td><td>There is a message waiting to be read (RX_DS) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a6badb9c1062591a6b89171c7116571be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6badb9c1062591a6b89171c7116571be">&#9670;&nbsp;</a></span>RF24_write()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RF24_write </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>multicast</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Write for single NOACK writes. Optionally disables acknowledgements/autoretries for a single write.</p>
-<dl class="section note"><dt>Note</dt><dd>enableDynamicAck() must be called to enable this feature</dd></dl>
-<p>Can be used with enableAckPayload() to request a response </p><dl class="section see"><dt>See also</dt><dd>enableDynamicAck() </dd>
-<dd>
-setAutoAck() </dd>
-<dd>
-write()</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buf</td><td>Pointer to the data to be sent </td></tr>
-    <tr><td class="paramname">len</td><td>Number of bytes to be sent </td></tr>
-    <tr><td class="paramname">multicast</td><td>Request ACK (0), NOACK (1) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa68e730561ea861392e55329049a6a41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa68e730561ea861392e55329049a6a41">&#9670;&nbsp;</a></span>RF24_writeAckPayload()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RF24_writeAckPayload </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>pipe</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Write an ack payload for the specified pipe</p>
-<p>The next time a message is received on <code>pipe</code>, the data in <code>buf</code> will be sent back in the acknowledgement. </p><dl class="section see"><dt>See also</dt><dd>enableAckPayload() </dd>
-<dd>
-enableDynamicPayloads() </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Only three of these can be pending at any time as there are only 3 FIFO buffers.<br  />
- Dynamic payloads must be enabled. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Ack payloads are handled automatically by the radio chip when a payload is received. Users should generally write an ack payload as soon as startListening() is called, so one is available when a regular payload is received. </dd>
-<dd>
-Ack payloads are dynamic payloads. This only works on pipes 0&amp;1 by default. Call enableDynamicPayloads() to enable on all pipes.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pipe</td><td>Which pipe# (typically 1-5) will get this response. </td></tr>
-    <tr><td class="paramname">buf</td><td>Pointer to data that is sent </td></tr>
-    <tr><td class="paramname">len</td><td>Length of the data to send, up to 32 bytes max. Not affected by the static payload set by setPayloadSize(). </td></tr>
+    <tr><td class="paramname">tx_ok</td><td>Mask transmission complete interrupts </td></tr>
+    <tr><td class="paramname">tx_fail</td><td>Mask transmit failure interrupts </td></tr>
+    <tr><td class="paramname">rx_ready</td><td>Mask payload received interrupts </td></tr>
   </table>
   </dd>
 </dl>
@@ -1520,23 +1522,6 @@ Ack payloads are dynamic payloads. This only works on pipes 0&amp;1 by default. 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a3a484c40aa7004084ac2b6e864353004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a484c40aa7004084ac2b6e864353004">&#9670;&nbsp;</a></span>RF24_csDelay</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t RF24_csDelay</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>On all devices but Linux and ATTiny, a small delay is added to the CSN toggling function</p>
-<p>This is intended to minimise the speed of SPI polling due to radio commands</p>
-<p>If using interrupts or timed requests, this can be set to 0 Default:5 </p>
-
-</div>
-</div>
 <a id="a28971efbe44f8b4dd531452cf696b8e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28971efbe44f8b4dd531452cf696b8e9">&#9670;&nbsp;</a></span>RF24_txDelay</h2>
 
@@ -1558,13 +1543,31 @@ Ack payloads are dynamic payloads. This only works on pipes 0&amp;1 by default. 
 
 </div>
 </div>
+<a id="a3a484c40aa7004084ac2b6e864353004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a484c40aa7004084ac2b6e864353004">&#9670;&nbsp;</a></span>RF24_csDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t RF24_csDelay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>On all devices but Linux and ATTiny, a small delay is added to the CSN toggling function</p>
+<p>This is intended to minimise the speed of SPI polling due to radio commands</p>
+<p>If using interrupts or timed requests, this can be set to 0 Default:5 </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_034dc9dd2860b0cfe884242bc6ff92e7.html">pic</a></li><li class="navelem"><a class="el" href="dir_76b8f1b9417a2e7826979a71c06a8a65.html">RF24</a></li><li class="navelem"><a class="el" href="RF24_8h.html">RF24.h</a></li>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

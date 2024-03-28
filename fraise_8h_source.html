@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,69 +96,93 @@ $(document).ready(function(){initNavTree('fraise_8h_source.html',''); initResiza
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;pico/stdlib.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">fraise_setup</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// ------------- Message sending utilities ----------------</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg); <span class="comment">// returns true on success</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">fraise_putbytes</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, uint8_t len); <span class="comment">// returns true on success</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar</a>(<span class="keywordtype">char</span> c);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, ...) __attribute__ ((format (printf, 1, 2)));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// ------------- Optional user defined callbacks ----------------</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga3fc92d82854585b4b0062645268a98be">setup</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">loop</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">fraise_receivebytes</a>(const <span class="keywordtype">char</span> *data, uint8_t len);           <span class="comment">// Called when a raw bytes message has been received</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">fraise_receivechars</a>(const <span class="keywordtype">char</span> *data, uint8_t len);           <span class="comment">// Called when a text message has been received</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">fraise_receivebytes_broadcast</a>(const <span class="keywordtype">char</span> *data, uint8_t len); <span class="comment">// Called when a raw bytes broadcast message has been received</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">fraise_receivechars_broadcast</a>(const <span class="keywordtype">char</span> *data, uint8_t len); <span class="comment">// Called when a text broadcast message has been received</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">// Get the pin numbers that Fraise is using</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">void</span> fraise_get_pins(<span class="keywordtype">int</span> *rxpin, <span class="keywordtype">int</span> *txpin, <span class="keywordtype">int</span> *drvpin);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#ifndef FRAISE_DONT_OVERWRITE_PRINTF</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#define printf fraise_printf</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#define putchar fraise_putchar</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif // _FRAISE_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;hardware/pio.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">fraise_setup</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">fraise_putbytes</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, uint8_t len); <span class="comment">// returns true on success</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gaef9ef780e6168fe6ea33fadd3bf53cd7">fraise_put_init</a>(); </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> fraise_put_int8(int8_t b);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> fraise_put_uint8(uint8_t b);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> fraise_put_int16(int16_t b);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> fraise_put_uint16(uint16_t b);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> fraise_put_int32(int32_t b);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> fraise_put_uint32(uint32_t b);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__fraise.html#ga58a69d5bec6eeee5e28b0314dd3aa93d">fraise_put_send</a>(); </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg); <span class="comment">// returns true on success</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar</a>(<span class="keywordtype">char</span> c);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, ...) __attribute__ ((format (printf, 1, 2)));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">loop</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">fraise_receivebytes</a>(const <span class="keywordtype">char</span> *data, uint8_t len);           <span class="comment">// Called when a raw bytes message has been received</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">fraise_receivechars</a>(const <span class="keywordtype">char</span> *data, uint8_t len);           <span class="comment">// Called when a text message has been received</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">fraise_receivebytes_broadcast</a>(const <span class="keywordtype">char</span> *data, uint8_t len); <span class="comment">// Called when a raw bytes broadcast message has been received</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">fraise_receivechars_broadcast</a>(const <span class="keywordtype">char</span> *data, uint8_t len); <span class="comment">// Called when a text broadcast message has been received</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;int8_t fraise_get_int8();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;uint8_t fraise_get_uint8();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;int16_t fraise_get_int16();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;uint16_t fraise_get_uint16();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;int32_t fraise_get_int32();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;uint32_t fraise_get_uint32();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__fraise.html#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">fraise_init_get_buffer</a>(const <span class="keywordtype">char</span> *data, uint8_t len);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">// Get the pin numbers that Fraise is using</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">void</span> fraise_get_pins(<span class="keywordtype">int</span> *rxpin, <span class="keywordtype">int</span> *txpin, <span class="keywordtype">int</span> *drvpin);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__fraise.html#ga267a010f22d0632a3ca4325daffc2dd8">claim_pio_sm_irq</a>(const pio_program_t *program, PIO *pio_hw, uint *sm, uint *program_offset, uint *irq);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#ifndef FRAISE_DONT_OVERWRITE_PRINTF</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#define printf fraise_printf</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#define putchar fraise_putchar</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#endif // _FRAISE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__fraise_html_ga39978b1484c2bde04c4e45d4274a2043"><div class="ttname"><a href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">fraise_receivechars_broadcast</a></div><div class="ttdeci">void fraise_receivechars_broadcast(const char *data, uint8_t len)</div></div>
-<div class="ttc" id="agroup__fraise_html_ga5de420201fa950da49fdfc9f56fca79b"><div class="ttname"><a href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">fraise_receivebytes</a></div><div class="ttdeci">void fraise_receivebytes(const char *data, uint8_t len)</div></div>
-<div class="ttc" id="agroup__fraise_html_ga3fc92d82854585b4b0062645268a98be"><div class="ttname"><a href="group__fraise.html#ga3fc92d82854585b4b0062645268a98be">setup</a></div><div class="ttdeci">void void setup()</div></div>
-<div class="ttc" id="agroup__fraise_html_gae5c9ab97fec7799326b5c4bc356d5b9a"><div class="ttname"><a href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">fraise_receivechars</a></div><div class="ttdeci">void fraise_receivechars(const char *data, uint8_t len)</div></div>
-<div class="ttc" id="agroup__fraise_html_ga634a7d90873198229c867fe4dfe7ab5b"><div class="ttname"><a href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">fraise_receivebytes_broadcast</a></div><div class="ttdeci">void fraise_receivebytes_broadcast(const char *data, uint8_t len)</div></div>
-<div class="ttc" id="agroup__fraise_html_gadd51949227bfd777a42e800867baa6b5"><div class="ttname"><a href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">fraise_setup</a></div><div class="ttdeci">void fraise_setup()</div></div>
-<div class="ttc" id="agroup__fraise_html_gae75e4a8d71ed499d4292ff4977a3415b"><div class="ttname"><a href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">fraise_putbytes</a></div><div class="ttdeci">bool fraise_putbytes(const char *data, uint8_t len)</div></div>
-<div class="ttc" id="agroup__fraise_html_ga4677a8dde274ac954f0e00fd8bb967aa"><div class="ttname"><a href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a></div><div class="ttdeci">void fraise_unsetup()</div></div>
-<div class="ttc" id="agroup__fraise_html_gafca0c30751460cab2387ac05c0b78353"><div class="ttname"><a href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf</a></div><div class="ttdeci">void fraise_printf(const char *fmt,...) __attribute__((format(printf</div></div>
-<div class="ttc" id="agroup__fraise_html_gafe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div></div>
-<div class="ttc" id="agroup__fraise_html_gaf4fcdfa366b46e7f1bad8935709d14a8"><div class="ttname"><a href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar</a></div><div class="ttdeci">void fraise_putchar(char c)</div></div>
-<div class="ttc" id="agroup__fraise_html_gaecca8d8311d85535d6487c1628bb2431"><div class="ttname"><a href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a></div><div class="ttdeci">bool fraise_puts(const char *msg)</div></div>
+<div class="ttc" id="agroup__fraise_html_ga39978b1484c2bde04c4e45d4274a2043"><div class="ttname"><a href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">fraise_receivechars_broadcast</a></div><div class="ttdeci">void fraise_receivechars_broadcast(const char *data, uint8_t len)</div><div class="ttdoc">Receive broadcast text message (optional user defined)</div></div>
+<div class="ttc" id="agroup__fraise_html_ga58a69d5bec6eeee5e28b0314dd3aa93d"><div class="ttname"><a href="group__fraise.html#ga58a69d5bec6eeee5e28b0314dd3aa93d">fraise_put_send</a></div><div class="ttdeci">bool fraise_put_send()</div><div class="ttdoc">Send the 'put' buffer with fraise_putbytes()</div></div>
+<div class="ttc" id="agroup__fraise_html_ga5de420201fa950da49fdfc9f56fca79b"><div class="ttname"><a href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">fraise_receivebytes</a></div><div class="ttdeci">void fraise_receivebytes(const char *data, uint8_t len)</div><div class="ttdoc">Receive raw bytes (optional user defined)</div></div>
+<div class="ttc" id="agroup__fraise_html_gaef9ef780e6168fe6ea33fadd3bf53cd7"><div class="ttname"><a href="group__fraise.html#gaef9ef780e6168fe6ea33fadd3bf53cd7">fraise_put_init</a></div><div class="ttdeci">void fraise_put_init()</div><div class="ttdoc">Initialize the 'put' buffer.</div></div>
+<div class="ttc" id="agroup__fraise_html_gae5c9ab97fec7799326b5c4bc356d5b9a"><div class="ttname"><a href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">fraise_receivechars</a></div><div class="ttdeci">void fraise_receivechars(const char *data, uint8_t len)</div><div class="ttdoc">Receive text message (optional user defined)</div></div>
+<div class="ttc" id="agroup__fraise_html_ga634a7d90873198229c867fe4dfe7ab5b"><div class="ttname"><a href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">fraise_receivebytes_broadcast</a></div><div class="ttdeci">void fraise_receivebytes_broadcast(const char *data, uint8_t len)</div><div class="ttdoc">Receive broadcast raw bytes (optional user defined)</div></div>
+<div class="ttc" id="agroup__fraise_html_ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><div class="ttname"><a href="group__fraise.html#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">fraise_init_get_buffer</a></div><div class="ttdeci">void fraise_init_get_buffer(const char *data, uint8_t len)</div><div class="ttdoc">Init the 'get' buffer.</div></div>
+<div class="ttc" id="agroup__fraise_html_gadd51949227bfd777a42e800867baa6b5"><div class="ttname"><a href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">fraise_setup</a></div><div class="ttdeci">void fraise_setup()</div><div class="ttdoc">Initialize the Fraise driver.</div></div>
+<div class="ttc" id="agroup__fraise_html_gae75e4a8d71ed499d4292ff4977a3415b"><div class="ttname"><a href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">fraise_putbytes</a></div><div class="ttdeci">bool fraise_putbytes(const char *data, uint8_t len)</div><div class="ttdoc">Send a raw bytes message.</div></div>
+<div class="ttc" id="agroup__fraise_html_ga4677a8dde274ac954f0e00fd8bb967aa"><div class="ttname"><a href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a></div><div class="ttdeci">void fraise_unsetup()</div><div class="ttdoc">Stop and cleanup the Fraise driver.</div></div>
+<div class="ttc" id="agroup__fraise_html_ga4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">Setup the application (optional user defined)</div></div>
+<div class="ttc" id="agroup__fraise_html_gafca0c30751460cab2387ac05c0b78353"><div class="ttname"><a href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf</a></div><div class="ttdeci">void fraise_printf(const char *fmt,...) __attribute__((format(printf</div><div class="ttdoc">Push a printf-formatted buffered text to the text buffer.</div></div>
+<div class="ttc" id="agroup__fraise_html_gafe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">Application loop (optional user defined)</div></div>
+<div class="ttc" id="agroup__fraise_html_gaf4fcdfa366b46e7f1bad8935709d14a8"><div class="ttname"><a href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar</a></div><div class="ttdeci">void fraise_putchar(char c)</div><div class="ttdoc">push a single character to the text buffer</div></div>
+<div class="ttc" id="agroup__fraise_html_ga267a010f22d0632a3ca4325daffc2dd8"><div class="ttname"><a href="group__fraise.html#ga267a010f22d0632a3ca4325daffc2dd8">claim_pio_sm_irq</a></div><div class="ttdeci">bool claim_pio_sm_irq(const pio_program_t *program, PIO *pio_hw, uint *sm, uint *program_offset, uint *irq)</div><div class="ttdoc">Request attribution of a pio/sm (and optionnaly irq) for a given pio program.</div></div>
+<div class="ttc" id="agroup__fraise_html_gaecca8d8311d85535d6487c1628bb2431"><div class="ttname"><a href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a></div><div class="ttdeci">bool fraise_puts(const char *msg)</div><div class="ttdoc">Send a text message.</div></div>
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_729958c98a37b673f34d84c25e02f88b.html">pico</a></li><li class="navelem"><a class="el" href="dir_201b244316128622211e6db4a98e934e.html">fraise</a></li><li class="navelem"><a class="el" href="fraise_8h.html">fraise.h</a></li>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

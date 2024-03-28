@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,9 +104,9 @@ $(document).ready(function(){initNavTree('protocol.html',''); initResizable(); }
  For any other operation, all <b>fruits</b> can be connected together to the bus.</p>
 <p>A <b>fruit</b> is assigned to an ID using its NAME to address it. The NAME of a <b>fruit</b> is also used in bootloader mode, for flashing a new application firmware.</p>
 <p>Normal communications use ID to access the <b>fruit</b>.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Pied-to-fruit communication</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 normal output</h2>
 <p>The <b>pied</b> initiates transmission by sending the <b>fruit</b> ID byte with bit 9 on, followed by a length byte where bit 8 is set if the packet is a string packet. <br  />
  The message continues with the data bytes, then ends with a checksum byte. <br  />
@@ -116,7 +118,7 @@ normal output</h2>
 <div class="line">- D(...)D = l data bytes.</div>
 <div class="line">- S = -sum (modulo 256) of all bytes before S (N+L+D+...+D).</div>
 </div><!-- fragment --><p><b>Fruit</b> number N must acknowledge the packet returning <code>0</code> in less than 1 millisecond, or returns <code>1</code> to signal a checksum error.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 broadcast output</h2>
 <p>If ID is 0, all the <b>fruits</b> decode the packet; no <b>fruit</b> has to acknowledge.</p>
 <p>Special broadcast commands are provided to assign an ID to a <b>fruit</b>, or to establish a 8 bits communication for bootloader purpose. <br  />
@@ -129,31 +131,31 @@ broadcast output</h2>
 <li><code>’b’</code> = broadcast raw bytes</li>
 </ul>
 <p>'B' and 'b' broadcast messages can be used by the user application (e.g to send a global clock).</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Fruit-to-pied communication</h1>
 <p><b>Fruits</b> are polled sequentially, between transmissions of pied-to-fruits packets. <br  />
  The <b>pied</b> initiates transmission: the first byte is the ID of tested <b>fruit</b>, with bit 9 set to signal the start of the packet, and bit 8 set to signal a poll message. <br  />
  Then ID + 128 is repeated with bit 9 cleared, in order to secure addressing. <br  />
  If the <b>fruit</b> has nothing to transmit, it returns a null byte. Otherwise it sends a packet, which is acknowledged by the <b>pied</b>.</p>
 <p>(# means next character has bit 9 set)</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 polling for input</h2>
 <div class="fragment"><div class="line">packet: #MM</div>
 <div class="line">- #M = fruit ID + bit8(128) + bit9</div>
 <div class="line">-  M = fruit ID + bit8(128)</div>
 </div><!-- fragment --><p><b>Fruit</b> number ID must answer before 1 ms.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 fruit answer</h2>
 <div class="fragment"><div class="line">packet: LD(...)DS</div>
 <div class="line">- L = 128 * c + l: c (bit8) = packet is character string, l = number of following data bytes (31 max).</div>
 <div class="line">- D(...)D = l data bytes.</div>
 <div class="line">- S = -sum (modulo 256) of all bytes before S (L + D + ... + D).</div>
 </div><!-- fragment --><p>The <b>pied</b> then returns <code>0</code> to acknowledge the packet, or <code>1</code> to signal a checksum error.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 fruit "nothing to report" answer</h2>
 <div class="fragment"><div class="line">packet: 0 (one null byte)</div>
 </div><!-- fragment --><p>No checksum byte in this case; the <b>pied</b> does not have to acknowledge.</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Bootloader communication</h1>
 <p>Bit 9 is always cleared. <br  />
  Bootloader packets start with the number of following bytes (length byte). <br  />
@@ -179,11 +181,11 @@ Bootloader communication</h1>
 <li>or 1 second after power-up if it has not been verified.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Fraise USB Protocol</h1>
 <p>The <b>pied</b> is connected to the host computer via USB.</p>
 <p>(here * means byte has bit 9 set)</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 output to fruit</h2>
 <p>The host sends an addressed message to the <b>pied</b>, which forward it to the <b>fruit</b>.</p>
 <p><code>"0100\n" -&gt; *0x01 0x01 0x00 0xFE</code>: send 0 to <b>fruit</b> ID 1. <br  />
@@ -193,12 +195,12 @@ output to fruit</h2>
 <li><code>"sTnn\n"</code> if <b>fruit</b> nn didn’t answer (timeout)</li>
 <li><code>"sann\n"</code> if the <b>fruit</b> refused to acknowledge the packet (packet error or buffer full).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 broadcast output</h2>
 <p>The host can ask the <b>pied</b> to send a message to all the <b>fruits</b>:</p>
 <p><code>"!BI\n" -&gt; *0x00 0x82 0x42 0x49 0xF3</code>: send "I" to all <b>fruits</b> ("string" message). <br  />
  <code>"!b00\n" -&gt; *0x00 0x01 0x00 0xFF</code>: send 0 to all <b>fruits</b> ("raw bytes" message).</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 polling for input</h2>
 <p>The host can enable or not the active polling of each fruit.</p>
 <p><code>"#S04\n"</code>: start polling <b>fruit</b> ID 4 <br  />
@@ -206,7 +208,7 @@ polling for input</h2>
 <p>When <b>fruit</b> nn answers for the first time, the <b>pied</b> sends to USB: <code>"sCnn\n"</code> (meaning: <b>fruit</b> nn is now connected). When <b>fruit</b> nn stops answering, the <b>pied</b> sends to USB: <code>"scnn\n"</code>.</p>
 <p>If the <b>pied</b> received a corrupted packet from <b>fruit</b> nn (checksum error), it signals this error by <code>"sxnn\n"</code>.</p>
 <p>When the <b>pied</b> successfully receives a packet from <b>fruit</b> nn, it forwards it to host prefixed with "NN", where NN equals to nn, plus 0x80 if the message is a character string.</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 control</h2>
 <p><code>"!N04Fruit1\n"</code>: assign ID 04 to fruit called "Fruit1". <br  />
  <code>"#i\n"</code>: reinit the <b>pied</b> (clears polling for all <b>fruits</b>). <br  />
@@ -215,7 +217,7 @@ control</h2>
  <code>"#UNLOCK\n"</code>: allow setting the piedID (which must be the next command) <br  />
  <code>"#W02\n"</code>: set the piedID to 2</p>
 <p>The piedID allows to distinguish several pieds connected to several USB ports.</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 bootloader mode</h2>
 <p><code>"!FFruit1\n"</code>: ask "Fruit1" to jump to bootloader.</p>
 <p>Additionnaly, the <b>pied</b> switches to bootloading mode: <br  />
@@ -227,7 +229,7 @@ bootloader mode</h2>
 </p>
 <p>Quit bootloading mode:</p>
 <p><code>"#F\n"</code>: ask the <b>pied</b> to quit bootloading mode</p>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 logging</h2>
 <p>The <b>pied</b> can send informational messages to the USB host, for debugging purpose. Each log line if prefixed with the 'l' character.</p>
 <hr  />
@@ -238,10 +240,11 @@ logging</h2>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

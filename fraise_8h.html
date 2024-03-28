@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.17-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="doc/img/icon-Fraise.png" type="image/x-icon" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,46 +94,118 @@ $(document).ready(function(){initNavTree('fraise_8h.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><code>#include &quot;pico/stdlib.h&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;hardware/pio.h&quot;</code><br />
 </div>
 <p><a href="fraise_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga267a010f22d0632a3ca4325daffc2dd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga267a010f22d0632a3ca4325daffc2dd8">claim_pio_sm_irq</a> (const pio_program_t *program, PIO *pio_hw, uint *sm, uint *program_offset, uint *irq)</td></tr>
+<tr class="memdesc:ga267a010f22d0632a3ca4325daffc2dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request attribution of a pio/sm (and optionnaly irq) for a given pio program.  <a href="group__fraise.html#ga267a010f22d0632a3ca4325daffc2dd8">More...</a><br /></td></tr>
+<tr class="separator:ga267a010f22d0632a3ca4325daffc2dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Global fraise driver management</div></td></tr>
 <tr class="memitem:gadd51949227bfd777a42e800867baa6b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">fraise_setup</a> ()</td></tr>
+<tr class="memdesc:gadd51949227bfd777a42e800867baa6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Fraise driver.  <a href="group__fraise.html#gadd51949227bfd777a42e800867baa6b5">More...</a><br /></td></tr>
 <tr class="separator:gadd51949227bfd777a42e800867baa6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a> ()</td></tr>
+<tr class="memitem:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga4677a8dde274ac954f0e00fd8bb967aa">fraise_unsetup</a> ()</td></tr>
+<tr class="memdesc:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop and cleanup the Fraise driver. <br /></td></tr>
 <tr class="separator:ga4677a8dde274ac954f0e00fd8bb967aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaecca8d8311d85535d6487c1628bb2431"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a> (const char *msg)</td></tr>
-<tr class="separator:gaecca8d8311d85535d6487c1628bb2431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Sending raw bytes messages</div></td></tr>
 <tr class="memitem:gae75e4a8d71ed499d4292ff4977a3415b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">fraise_putbytes</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:gae75e4a8d71ed499d4292ff4977a3415b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a raw bytes message.  <a href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b">More...</a><br /></td></tr>
 <tr class="separator:gae75e4a8d71ed499d4292ff4977a3415b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef9ef780e6168fe6ea33fadd3bf53cd7"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaef9ef780e6168fe6ea33fadd3bf53cd7">fraise_put_init</a> ()</td></tr>
+<tr class="memdesc:gaef9ef780e6168fe6ea33fadd3bf53cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the 'put' buffer. <br /></td></tr>
+<tr class="separator:gaef9ef780e6168fe6ea33fadd3bf53cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbf49c64c55cc5c717fb79b0c499957d"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_int8</b> (int8_t b)</td></tr>
+<tr class="separator:gafbf49c64c55cc5c717fb79b0c499957d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46d0cfdae4f710f37010cc8ea6c66e83"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_uint8</b> (uint8_t b)</td></tr>
+<tr class="separator:ga46d0cfdae4f710f37010cc8ea6c66e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9358058d7c3b2f5f20d3ac3a5a679b56"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_int16</b> (int16_t b)</td></tr>
+<tr class="separator:ga9358058d7c3b2f5f20d3ac3a5a679b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga434f915d96c147132a14a31813bb01c5"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_uint16</b> (uint16_t b)</td></tr>
+<tr class="separator:ga434f915d96c147132a14a31813bb01c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8cbc2baf4a1f2f41e86fa4ce73b7de4"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_int32</b> (int32_t b)</td></tr>
+<tr class="separator:gaa8cbc2baf4a1f2f41e86fa4ce73b7de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3503fb63786f448f63434dff2608e161"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_put_uint32</b> (uint32_t b)</td></tr>
+<tr class="separator:ga3503fb63786f448f63434dff2608e161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58a69d5bec6eeee5e28b0314dd3aa93d"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga58a69d5bec6eeee5e28b0314dd3aa93d">fraise_put_send</a> ()</td></tr>
+<tr class="memdesc:ga58a69d5bec6eeee5e28b0314dd3aa93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the 'put' buffer with <a class="el" href="group__fraise.html#gae75e4a8d71ed499d4292ff4977a3415b" title="Send a raw bytes message.">fraise_putbytes()</a> <br /></td></tr>
+<tr class="separator:ga58a69d5bec6eeee5e28b0314dd3aa93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Sending text messages</div></td></tr>
+<tr class="memitem:gaecca8d8311d85535d6487c1628bb2431"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">fraise_puts</a> (const char *msg)</td></tr>
+<tr class="memdesc:gaecca8d8311d85535d6487c1628bb2431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a text message.  <a href="group__fraise.html#gaecca8d8311d85535d6487c1628bb2431">More...</a><br /></td></tr>
+<tr class="separator:gaecca8d8311d85535d6487c1628bb2431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf4fcdfa366b46e7f1bad8935709d14a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">fraise_putchar</a> (char c)</td></tr>
+<tr class="memdesc:gaf4fcdfa366b46e7f1bad8935709d14a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">push a single character to the text buffer  <a href="group__fraise.html#gaf4fcdfa366b46e7f1bad8935709d14a8">More...</a><br /></td></tr>
 <tr class="separator:gaf4fcdfa366b46e7f1bad8935709d14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafca0c30751460cab2387ac05c0b78353"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">fraise_printf</a> (const char *fmt,...) __attribute__((format(printf</td></tr>
+<tr class="memdesc:gafca0c30751460cab2387ac05c0b78353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a printf-formatted buffered text to the text buffer.  <a href="group__fraise.html#gafca0c30751460cab2387ac05c0b78353">More...</a><br /></td></tr>
 <tr class="separator:gafca0c30751460cab2387ac05c0b78353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fc92d82854585b4b0062645268a98be"><td class="memItemLeft" align="right" valign="top">void void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga3fc92d82854585b4b0062645268a98be">setup</a> ()</td></tr>
-<tr class="separator:ga3fc92d82854585b4b0062645268a98be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Optional user defined callbacks</div></td></tr>
+<tr class="memitem:ga4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:ga4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the application (optional user defined)  <a href="group__fraise.html#ga4fc01d736fe50cf5b977f755b675f11d">More...</a><br /></td></tr>
+<tr class="separator:ga4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:gafe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application loop (optional user defined)  <a href="group__fraise.html#gafe461d27b9c48d5921c00d521181f12f">More...</a><br /></td></tr>
 <tr class="separator:gafe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5de420201fa950da49fdfc9f56fca79b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">fraise_receivebytes</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga5de420201fa950da49fdfc9f56fca79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive raw bytes (optional user defined)  <a href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b">More...</a><br /></td></tr>
 <tr class="separator:ga5de420201fa950da49fdfc9f56fca79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5c9ab97fec7799326b5c4bc356d5b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">fraise_receivechars</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:gae5c9ab97fec7799326b5c4bc356d5b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive text message (optional user defined)  <a href="group__fraise.html#gae5c9ab97fec7799326b5c4bc356d5b9a">More...</a><br /></td></tr>
 <tr class="separator:gae5c9ab97fec7799326b5c4bc356d5b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga634a7d90873198229c867fe4dfe7ab5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">fraise_receivebytes_broadcast</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga634a7d90873198229c867fe4dfe7ab5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive broadcast raw bytes (optional user defined)  <a href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b">More...</a><br /></td></tr>
 <tr class="separator:ga634a7d90873198229c867fe4dfe7ab5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga39978b1484c2bde04c4e45d4274a2043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">fraise_receivechars_broadcast</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga39978b1484c2bde04c4e45d4274a2043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive broadcast text message (optional user defined)  <a href="group__fraise.html#ga39978b1484c2bde04c4e45d4274a2043">More...</a><br /></td></tr>
 <tr class="separator:ga39978b1484c2bde04c4e45d4274a2043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Bytes receive decoding utils:</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><dl class="section note"><dt>Note</dt><dd>These functions are only valid when called from <a class="el" href="group__fraise.html#ga5de420201fa950da49fdfc9f56fca79b" title="Receive raw bytes (optional user defined)">fraise_receivebytes()</a> or <a class="el" href="group__fraise.html#ga634a7d90873198229c867fe4dfe7ab5b" title="Receive broadcast raw bytes (optional user defined)">fraise_receivebytes_broadcast()</a>. If there's not enough data left, they return 0. </dd></dl>
+</div></td></tr>
+<tr class="memitem:ga8c7e1dedccafbdbe1b6758fa5b5074c4"><td class="memItemLeft" align="right" valign="top">
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_int8</b> ()</td></tr>
+<tr class="separator:ga8c7e1dedccafbdbe1b6758fa5b5074c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae27d2d06d729332388652171660139df"><td class="memItemLeft" align="right" valign="top">
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_uint8</b> ()</td></tr>
+<tr class="separator:gae27d2d06d729332388652171660139df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga331340908a15d5846a793eebbebc49e1"><td class="memItemLeft" align="right" valign="top">
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_int16</b> ()</td></tr>
+<tr class="separator:ga331340908a15d5846a793eebbebc49e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed33519d22e18c098fe0216510450e9d"><td class="memItemLeft" align="right" valign="top">
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_uint16</b> ()</td></tr>
+<tr class="separator:gaed33519d22e18c098fe0216510450e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24e680867226a03c808c17d696f92e13"><td class="memItemLeft" align="right" valign="top">
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_int32</b> ()</td></tr>
+<tr class="separator:ga24e680867226a03c808c17d696f92e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1094c77513cc49f8b0539465a052f927"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>fraise_get_uint32</b> ()</td></tr>
+<tr class="separator:ga1094c77513cc49f8b0539465a052f927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fraise.html#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">fraise_init_get_buffer</a> (const char *data, uint8_t len)</td></tr>
+<tr class="memdesc:ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the 'get' buffer.  <a href="group__fraise.html#ga6bbe3f06b1d8c17acfbc8c16d8191b8e">More...</a><br /></td></tr>
+<tr class="separator:ga6bbe3f06b1d8c17acfbc8c16d8191b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Copyright (c) 2023 metalu.net</p>
 <p>SPDX-License-Identifier: BSD-3-Clause </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_729958c98a37b673f34d84c25e02f88b.html">pico</a></li><li class="navelem"><a class="el" href="dir_201b244316128622211e6db4a98e934e.html">fraise</a></li><li class="navelem"><a class="el" href="fraise_8h.html">fraise.h</a></li>
-    <li class="footer">Generated on Tue Feb 6 2024 16:46:41 for Fraise by
+    <li class="footer">Generated on Thu Mar 28 2024 18:39:46 for Fraise by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

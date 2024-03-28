@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['mono_5fs8_5fto_5fmono_5fconsumer_5ftake_489',['mono_s8_to_mono_consumer_take',['../group__pico__audio.html#ga2657d6dca63ef75ff0e4edb3422e2ea9',1,'audio.h']]],
-  ['mono_5fs8_5fto_5fstereo_5fconsumer_5ftake_490',['mono_s8_to_stereo_consumer_take',['../group__pico__audio.html#ga0173efcfc7b0fff13caa19cbbca85a73',1,'audio.h']]],
-  ['mono_5fto_5fmono_5fconsumer_5ftake_491',['mono_to_mono_consumer_take',['../group__pico__audio.html#ga1b05254b4a11360e001ecfb0e263537c',1,'audio.h']]],
-  ['mono_5fto_5fstereo_5fconsumer_5ftake_492',['mono_to_stereo_consumer_take',['../group__pico__audio.html#ga7170fd60ff64d83745b4540c98d38b01',1,'audio.h']]]
+  ['mono_5fs8_5fto_5fmono_5fconsumer_5ftake_629',['mono_s8_to_mono_consumer_take',['../group__pico__audio.html#ga2657d6dca63ef75ff0e4edb3422e2ea9',1,'audio.h']]],
+  ['mono_5fs8_5fto_5fstereo_5fconsumer_5ftake_630',['mono_s8_to_stereo_consumer_take',['../group__pico__audio.html#ga0173efcfc7b0fff13caa19cbbca85a73',1,'audio.h']]],
+  ['mono_5fto_5fmono_5fconsumer_5ftake_631',['mono_to_mono_consumer_take',['../group__pico__audio.html#ga1b05254b4a11360e001ecfb0e263537c',1,'audio.h']]],
+  ['mono_5fto_5fstereo_5fconsumer_5ftake_632',['mono_to_stereo_consumer_take',['../group__pico__audio.html#ga7170fd60ff64d83745b4540c98d38b01',1,'audio.h']]]
 ];

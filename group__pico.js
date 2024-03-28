@@ -5,5 +5,6 @@ var group__pico =
     [ "fraise", "group__fraise.html", "group__fraise" ],
     [ "fraise_eeprom", "group__fraise__eeprom.html", "group__fraise__eeprom" ],
     [ "smooth_pwm", "group__smooth__pwm.html", null ],
-    [ "fraise_stdout", "group__fraise__stdout.html", "group__fraise__stdout" ]
+    [ "fraise_stdout", "group__fraise__stdout.html", "group__fraise__stdout" ],
+    [ "ws2812", "group__ws2812.html", null ]
 ];
